@@ -1,0 +1,22 @@
+---
+shape-URI: https://mock-cube.ld.admin.ch/cube/shape/
+dimensions:
+  # required
+  - column-name: Jahr
+    dimension-type: Key Dimension
+    scale-type: ordinal
+    name:
+      de: Jahr
+      fr: An
+      it: Anno
+      en: Year
+    description:
+      de: Jahr der Erhebung
+    path: year
+  # optional - löschen wenn nicht benötigt
+    data-kind: 
+      type: temporal
+      unit: year
+    mapping:
+      type: additive
+      base: https://ld.admin.ch/time/year/
