@@ -2,7 +2,7 @@
 shape-URI: https://mock-cube.ld.admin.ch/cube/shape/
 dimensions:
   # required
-  - column-name: Jahr
+  Jahr:
     dimension-type: Key Dimension
     scale-type: ordinal
     name:
@@ -20,3 +20,12 @@ dimensions:
     mapping:
       type: additive
       base: https://ld.admin.ch/time/year/
+  
+  Station:
+    dimension-type: Key Dimension
+    scale-type: nominal
+    mapping:
+      type: replace
+      replacements:
+        Bern: https://mock.ld.admin.ch/station/01
+        Zürich: https://mock.ld.admin.ch/station/02

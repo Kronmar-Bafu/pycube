@@ -3,7 +3,7 @@ requires = ["hatchling", "hatch-requirements-txt"]
 build-backend = "hatchling.build"
 
 [project]
-name = "py-cube"
+name = "cubelink"
 version = "0.1.0"
 dynamic = ["dependencies"]
 

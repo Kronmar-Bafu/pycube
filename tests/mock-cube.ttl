@@ -1,0 +1,280 @@
+@prefix ns1: <https://cube.link/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+<https://mock.ld.admin.ch/cube/mock-example/1ObservationSet> ns1:observation <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2000/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2000/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2001/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2001/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2002/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2002/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2003/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2003/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2004/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2004/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2005/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2005/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2006/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2006/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2007/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2007/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2008/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2008/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2009/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2009/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2010/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2010/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2011/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2011/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2012/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2012/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2013/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2013/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2014/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2014/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2015/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2015/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2016/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2016/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2017/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2017/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2018/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2018/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2019/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2019/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2020/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2020/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2021/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2021/Zürich>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2022/Bern>,
+        <https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2022/Zürich> .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2000/Bern> <Jahr> <https://ld.admin.ch/time/year/2000> ;
+    <Standardfehler> 5.0 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 23.0 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2000/Zürich> <Jahr> <https://ld.admin.ch/time/year/2000> ;
+    <Standardfehler> 7.517863529610764 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 23.555744036232408 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2001/Bern> <Jahr> <https://ld.admin.ch/time/year/2001> ;
+    <Standardfehler> 6.466524763963783 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 21.536090723505524 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2001/Zürich> <Jahr> <https://ld.admin.ch/time/year/2001> ;
+    <Standardfehler> 6.030296213104391 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 21.65992433002125 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2002/Bern> <Jahr> <https://ld.admin.ch/time/year/2002> ;
+    <Standardfehler> 1.493504195537817 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 22.575144684250287 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2002/Zürich> <Jahr> <https://ld.admin.ch/time/year/2002> ;
+    <Standardfehler> 4.460656090931694 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 20.688211936144263 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2003/Bern> <Jahr> <https://ld.admin.ch/time/year/2003> ;
+    <Standardfehler> 3.1225318830708093 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 20.34210673843992 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2003/Zürich> <Jahr> <https://ld.admin.ch/time/year/2003> ;
+    <Standardfehler> 9.256702605801236 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 21.515733621541955 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2004/Bern> <Jahr> <https://ld.admin.ch/time/year/2004> ;
+    <Standardfehler> 4.901117604444538 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 19.883669558588743 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2004/Zürich> <Jahr> <https://ld.admin.ch/time/year/2004> ;
+    <Standardfehler> 7.390939821011258 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 19.06703223788886 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2005/Bern> <Jahr> <https://ld.admin.ch/time/year/2005> ;
+    <Standardfehler> 0.3648574303067509 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 20.37741134479489 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2005/Zürich> <Jahr> <https://ld.admin.ch/time/year/2005> ;
+    <Standardfehler> 5.334716140807069 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 19.10206139418359 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2006/Bern> <Jahr> <https://ld.admin.ch/time/year/2006> ;
+    <Standardfehler> 2.520552866392209 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 17.851780950874087 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2006/Zürich> <Jahr> <https://ld.admin.ch/time/year/2006> ;
+    <Standardfehler> 9.574551975171314 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 19.16636437276704 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2007/Bern> <Jahr> <https://ld.admin.ch/time/year/2007> ;
+    <Standardfehler> 4.873759639672014 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 18.321158320002034 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2007/Zürich> <Jahr> <https://ld.admin.ch/time/year/2007> ;
+    <Standardfehler> 7.127258811335302 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 16.70866751700804 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2008/Bern> <Jahr> <https://ld.admin.ch/time/year/2008> ;
+    <Standardfehler> 0.9142998372297384 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 17.89457243174931 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2008/Zürich> <Jahr> <https://ld.admin.ch/time/year/2008> ;
+    <Standardfehler> 4.510509430147336 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 17.518675046034367 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2009/Bern> <Jahr> <https://ld.admin.ch/time/year/2009> ;
+    <Standardfehler> 3.6030273778709576 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 15.644260115877954 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2009/Zürich> <Jahr> <https://ld.admin.ch/time/year/2009> ;
+    <Standardfehler> 8.255475397580657 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 16.57885415743719 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2010/Bern> <Jahr> <https://ld.admin.ch/time/year/2010> ;
+    <Standardfehler> 6.403036956705559 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 16.67404534861387 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2010/Zürich> <Jahr> <https://ld.admin.ch/time/year/2010> ;
+    <Standardfehler> 5.41838925075702 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 14.658857249625616 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2011/Bern> <Jahr> <https://ld.admin.ch/time/year/2011> ;
+    <Standardfehler> 2.768558605478989 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 15.23952733205338 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2011/Zürich> <Jahr> <https://ld.admin.ch/time/year/2011> ;
+    <Standardfehler> 2.547974456080931 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 15.77006036400352 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2012/Bern> <Jahr> <https://ld.admin.ch/time/year/2012> ;
+    <Standardfehler> 5.634558406905088 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 13.746463964437758 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2012/Zürich> <Jahr> <https://ld.admin.ch/time/year/2012> ;
+    <Standardfehler> 6.195609420937518 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 13.898790381464226 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2013/Bern> <Jahr> <https://ld.admin.ch/time/year/2013> ;
+    <Standardfehler> 8.450009649429939 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 14.79423943661537 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2013/Zürich> <Jahr> <https://ld.admin.ch/time/year/2013> ;
+    <Standardfehler> 3.425280014313877 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 12.895269405129998 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2014/Bern> <Jahr> <https://ld.admin.ch/time/year/2014> ;
+    <Standardfehler> 4.667912290722137 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 12.57895406130142 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2014/Zürich> <Jahr> <https://ld.admin.ch/time/year/2014> ;
+    <Standardfehler> 0.780391898961843 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 13.739824320879595 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2015/Bern> <Jahr> <https://ld.admin.ch/time/year/2015> ;
+    <Standardfehler> 7.234991659001383 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 12.08858766109956 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2015/Zürich> <Jahr> <https://ld.admin.ch/time/year/2015> ;
+    <Standardfehler> 4.794358156286226 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 11.300664194959296 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2016/Bern> <Jahr> <https://ld.admin.ch/time/year/2016> ;
+    <Standardfehler> 9.624032873046964 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 12.606317539212023 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2016/Zürich> <Jahr> <https://ld.admin.ch/time/year/2016> ;
+    <Standardfehler> 2.5019829145341275 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 11.306186956398 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2017/Bern> <Jahr> <https://ld.admin.ch/time/year/2017> ;
+    <Standardfehler> 5.322003468934927 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 10.081257039139402 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2017/Zürich> <Jahr> <https://ld.admin.ch/time/year/2017> ;
+    <Standardfehler> 0.4085982816951822 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 11.399522010793316 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2018/Bern> <Jahr> <https://ld.admin.ch/time/year/2018> ;
+    <Standardfehler> 7.317046263544459 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 10.525901301404176 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2018/Zürich> <Jahr> <https://ld.admin.ch/time/year/2018> ;
+    <Standardfehler> 5.003684887934572 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 8.933378287580624 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2019/Bern> <Jahr> <https://ld.admin.ch/time/year/2019> ;
+    <Standardfehler> 9.12751448116438 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 10.131078794353764 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2019/Zürich> <Jahr> <https://ld.admin.ch/time/year/2019> ;
+    <Standardfehler> 3.27575514766154 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 9.725396222849866 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2020/Bern> <Jahr> <https://ld.admin.ch/time/year/2020> ;
+    <Standardfehler> 4.286464451069697 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 7.863975722345669 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2020/Zürich> <Jahr> <https://ld.admin.ch/time/year/2020> ;
+    <Standardfehler> 1.6851777638149157 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 8.817539768108874 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2021/Bern> <Jahr> <https://ld.admin.ch/time/year/2021> ;
+    <Standardfehler> 5.824977064184451 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 8.883947915155796 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2021/Zürich> <Jahr> <https://ld.admin.ch/time/year/2021> ;
+    <Standardfehler> 6.681380029364922 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 6.873745757485178 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2022/Bern> <Jahr> <https://ld.admin.ch/time/year/2022> ;
+    <Standardfehler> 7.297772477326248 ;
+    <Station> <https://mock.ld.admin.ch/station/01> ;
+    <Wert> 7.479049116629595 .
+
+<https://mock.ld.admin.chhttps://mock.ld.admin.ch/cube/mock-example/1/observation/2022/Zürich> <Jahr> <https://ld.admin.ch/time/year/2022> ;
+    <Standardfehler> 5.220921715260017 ;
+    <Station> <https://mock.ld.admin.ch/station/02> ;
+    <Wert> 7.984094086903241 .
+

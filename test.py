@@ -1,19 +1,15 @@
 import pandas as pd
 import numpy as np
 from math import pi
+import cubelink
+import yaml
 
-df = pd.DataFrame()
-df["Jahr"] = np.repeat(np.arange(start=2000, stop=2023), 2)
-df["Station"] = np.tile(["Bern", "Zürich"], 23)
+mock_df = pd.read_csv("tests/mock_data.csv")
 
-x = np.arange(46)
-value = np.sin(2*x) + np.sin(pi*x) - (0.5)**1.5*x + 23
-print(value.max())
-print(value.min())
-df["Wert"] = value
-error = (np.sin(3*x) + np.sin(pi/3*x) + 2)/4*10
-df["Standardfehler"] = error
+with open("tests/mock_dimensions.yml") as file:
+    shape_yaml = yaml.safe_load(file)
 
-df.to_csv("tests/example_cube_data.csv", index=False)
+with open("tests/mock_cube.yml") as file:
+    cube_yaml = yaml.safe_load(file)
 
-print(df.head())
+cube = cubelink.Cube(dataframe=mock_df, shape_yaml=shape_yaml, cube_yaml=cube_yaml)
