@@ -1,3 +1,25 @@
-Base-URI: "https://mock.ld.admin.ch"
-Identifier: "mock-example"
+Name:
+  de: Mock Cube
+  fr: Mock Cube
+  it: Mock Cube
+  en: Mock Cube
+Description:
+  de: Ein Beispiel Cube, der simulierten Daten enthält
+  en: An example Cube containing some simulated data
+Publisher: 
+  IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+Creator:
+  IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+Contributor:
+  IRI: https://register.ld.admin.ch/opendataswiss/org/foen # mal nachschauen wie es wirklich ist fürs BAFU
+Date Created:
+  2024-08-26
+Contact Point:
+  E-Mail: contackt@mock.ld.admin.ch
+  Name: Bundesamt für Mock Data
+Base-URI: https://mock.ld.admin.ch/
+Identifier: mock-example
 Version: 1
+Namespace: mock
+# optional but recommended
+Accrual Periodicity: yearly

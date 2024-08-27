@@ -1,10 +1,7 @@
 ---
-shape-URI: https://mock-cube.ld.admin.ch/cube/shape/
 dimensions:
   # required
   Jahr:
-    dimension-type: Key Dimension
-    scale-type: ordinal
     name:
       de: Jahr
       fr: An
@@ -12,6 +9,8 @@ dimensions:
       en: Year
     description:
       de: Jahr der Erhebung
+    dimension-type: Key Dimension
+    scale-type: ordinal
     path: year
   # optional - löschen wenn nicht benötigt
     data-kind: 
@@ -22,10 +21,42 @@ dimensions:
       base: https://ld.admin.ch/time/year/
   
   Station:
+    name:
+      de: Station
+      fr: Station
+      it: Stazione
+      en: Station
+    description:
+      de: Station der Untersuchung
     dimension-type: Key Dimension
     scale-type: nominal
+    path: station
     mapping:
       type: replace
       replacements:
         Bern: https://mock.ld.admin.ch/station/01
         Zürich: https://mock.ld.admin.ch/station/02
+
+  Wert:
+    name:
+      de: Wert
+      fr: Valeur
+      it: Valore
+      en: Value
+    description:
+      de: Gemessener Wert an der Station
+    dimension-type: Measure Dimension
+    scale-type: interval
+    path: value
+
+  Standardfehler:
+    name:
+      de: Standardfehler
+      fr: Erreur standard
+      it: Errore standard
+      en: Standard error
+    description:
+      de: Standardfehler des berechneten Werts
+    dimension-type: Measure Dimension
+    scale-type: ratio
+    path: standardError
