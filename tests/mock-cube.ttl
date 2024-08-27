@@ -1,11 +1,16 @@
 @prefix cube: <https://cube.link/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix mock: <https://mock.ld.admin.ch/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix schema1: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1> a cube:Cube .
+<https://mock.ld.admin.ch/cube/mock-example/1> a void:Dataset,
+        schema1:Dataset,
+        dcat:Dataset,
+        cube:Cube .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/ObservationSet> cube:observation <https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Bern>,
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Zürich>,
@@ -54,17 +59,7 @@
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Bern>,
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Zürich> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/shape> sh:property [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:RatioScale ;
-            schema1:description "Standardfehler des berechneten Werts"@de ;
-            schema1:name "Standardfehler"@de,
-                "Standard error"@en,
-                "Erreur standard"@fr,
-                "Errore standard"@it ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:path mock:standardError ],
-        [ a cube:KeyDimension ;
+<https://mock.ld.admin.ch/cube/mock-example/1/shape> sh:property [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
             schema1:name "Jahr"@de,
@@ -95,7 +90,17 @@
                 "Valore"@it ;
             sh:maxCount 1 ;
             sh:minCount 1 ;
-            sh:path mock:value ] .
+            sh:path mock:value ],
+        [ a cube:MeasureDimension ;
+            qudt:scaleType qudt:RatioScale ;
+            schema1:description "Standardfehler des berechneten Werts"@de ;
+            schema1:name "Standardfehler"@de,
+                "Standard error"@en,
+                "Erreur standard"@fr,
+                "Errore standard"@it ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:path mock:standardError ] .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Bern> mock:standardError 5.0 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;

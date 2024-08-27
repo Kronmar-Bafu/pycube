@@ -20,6 +20,8 @@ Contact Point:
 Base-URI: https://mock.ld.admin.ch/
 Identifier: mock-example
 Version: 1
+# Optional but recommended
+#Accrual Periodicity: yearly
+
+# Optional
 Namespace: mock
-# optional but recommended
-Accrual Periodicity: yearly

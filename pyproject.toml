@@ -3,9 +3,12 @@ requires = ["hatchling", "hatch-requirements-txt"]
 build-backend = "hatchling.build"
 
 [project]
-name = "cubelink"
+name = "py_cube"
 version = "0.1.0"
 dynamic = ["dependencies"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["py_cube"]
 
 [tool.hatch.metadata.hooks.requirements_txt]
 files = ["requirements.txt"]

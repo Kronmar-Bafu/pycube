@@ -2,7 +2,7 @@ from rdflib import BNode, Graph, Literal, Namespace, RDF, URIRef, XSD
 import pandas as pd
 import numbers
 import yaml
-from cubelink.lindas.namespaces import *
+from py_cube.lindas.namespaces import *
 
 
 
