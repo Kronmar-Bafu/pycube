@@ -7,11 +7,12 @@ Description:
   de: Ein Beispiel Cube, der simulierten Daten enthält
   en: An example Cube containing some simulated data
 Publisher: 
-  IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+  - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
 Creator:
-  IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+  - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
 Contributor:
-  IRI: https://register.ld.admin.ch/opendataswiss/org/foen # mal nachschauen wie es wirklich ist fürs BAFU
+  - IRI: https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-umwelt-bafu
+    Name: Bundesamt für Mock Data
 Date Created:
   2024-08-26
 Contact Point:
@@ -20,8 +21,12 @@ Contact Point:
 Base-URI: https://mock.ld.admin.ch/
 Identifier: mock-example
 Version: 1
+Work Status: 
+  Draft
+Visualize:
+  True
 # Optional but recommended
-#Accrual Periodicity: yearly
+Accrual Periodicity: yearly
 
 # Optional
 Namespace: mock

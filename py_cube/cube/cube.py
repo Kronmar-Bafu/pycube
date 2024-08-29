@@ -1,4 +1,6 @@
 from rdflib import BNode, Graph, Literal, Namespace, RDF, URIRef, XSD
+from rdflib.collection import Collection
+from datetime import datetime, timezone
 import pandas as pd
 import numbers
 import yaml
@@ -77,15 +79,73 @@ class Cube:
         self._graph.add((self._cube_uri, RDF.type, DCAT.Dataset))
         self._graph.add((self._cube_uri, RDF.type, VOID.Dataset))
 
+        names = self._cube_dict.get("Name")
+        for lan, name in names.items():
+            self._graph.add((self._cube_uri, SCHEMA.name, Literal(name, lang=lan)))
+            self._graph.add((self._cube_uri, DCT.title, Literal(name, lang=lan)))
+        
+        descriptions = self._cube_dict.get("Description")
+        for lan, desc in descriptions.items():
+            self._graph.add((self._cube_uri, SCHEMA.description, Literal(desc, lang=lan)))
+            self._graph.add((self._cube_uri, DCT.description, Literal(desc, lang=lan)))
+
+        publisher = self._cube_dict.get("Publisher")
+        for pblshr in publisher:
+            self._graph.add((self._cube_uri, SCHEMA.publisher, URIRef(pblshr.get("IRI"))))
+
+        creator = self._cube_dict.get("Creator")
+        for crtr in creator:
+            self._graph.add((self._cube_uri, SCHEMA.creator, URIRef(crtr.get("IRI"))))
+
+        contributor = self._cube_dict.get("Contributor")
+        for cntrbtr in contributor:
+            self._graph.add((self._cube_uri, SCHEMA.contributor, URIRef(cntrbtr.get("IRI"))))
+        
+        self._write_contact_point(self._cube_dict.get("Contact Point"))
+
+        today = datetime.today().strftime("%Y-%m-%d")
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+        
+        self._graph.add((self._cube_uri, SCHEMA.dateCreated, Literal(self._cube_dict.get("Date Created"), datatype=XSD.date)))
+        self._graph.add((self._cube_uri, SCHEMA.datePublished, Literal(today, datatype=XSD.date)))
+        # todo: serialization yields improper format for datetime (with timezone as +02:00 instead of proper UTC)
+        self._graph.add((self._cube_uri, SCHEMA.dateModified, Literal(now, datatype=XSD.dateTime)))
+        
+        self._graph.add((self._cube_uri, CUBE.observationSet, self._cube_uri + "/ObservationSet"))
+        self._graph.add((self._cube_uri, CUBE.observationConstraint, self._shape_URI))
+
+        if self._cube_dict.get("Visualize"):
+            self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef("https://ld.admin.ch/application/visualize")))
+        
+        if self._cube_dict.get("Work Status"):
+            status = self._cube_dict.get("Work Status")
+            self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
+
         if self._cube_dict.get("Accrual Periodicity"):
             self._add_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
+
+    def _write_contact_point(self, contact_dict: dict):
+        if contact_dict.get("IRI"):
+            self._graph.add((self._cube_uri, SCHEMA.contactPoint, URIRef(contact_dict.get("IRI"))))
+        else:
+            contact_node = BNode()
+            self._graph.add((self._cube_uri, SCHEMA.contactPoint, contact_node))
+            self._graph.add((contact_node, SCHEMA.email, Literal(contact_dict.get("E-Mail"))))
+            self._graph.add((contact_node, SCHEMA.name, Literal(contact_dict.get("Name"))))
 
     def _add_accrual_periodicity(self, periodicity: str):
         base_uri = URIRef("http://publications.europe.eu/resource/authority/frequency/")
         match periodicity:
+            case "daily":
+                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "DAILY"))
+            case "weekly":
+                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "WEEKLY"))
+            case "monthly":
+                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "MONTHLY"))
             case "yearly": 
                 self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "ANNUAL"))
-
+            case "irregular":
+                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "IRREG"))
 
     def _write_obs(self):
         self._dataframe.apply(self._add_observation, axis=1)
@@ -103,7 +163,7 @@ class Cube:
             shape = self._write_dimension_shape(dim_dict, self._dataframe[dim])
             self._graph.add((self._shape_URI, SH.property, shape))
     
-    def _write_dimension_shape(self, dim_dict: dict, obs: pd.Series) -> BNode:
+    def _write_dimension_shape(self, dim_dict: dict, values: pd.Series) -> BNode:
         dim_node = BNode()
         
         self._graph.add((dim_node, SH.minCount, Literal(1)))
@@ -130,12 +190,16 @@ class Cube:
         match dim_dict.get("scale-type"):
             case "nominal":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.NominalSclae))
+                self._add_sh_list(dim_node, values)
             case "ordinal":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.OrdinalScale))
+                self._add_sh_list(dim_node, values)
             case "interval":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.IntervalScale))
+                self._add_min_max(dim_node, values)
             case "ratio":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.RatioScale))
+                self._add_min_max(dim_node, values)
             case _ as unrecognized:
                 print(f"Scale Type '{unrecognized}' is not recognized")
         
@@ -143,12 +207,25 @@ class Cube:
         #    match dim_dict.get("")
 
         return dim_node
+    
+    def _add_sh_list(self, dim_node: BNode, values: pd.Series):
+        list_node = BNode()
+        unique_values = values.unique()
+        Collection(self._graph, list_node, [URIRef(vl) for vl in unique_values])
+        self._graph.add((dim_node, URIRef(SH + "in"), list_node))
+
+    def _add_min_max(self, dim_node: BNode, values: pd.Series):
+        # todo: case of cube.Undefined should be covered
+        _min = values.min()
+        _max = values.max()
+        self._graph.add((dim_node, SH.min, Literal(_min)))
+        self._graph.add((dim_node, SH.max, Literal(_max)))
 
     @staticmethod
     def _sanitize_value(value):
         if isinstance(value, numbers.Number):
             if pd.isna(value):
-                return Literal("", datatype=cube.Undefined)
+                return Literal("", datatype=CUBE.Undefined)
             else:
                 return Literal(value, datatype=XSD.decimal)
         elif isinstance(value, URIRef):
