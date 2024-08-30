@@ -1,6 +1,6 @@
 from fastapi import FastAPI, Response
 from fastapi.responses import StreamingResponse
-from cubelink import get_observations, get_cube
+from py_cube import get_observations, get_cube
 import io
 
 app = FastAPI()
