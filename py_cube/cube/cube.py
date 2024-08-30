@@ -22,6 +22,16 @@ class Cube:
 
     
     def __init__(self, dataframe: pd.DataFrame, shape_yaml: dict, cube_yaml: dict):
+        """Initialize the CubeBuilder object.
+        
+        Args:
+            dataframe (pd.DataFrame): The input dataframe containing the data.
+            shape_yaml (dict): The YAML configuration for the shape of the data cube.
+            cube_yaml (dict): The YAML configuration for the data cube.
+        
+        Returns:
+            None
+        """
         self._dataframe = dataframe
         self._setup_cube_dict(cube_yaml=cube_yaml)
         self._setup_shape_dicts(shape_yaml=shape_yaml)
@@ -33,17 +43,38 @@ class Cube:
         self._write_shape()
         self._graph.serialize("tests/mock-cube.ttl", format="turtle")
 
-    def _setup_cube_dict(self, cube_yaml: dict):
+    def _setup_cube_dict(self, cube_yaml: dict) -> None:
+        """Set up the cube dictionary with the provided YAML data.
+        
+            Args:
+                cube_yaml (dict): A dictionary containing cube information.
+        
+            Returns:
+                None
+        """
         self._base_uri = URIRef(cube_yaml.get("Base-URI"))
         self._cube_dict = cube_yaml
         self._cube_uri = URIRef(self._base_uri + "/".join(["cube", str(cube_yaml.get("Identifier")), str(cube_yaml.get("Version"))]))
     
-    def _setup_shape_dicts(self, shape_yaml: dict):
+    def _setup_shape_dicts(self, shape_yaml: dict) -> None:
+        """Set up shape dictionaries based on the provided YAML file.
+        
+            Args:
+                shape_yaml (dict): A dictionary containing shape information.
+        
+            Returns:
+                None
+        """
         self._shape_dict = shape_yaml.get("dimensions")
         self._shape_URI = URIRef(self._cube_uri + "/shape") 
         self._key_dimensions = [dim_name for dim_name, dim in self._shape_dict.items() if dim.get("dimension-type") == "Key Dimension"]
 
     def _setup_graph(self) -> Graph:
+        """Set up the graph by binding namespaces and returning the graph object.
+        
+        Returns:
+            Graph: The graph object with namespaces bound.
+        """
         graph = Graph()
         for prefix, nmspc in Namespaces.items():
             graph.bind(prefix=prefix, namespace=nmspc)
@@ -55,6 +86,13 @@ class Cube:
         return graph
 
     def _construct_obs_uri(self) -> None:
+        """Construct observation URIs for each row in the dataframe.
+        
+        This function constructs observation URIs for each row in the dataframe based on the cube URI and key dimensions.
+        
+        Returns:
+            None
+        """
         self._dataframe['obs-uri'] = self._dataframe.apply(
             lambda row: self._cube_uri + "/observation/" + "_".join([str(row[key_dim]) for key_dim in self._key_dimensions]), axis=1
         )
@@ -62,6 +100,17 @@ class Cube:
         self._dataframe = self._dataframe.set_index("obs-uri")
 
     def _apply_mappings(self) -> None:
+        """Apply mappings to the dataframe based on the specified mapping type.
+        
+        This method iterates through the dimensions in the shape dictionary and applies mappings to the dataframe if a mapping is defined for the dimension. 
+        For dimensions with 'additive' mapping type, it adds a baseline URI in front of the value. For example the entry 1999 will be replaced with 
+        https://ld.admin.ch/time/year/1999. 
+        For dimensions with 'replace' mapping type, it replaces values in the dataframe column based on the specified replacements.
+        Finally, it converts the values in the dataframe column to URIRef objects.
+        
+        Returns:
+            None
+        """
         for dim_name, dim_dict in self._shape_dict.items():
             if "mapping" in dim_dict:
                 mapping = dim_dict.get("mapping")
@@ -73,7 +122,13 @@ class Cube:
                         self._dataframe[dim_name] = self._dataframe[dim_name].map(mapping.get("replacements"))
                 self._dataframe[dim_name] = self._dataframe[dim_name].map(URIRef)
 
-    def _write_cube(self):
+    def _write_cube(self) -> None:
+        """Writes metadata about the cube to the graph including name, description, publisher, creator, contributor, contact point, dates, observation set, 
+        observation constraint, visualization link, work status link, and accrual periodicity.
+        
+        Returns:
+            None
+        """
         self._graph.add((self._cube_uri, RDF.type, CUBE.Cube))
         self._graph.add((self._cube_uri, RDF.type, SCHEMA.Dataset))
         self._graph.add((self._cube_uri, RDF.type, DCAT.Dataset))
@@ -101,7 +156,8 @@ class Cube:
         for cntrbtr in contributor:
             self._graph.add((self._cube_uri, SCHEMA.contributor, URIRef(cntrbtr.get("IRI"))))
         
-        self._write_contact_point(self._cube_dict.get("Contact Point"))
+        contact_Node = self._write_contact_point(self._cube_dict.get("Contact Point"))
+        self._graph.add((self._cube_uri, SCHEMA.contactPoint, contact_Node))
 
         today = datetime.today().strftime("%Y-%m-%d")
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -122,35 +178,61 @@ class Cube:
             self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
 
         if self._cube_dict.get("Accrual Periodicity"):
-            self._add_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
+            accrual_periodicity_uri = self._get_accrual_periodictiy(self._cube_dict.get("Accrual Periodicity"))
+            self._graph.add((self._cube_uri, DCT.accrualPeriodicity, accrual_periodicity_uri))
 
-    def _write_contact_point(self, contact_dict: dict):
+    def _write_contact_point(self, contact_dict: dict) -> BNode|URIRef:
+        """Writes a contact point to the graph.
+        
+            Args:
+                contact_dict (dict): A dictionary containing information about the contact point.
+                
+            Returns:
+                BNode or URIRef: The created BNode or URIRef representing the contact point.
+        """
         if contact_dict.get("IRI"):
-            self._graph.add((self._cube_uri, SCHEMA.contactPoint, URIRef(contact_dict.get("IRI"))))
+            return URIRef(contact_dict.get("IRI"))
         else:
             contact_node = BNode()
-            self._graph.add((self._cube_uri, SCHEMA.contactPoint, contact_node))
             self._graph.add((contact_node, SCHEMA.email, Literal(contact_dict.get("E-Mail"))))
             self._graph.add((contact_node, SCHEMA.name, Literal(contact_dict.get("Name"))))
+            return contact_node
 
-    def _add_accrual_periodicity(self, periodicity: str):
+    def _get_accrual_periodicity(self, periodicity: str) -> URIRef:
+        """Get the URIRef for the given accrual periodicity.
+        
+        Args:
+            periodicity (str): The periodicity of the accrual.
+        
+        Returns:
+            URIRef: The URIRef corresponding to the accrual periodicity.
+        """
         base_uri = URIRef("http://publications.europe.eu/resource/authority/frequency/")
         match periodicity:
             case "daily":
-                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "DAILY"))
+                return URIRef(base_uri + "DAILY")
             case "weekly":
-                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "WEEKLY"))
+                return URIRef(base_uri + "WEEKLY")
             case "monthly":
-                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "MONTHLY"))
+                return URIRef(base_uri + "MONTHLY")
             case "yearly": 
-                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "ANNUAL"))
+                return URIRef(base_uri + "ANNUAL")
             case "irregular":
-                self._graph.add((self._cube_uri, DCT.accrualPeriodicity, base_uri + "IRREG"))
+                return URIRef(base_uri + "IRREG")
 
-    def _write_obs(self):
+    def _write_obs(self) -> None:
+        """Apply the _add_observation method to each row in the dataframe."""
         self._dataframe.apply(self._add_observation, axis=1)
 
-    def _add_observation(self, obs: pd.DataFrame):
+    def _add_observation(self, obs: pd.DataFrame) -> None:
+        """Add an observation to the cube.
+        
+            Args:
+                obs (pd.DataFrame): The observation data to be added.
+        
+            Returns:
+                None
+        """
         self._graph.add((self._cube_uri + "/ObservationSet", cube.observation, obs.name))
 
         for column in obs.keys():
@@ -158,12 +240,32 @@ class Cube:
             sanitized_value = self._sanitize_value(obs.get(column))
             self._graph.add((obs.name, URIRef(path), sanitized_value))
 
-    def _write_shape(self):
+    def _write_shape(self) -> None:
+        """Writes the shape of the data frame to the graph.
+        
+            This function iterates over the dimensions in the shape dictionary and writes the shape of each dimension to the graph by adding it as a 
+            SH:property of the shape URI.
+        
+            Args:
+                self: The object instance.
+            
+            Returns:
+                None
+        """
         for dim, dim_dict in self._shape_dict.items():
             shape = self._write_dimension_shape(dim_dict, self._dataframe[dim])
             self._graph.add((self._shape_URI, SH.property, shape))
     
     def _write_dimension_shape(self, dim_dict: dict, values: pd.Series) -> BNode:
+        """Write dimension shape based on the provided dictionary and values.
+        
+        Args:
+            dim_dict (dict): A dictionary containing information about the dimension.
+            values (pd.Series): A pandas Series containing values related to the dimension.
+        
+        Returns:
+            BNode: The created dimension node in the graph.
+        """
         dim_node = BNode()
         
         self._graph.add((dim_node, SH.minCount, Literal(1)))
@@ -209,12 +311,30 @@ class Cube:
         return dim_node
     
     def _add_sh_list(self, dim_node: BNode, values: pd.Series):
+        """Add a SHACL list of all unique values to the given dimension node.
+        
+            Args:
+                dim_node (BNode): The dimension node to which the SHACL list will be added.
+                values (pd.Series): The values to be added to the SHACL list.
+        
+            Returns:
+                None
+        """
         list_node = BNode()
         unique_values = values.unique()
         Collection(self._graph, list_node, [URIRef(vl) for vl in unique_values])
         self._graph.add((dim_node, URIRef(SH + "in"), list_node))
 
     def _add_min_max(self, dim_node: BNode, values: pd.Series):
+        """Add minimum and maximum values to the given dimension node.
+        
+            Args:
+                dim_node (BNode): The dimension node to which the values will be added.
+                values (pd.Series): The series of values from which minimum and maximum will be calculated.
+        
+            Todo:
+                Case of cube.Undefined should be covered.
+        """
         # todo: case of cube.Undefined should be covered
         _min = values.min()
         _max = values.max()
@@ -222,7 +342,15 @@ class Cube:
         self._graph.add((dim_node, SH.max, Literal(_max)))
 
     @staticmethod
-    def _sanitize_value(value):
+    def _sanitize_value(value) -> Literal|URIRef:
+        """Sanitize the input value to ensure it is in a valid format.
+        
+            Args:
+                value: The value to be sanitized.
+        
+            Returns:
+                Literal or URIRef: The sanitized value in the form of a Literal or URIRef.
+        """
         if isinstance(value, numbers.Number):
             if pd.isna(value):
                 return Literal("", datatype=CUBE.Undefined)

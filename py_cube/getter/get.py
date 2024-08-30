@@ -4,6 +4,19 @@ from SPARQLWrapper import SPARQLWrapper, JSON
 
 
 def get_cube(endpoint: str, identifier: str, version: str):
+    """Retrieve the cube URI based on the provided identifier and version using SPARQL query.
+    
+        Args:
+            endpoint (str): The SPARQL endpoint URL.
+            identifier (str): The identifier of the cube.
+            version (str): The version of the cube.
+    
+        Returns:
+            str: The URI of the cube.
+    
+        Raises:
+            Exception: If an error occurs during the SPARQL query execution.
+    """
     match endpoint:
         case "TEST":
             endpoint = "https://test.lindas.admin.ch/query"
@@ -37,6 +50,16 @@ def get_cube(endpoint: str, identifier: str, version: str):
 
 
 def get_observations(endpoint: str, identifier: str, version: str):
+    """Retrieve observations from a given endpoint based on the provided identifier and version.
+    
+        Args:
+            endpoint (str): The SPARQL endpoint URL.
+            identifier (str): The identifier for the observations.
+            version (str): The version of the observations.
+    
+        Returns:
+            pandas.DataFrame: A DataFrame containing the observations with columns for observation, predicate, and value.
+    """
     match endpoint:
         case "TEST":
             endpoint = "https://test.lindas.admin.ch/query"
