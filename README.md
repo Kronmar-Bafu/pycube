@@ -30,18 +30,3 @@ If you wish to contribute to this project, feel free to clone this repository an
 Alternatively feel free to open an issue with a suggestion on what we could implement. We laid out a rough road map for the features ahead on our [Timetable](https://github.com/Kronmar-Bafu/cubelink/wiki/Timetable)
 
 
-<<<<<<< HEAD
-Version | Features
-------|---------------
-0.1.0 | Build cubes
-0.1.1 | Read me + "Wiki"
-0.1.2 | Fix Getter
-0.2.0 | Validierung mit pyShacl, Upload 
-0.2.1 | Fix der Issues die von der Validierung kommen werden (units?)
-0.3.0 | Smart Validierung (gibt es die Cubes schon? Sonstige URIs)
-0.4.0 | Lindas -> yaml?
-1.0.0 | SharedDimension Mapping: Pre-Processing, mini API (Look-Up, gibt es eine solche URI, die ich benötige?), Replaces Mapping in Dimension-yaml
-1.1.0 | SharedDimension in Python?
-2.0.0 | Smart Upload (Diff-Upload?)
-=======
->>>>>>> 3fcc0149b5bab0ae3af17ad6c0b4bcd470ca5c0d
