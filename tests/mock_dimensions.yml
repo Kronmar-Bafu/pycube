@@ -12,7 +12,6 @@ dimensions:
     dimension-type: Key Dimension
     scale-type: ordinal
     path: year
-  # optional - löschen wenn nicht benötigt
     data-kind: 
       type: temporal
       unit: year
