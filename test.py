@@ -1,15 +1,19 @@
 import pandas as pd
-import numpy as np
 from math import pi
 import py_cube
 import yaml
 
-mock_df = pd.read_csv("tests/mock_data.csv")
+import py_cube.lindas
+from py_cube.lindas.upload import upload_ttl
 
-with open("tests/mock_dimensions.yml") as file:
-    shape_yaml = yaml.safe_load(file)
+# mock_df = pd.read_csv("tests/mock_data.csv")
 
-with open("tests/mock_cube.yml") as file:
-    cube_yaml = yaml.safe_load(file)
+# with open("tests/mock_dimensions.yml") as file:
+#     shape_yaml = yaml.safe_load(file)
 
-cube = py_cube.Cube(dataframe=mock_df, shape_yaml=shape_yaml, cube_yaml=cube_yaml)
+# with open("tests/mock_cube.yml") as file:
+#     cube_yaml = yaml.safe_load(file)
+
+# cube = py_cube.Cube(dataframe=mock_df, shape_yaml=shape_yaml, cube_yaml=cube_yaml)
+
+upload_ttl("lindas.ini", "lindas.ini", "TEST")
