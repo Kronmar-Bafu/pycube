@@ -29,8 +29,8 @@ def _load_config(db_file:str, environment: str) -> dict:
 
 def upload_ttl(filename: str, db_file: str, environment: str):
     conn_details = _load_config(db_file, environment)
-    print(conn_details)
-    # with stardog.Connection("lindas", **conn_details) as conn:
-    #     conn.begin()
-    #     conn.add(stardog.content.File(file=filename))
-    #     conn.commit()
+
+    with stardog.Connection("lindas", **conn_details) as conn:
+        conn.begin()
+        conn.add(stardog.content.File(file=filename))
+        conn.commit()
