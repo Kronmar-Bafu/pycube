@@ -3,8 +3,10 @@ from rdflib.collection import Collection
 from datetime import datetime, timezone
 import pandas as pd
 import numbers
+import sys
 import yaml
 from py_cube.lindas.namespaces import *
+from py_cube.lindas.query import query_lindas
 
 
 
@@ -21,7 +23,7 @@ class Cube:
     _shape_URI: URIRef
 
     
-    def __init__(self, dataframe: pd.DataFrame, shape_yaml: dict, cube_yaml: dict):
+    def __init__(self, dataframe: pd.DataFrame, shape_yaml: dict, cube_yaml: dict, environment: str):
         """Initialize the CubeBuilder object.
         
         Args:
@@ -34,6 +36,7 @@ class Cube:
         """
         self._dataframe = dataframe
         self._setup_cube_dict(cube_yaml=cube_yaml)
+        self._setup_cube_uri()
         self._setup_shape_dicts(shape_yaml=shape_yaml)
         self._graph = self._setup_graph()
         self._construct_obs_uri()
@@ -41,7 +44,7 @@ class Cube:
         self._write_cube()
         self._write_obs()
         self._write_shape()
-        self._graph.serialize("tests/mock-cube.ttl", format="turtle")
+        self._graph.serialize("example/mock-cube.ttl", format="turtle")
 
     def _setup_cube_dict(self, cube_yaml: dict) -> None:
         """Set up the cube dictionary with the provided YAML data.
@@ -55,6 +58,12 @@ class Cube:
         self._base_uri = URIRef(cube_yaml.get("Base-URI"))
         self._cube_dict = cube_yaml
         self._cube_uri = URIRef(self._base_uri + "/".join(["cube", str(cube_yaml.get("Identifier")), str(cube_yaml.get("Version"))]))
+    
+    def _setup_cube_uri(self):
+        cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
+        query = f"ASK {{ <{cube_uri}> ?p ?o}}"
+        if query_lindas(query, environment="TEST") == False:
+            sys.exit("Cube already exist! Please update your yaml")
     
     def _setup_shape_dicts(self, shape_yaml: dict) -> None:
         """Set up shape dictionaries based on the provided YAML file.
@@ -178,7 +187,7 @@ class Cube:
             self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
 
         if self._cube_dict.get("Accrual Periodicity"):
-            accrual_periodicity_uri = self._get_accrual_periodictiy(self._cube_dict.get("Accrual Periodicity"))
+            accrual_periodicity_uri = self._get_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
             self._graph.add((self._cube_uri, DCT.accrualPeriodicity, accrual_periodicity_uri))
 
     def _write_contact_point(self, contact_dict: dict) -> BNode|URIRef:

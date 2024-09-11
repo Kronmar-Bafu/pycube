@@ -20,13 +20,13 @@
         "Mock Cube"@en,
         "Mock Cube"@fr,
         "Mock Cube"@it ;
-    schema1:contactPoint [ schema1:email "contackt@mock.ld.admin.ch" ;
+    schema1:contactPoint [ schema1:email "contact@mock.ld.admin.ch" ;
             schema1:name "Bundesamt für Mock Data" ] ;
     schema1:contributor <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-umwelt-bafu> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-08-29T11:41:34+00:00"^^xsd:dateTime ;
-    schema1:datePublished "2024-08-29"^^xsd:date ;
+    schema1:dateModified "2024-09-11T14:29:35+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-09-11"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierten Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     schema1:name "Mock Cube"@de,
@@ -34,6 +34,8 @@
         "Mock Cube"@fr,
         "Mock Cube"@it ;
     schema1:publisher <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    schema1:workExample <https://ld.admin.ch/application/visualize>,
+        <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     cube:observationConstraint <https://mock.ld.admin.ch/cube/mock-example/1/shape> ;
     cube:observationSet <https://mock.ld.admin.ch/cube/mock-example/1/ObservationSet> .
 
@@ -101,7 +103,7 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Zürich> mock:standardError 6.030296213104391 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
-    mock:value 21.65992433002125 ;
+    mock:value 21.659924330021255 ;
     mock:year <https://ld.admin.ch/time/year/2001> .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2002_Bern> mock:standardError 1.493504195537817 ;
@@ -129,7 +131,7 @@
     mock:value 19.883669558588743 ;
     mock:year <https://ld.admin.ch/time/year/2004> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Zürich> mock:standardError 7.390939821011258 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Zürich> mock:standardError 7.390939821011259 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 19.06703223788886 ;
     mock:year <https://ld.admin.ch/time/year/2004> .
@@ -144,7 +146,7 @@
     mock:value 19.10206139418359 ;
     mock:year <https://ld.admin.ch/time/year/2005> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Bern> mock:standardError 2.520552866392209 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Bern> mock:standardError 2.5205528663922094 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 17.851780950874087 ;
     mock:year <https://ld.admin.ch/time/year/2006> .
@@ -156,7 +158,7 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Bern> mock:standardError 4.873759639672014 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
-    mock:value 18.321158320002034 ;
+    mock:value 18.32115832000203 ;
     mock:year <https://ld.admin.ch/time/year/2007> .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Zürich> mock:standardError 7.127258811335302 ;
@@ -194,7 +196,7 @@
     mock:value 14.658857249625616 ;
     mock:year <https://ld.admin.ch/time/year/2010> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Bern> mock:standardError 2.768558605478989 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Bern> mock:standardError 2.7685586054789892 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 15.23952733205338 ;
     mock:year <https://ld.admin.ch/time/year/2011> .
@@ -314,19 +316,7 @@
     mock:value 7.984094086903241 ;
     mock:year <https://ld.admin.ch/time/year/2022> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/shape> sh:property [ a cube:KeyDimension ;
-            qudt:scaleType qudt:OrdinalScale ;
-            schema1:description "Jahr der Erhebung"@de ;
-            schema1:name "Jahr"@de,
-                "Year"@en,
-                "An"@fr,
-                "Anno"@it ;
-            sh:in ( <https://ld.admin.ch/time/year/2000> <https://ld.admin.ch/time/year/2001> <https://ld.admin.ch/time/year/2002> <https://ld.admin.ch/time/year/2003> <https://ld.admin.ch/time/year/2004> <https://ld.admin.ch/time/year/2005> <https://ld.admin.ch/time/year/2006> <https://ld.admin.ch/time/year/2007> <https://ld.admin.ch/time/year/2008> <https://ld.admin.ch/time/year/2009> <https://ld.admin.ch/time/year/2010> <https://ld.admin.ch/time/year/2011> <https://ld.admin.ch/time/year/2012> <https://ld.admin.ch/time/year/2013> <https://ld.admin.ch/time/year/2014> <https://ld.admin.ch/time/year/2015> <https://ld.admin.ch/time/year/2016> <https://ld.admin.ch/time/year/2017> <https://ld.admin.ch/time/year/2018> <https://ld.admin.ch/time/year/2019> <https://ld.admin.ch/time/year/2020> <https://ld.admin.ch/time/year/2021> <https://ld.admin.ch/time/year/2022> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:year ],
-        [ a cube:MeasureDimension ;
+<https://mock.ld.admin.ch/cube/mock-example/1/shape> sh:property [ a cube:MeasureDimension ;
             qudt:scaleType qudt:RatioScale ;
             schema1:description "Standardfehler des berechneten Werts"@de ;
             schema1:name "Standardfehler"@de,
@@ -338,18 +328,6 @@
             sh:min 3.648574e-01 ;
             sh:minCount 1 ;
             sh:path mock:standardError ],
-        [ a cube:KeyDimension ;
-            qudt:scaleType qudt:NominalSclae ;
-            schema1:description "Station der Untersuchung"@de ;
-            schema1:name "Station"@de,
-                "Station"@en,
-                "Station"@fr,
-                "Stazione"@it ;
-            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:station ],
         [ a cube:MeasureDimension ;
             qudt:scaleType qudt:IntervalScale ;
             schema1:description "Gemessener Wert an der Station"@de ;
@@ -361,5 +339,29 @@
             sh:maxCount 1 ;
             sh:min 6.873746e+00 ;
             sh:minCount 1 ;
-            sh:path mock:value ] .
+            sh:path mock:value ],
+        [ a cube:KeyDimension ;
+            qudt:scaleType qudt:OrdinalScale ;
+            schema1:description "Jahr der Erhebung"@de ;
+            schema1:name "Jahr"@de,
+                "Year"@en,
+                "An"@fr,
+                "Anno"@it ;
+            sh:in ( <https://ld.admin.ch/time/year/2000> <https://ld.admin.ch/time/year/2001> <https://ld.admin.ch/time/year/2002> <https://ld.admin.ch/time/year/2003> <https://ld.admin.ch/time/year/2004> <https://ld.admin.ch/time/year/2005> <https://ld.admin.ch/time/year/2006> <https://ld.admin.ch/time/year/2007> <https://ld.admin.ch/time/year/2008> <https://ld.admin.ch/time/year/2009> <https://ld.admin.ch/time/year/2010> <https://ld.admin.ch/time/year/2011> <https://ld.admin.ch/time/year/2012> <https://ld.admin.ch/time/year/2013> <https://ld.admin.ch/time/year/2014> <https://ld.admin.ch/time/year/2015> <https://ld.admin.ch/time/year/2016> <https://ld.admin.ch/time/year/2017> <https://ld.admin.ch/time/year/2018> <https://ld.admin.ch/time/year/2019> <https://ld.admin.ch/time/year/2020> <https://ld.admin.ch/time/year/2021> <https://ld.admin.ch/time/year/2022> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mock:year ],
+        [ a cube:KeyDimension ;
+            qudt:scaleType qudt:NominalSclae ;
+            schema1:description "Station der Untersuchung"@de ;
+            schema1:name "Station"@de,
+                "Station"@en,
+                "Station"@fr,
+                "Stazione"@it ;
+            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mock:station ] .
 
