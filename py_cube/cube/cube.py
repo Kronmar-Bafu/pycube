@@ -23,7 +23,7 @@ class Cube:
     _shape_URI: URIRef
 
     
-    def __init__(self, dataframe: pd.DataFrame, shape_yaml: dict, cube_yaml: dict, environment: str):
+    def __init__(self, dataframe: pd.DataFrame, shape_yaml: dict, cube_yaml: dict, environment: str, local=False):
         """Initialize the CubeBuilder object.
         
         Args:
@@ -36,7 +36,7 @@ class Cube:
         """
         self._dataframe = dataframe
         self._setup_cube_dict(cube_yaml=cube_yaml)
-        self._setup_cube_uri()
+        self._setup_cube_uri(local)
         self._setup_shape_dicts(shape_yaml=shape_yaml)
         self._graph = self._setup_graph()
         self._construct_obs_uri()
@@ -59,10 +59,10 @@ class Cube:
         self._cube_dict = cube_yaml
         self._cube_uri = URIRef(self._base_uri + "/".join(["cube", str(cube_yaml.get("Identifier")), str(cube_yaml.get("Version"))]))
     
-    def _setup_cube_uri(self):
+    def _setup_cube_uri(self, local):
         cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
         query = f"ASK {{ <{cube_uri}> ?p ?o}}"
-        if query_lindas(query, environment="TEST") == True:
+        if query_lindas(query, environment="TEST") == True and not local:
             sys.exit("Cube already exist! Please update your yaml")
     
     def _setup_shape_dicts(self, shape_yaml: dict) -> None:
@@ -297,6 +297,13 @@ class Cube:
                 
             case "Measure Dimension":
                 self._graph.add((dim_node, RDF.type, CUBE.MeasureDimension))
+            
+            case "Standard Error":
+                relation_node = BNode()
+                relation_path = dim_dict.get("relates-to")
+                self._graph.add((relation_node, RDF.type, RELATION.StandardError))
+                self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
+                self._graph.add((dim_node, META.dimensionRelation, relation_node))
             case _ as unrecognized:
                 print(f"Dimension Type '{unrecognized}' is not recognized")
         

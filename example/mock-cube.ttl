@@ -1,9 +1,11 @@
 @prefix cube: <https://cube.link/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
+@prefix meta: <https://cube.link/meta/> .
 @prefix mock: <https://mock.ld.admin.ch/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix relation: <http://cube.link/relation/> .
 @prefix schema1: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
 @prefix void: <http://rdfs.org/ns/void#> .
@@ -26,8 +28,8 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-09-11T18:55:03+00:00"^^xsd:dateTime ;
-    schema1:datePublished "2024-09-11"^^xsd:date ;
+    schema1:dateModified "2024-09-12T04:58:18+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-09-12"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     schema1:name "Mock Cube"@de,
@@ -319,7 +321,18 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
     sh:property [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:RatioScale ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Gemessener Wert an der Station"@de ;
+            schema1:name "Wert"@de,
+                "Value"@en,
+                "Valeur"@fr,
+                "Valore"@it ;
+            sh:max 2.355574e+01 ;
+            sh:maxCount 1 ;
+            sh:min 6.873746e+00 ;
+            sh:minCount 1 ;
+            sh:path mock:value ],
+        [ qudt:scaleType qudt:RatioScale ;
             schema1:description "Standardfehler des berechneten Werts"@de ;
             schema1:name "Standardfehler"@de,
                 "Standard error"@en,
@@ -329,7 +342,9 @@
             sh:maxCount 1 ;
             sh:min 3.648574e-01 ;
             sh:minCount 1 ;
-            sh:path mock:standardError ],
+            sh:path mock:standardError ;
+            meta:dimensionRelation [ a relation:StandardError ;
+                    meta:relatesTo mock:value ] ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
@@ -342,18 +357,6 @@
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path mock:year ],
-        [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gemessener Wert an der Station"@de ;
-            schema1:name "Wert"@de,
-                "Value"@en,
-                "Valeur"@fr,
-                "Valore"@it ;
-            sh:max 2.355574e+01 ;
-            sh:maxCount 1 ;
-            sh:min 6.873746e+00 ;
-            sh:minCount 1 ;
-            sh:path mock:value ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:NominalSclae ;
             schema1:description "Station der Untersuchung"@de ;
