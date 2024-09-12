@@ -339,6 +339,21 @@ class Cube:
         except KeyError:
             pass
 
+        try:
+            data_kind = dim_dict.get("data-kind")
+            try: 
+                match data_kind.get("type"):
+                    case "temporal":
+                        data_kind_node = BNode()
+                        self._graph.add((data_kind_node, RDF.type, TIME.GeneralDateTimeDescription))
+                        self._graph.add((data_kind_node, TIME.unitType, TIME.unitYear))
+                        self._graph.add((dim_node, META.dataKind, data_kind_node))
+            except AttributeError:
+                pass
+        except KeyError or AttributeError:
+            pass
+
+
 
         return dim_node
     
