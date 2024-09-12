@@ -14,7 +14,7 @@ with open("example/mock_dimensions.yml") as file:
 with open("example/mock_cube.yml") as file:
     cube_yaml = yaml.safe_load(file)
 
-cube = py_cube.Cube(dataframe=mock_df, shape_yaml=shape_yaml, cube_yaml=cube_yaml, environment="TEST", local=True)
+cube = py_cube.Cube(dataframe=mock_df, shape_yaml=shape_yaml, cube_yaml=cube_yaml, environment="TEST")
 
-#upload_ttl(filename="./example/mock-cube.ttl", db_file="lindas.ini", environment="TEST")
+upload_ttl(filename="./example/mock-cube.ttl", db_file="lindas.ini", environment="TEST")
 

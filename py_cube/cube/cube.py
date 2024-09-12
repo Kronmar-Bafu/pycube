@@ -263,6 +263,7 @@ class Cube:
                 None
         """
         self._graph.add((self._shape_URI, RDF.type, CUBE.Constraint))
+        self._graph.add((self._shape_URI, SH.closed, Literal("true", datatype=XSD.boolean)))
         for dim, dim_dict in self._shape_dict.items():
             shape = self._write_dimension_shape(dim_dict, self._dataframe[dim])
             self._graph.add((self._shape_URI, SH.property, shape))
@@ -292,11 +293,12 @@ class Cube:
         match dim_dict.get("dimension-type"):
             case "Key Dimension":
                 self._graph.add((dim_node, RDF.type, CUBE.KeyDimension))
-                # to do: alle KeyDimensions IRI? Angenommen für den Moment ja
+                self._graph.add((dim_node, SH.nodeKind, SH.IRI))
                 self._graph.add((dim_node, SH.nodeKind, SH.IRI))
                 
             case "Measure Dimension":
                 self._graph.add((dim_node, RDF.type, CUBE.MeasureDimension))
+                self._graph.add((dim_node, SH.nodeKind, SH.Literal))
             
             case "Standard Error":
                 relation_node = BNode()
@@ -304,12 +306,13 @@ class Cube:
                 self._graph.add((relation_node, RDF.type, RELATION.StandardError))
                 self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
                 self._graph.add((dim_node, META.dimensionRelation, relation_node))
+                self._graph.add((dim_node, SH.nodeKind, SH.Literal))
             case _ as unrecognized:
                 print(f"Dimension Type '{unrecognized}' is not recognized")
         
         match dim_dict.get("scale-type"):
             case "nominal":
-                self._graph.add((dim_node, QUDT.scaleType, QUDT.NominalSclae))
+                self._graph.add((dim_node, QUDT.scaleType, QUDT.NominalScale))
                 self._add_sh_list(dim_node, values)
             case "ordinal":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.OrdinalScale))
@@ -323,8 +326,15 @@ class Cube:
             case _ as unrecognized:
                 print(f"Scale Type '{unrecognized}' is not recognized")
         
-        #try:
-        #    match dim_dict.get("")
+        try:
+            match dim_dict.get("unit"):
+                case "kilogramm":
+                   self._graph.add((dim_node, QUDT.hasUnit, UNIT.KiloGM))
+                case "percent":
+                   self._graph.add((dim_node, QUDT.hasUnit, UNIT.PERCENT))
+        except KeyError:
+            pass
+
 
         return dim_node
     

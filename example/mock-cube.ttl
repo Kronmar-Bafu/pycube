@@ -5,9 +5,10 @@
 @prefix mock: <https://mock.ld.admin.ch/> .
 @prefix qudt: <http://qudt.org/schema/qudt/> .
 @prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix relation: <http://cube.link/relation/> .
+@prefix relation: <https://cube.link/relation/> .
 @prefix schema1: <http://schema.org/> .
 @prefix sh: <http://www.w3.org/ns/shacl#> .
+@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
 
@@ -28,7 +29,7 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-09-12T04:58:18+00:00"^^xsd:dateTime ;
+    schema1:dateModified "2024-09-12T06:36:13+00:00"^^xsd:dateTime ;
     schema1:datePublished "2024-09-12"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
@@ -320,7 +321,21 @@
     mock:year <https://ld.admin.ch/time/year/2022> .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
-    sh:property [ a cube:MeasureDimension ;
+    sh:closed true ;
+    sh:property [ a cube:KeyDimension ;
+            qudt:scaleType qudt:NominalScale ;
+            schema1:description "Station der Untersuchung"@de ;
+            schema1:name "Station"@de,
+                "Station"@en,
+                "Station"@fr,
+                "Stazione"@it ;
+            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mock:station ],
+        [ a cube:MeasureDimension ;
+            qudt:hasUnit unit:KiloGM ;
             qudt:scaleType qudt:IntervalScale ;
             schema1:description "Gemessener Wert an der Station"@de ;
             schema1:name "Wert"@de,
@@ -331,20 +346,8 @@
             sh:maxCount 1 ;
             sh:min 6.873746e+00 ;
             sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
             sh:path mock:value ],
-        [ qudt:scaleType qudt:RatioScale ;
-            schema1:description "Standardfehler des berechneten Werts"@de ;
-            schema1:name "Standardfehler"@de,
-                "Standard error"@en,
-                "Erreur standard"@fr,
-                "Errore standard"@it ;
-            sh:max 9.624033e+00 ;
-            sh:maxCount 1 ;
-            sh:min 3.648574e-01 ;
-            sh:minCount 1 ;
-            sh:path mock:standardError ;
-            meta:dimensionRelation [ a relation:StandardError ;
-                    meta:relatesTo mock:value ] ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
@@ -357,16 +360,19 @@
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path mock:year ],
-        [ a cube:KeyDimension ;
-            qudt:scaleType qudt:NominalSclae ;
-            schema1:description "Station der Untersuchung"@de ;
-            schema1:name "Station"@de,
-                "Station"@en,
-                "Station"@fr,
-                "Stazione"@it ;
-            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
+        [ qudt:hasUnit unit:PERCENT ;
+            qudt:scaleType qudt:RatioScale ;
+            schema1:description "Standardfehler des berechneten Werts"@de ;
+            schema1:name "Standardfehler"@de,
+                "Standard error"@en,
+                "Erreur standard"@fr,
+                "Errore standard"@it ;
+            sh:max 9.624033e+00 ;
             sh:maxCount 1 ;
+            sh:min 3.648574e-01 ;
             sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:station ] .
+            sh:nodeKind sh:Literal ;
+            sh:path mock:standardError ;
+            meta:dimensionRelation [ a relation:StandardError ;
+                    meta:relatesTo mock:value ] ] .
 

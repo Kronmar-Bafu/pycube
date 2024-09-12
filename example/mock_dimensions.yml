@@ -47,6 +47,7 @@ dimensions:
     dimension-type: Measure Dimension
     scale-type: interval
     path: value
+    unit: kilogramm
 
   Standardfehler:
     name:
@@ -60,3 +61,4 @@ dimensions:
     relates-to: value
     scale-type: ratio
     path: standardError
+    unit: percent
