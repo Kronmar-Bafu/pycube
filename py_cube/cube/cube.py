@@ -166,7 +166,10 @@ class Cube:
             self._graph.add((self._cube_uri, SCHEMA.contributor, URIRef(cntrbtr.get("IRI"))))
         
         contact_Node = self._write_contact_point(self._cube_dict.get("Contact Point"))
-        self._graph.add((self._cube_uri, SCHEMA.contactPoint, contact_Node))
+        self._graph.add((self._cube_uri, DCAT.contactPoint, contact_Node))
+
+        version = self._cube_dict.get("Version")
+        self._graph.add((self._cube_uri, SCHEMA.version, Literal(version)))
 
         today = datetime.today().strftime("%Y-%m-%d")
         now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
@@ -203,8 +206,9 @@ class Cube:
             return URIRef(contact_dict.get("IRI"))
         else:
             contact_node = BNode()
-            self._graph.add((contact_node, SCHEMA.email, Literal(contact_dict.get("E-Mail"))))
-            self._graph.add((contact_node, SCHEMA.name, Literal(contact_dict.get("Name"))))
+            self._graph.add((contact_node, RDF.type, VCARD.Organization))
+            self._graph.add((contact_node, VCARD.hasEmail, Literal(contact_dict.get("E-Mail"), datatype=XSD.string)))
+            self._graph.add((contact_node, VCARD.fn, Literal(contact_dict.get("Name"), datatype=XSD.string)))
             return contact_node
 
     def _get_accrual_periodicity(self, periodicity: str) -> URIRef:
