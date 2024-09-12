@@ -62,7 +62,7 @@ class Cube:
     def _setup_cube_uri(self):
         cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
         query = f"ASK {{ <{cube_uri}> ?p ?o}}"
-        if query_lindas(query, environment="TEST") == False:
+        if query_lindas(query, environment="TEST") == True:
             sys.exit("Cube already exist! Please update your yaml")
     
     def _setup_shape_dicts(self, shape_yaml: dict) -> None:
@@ -184,7 +184,7 @@ class Cube:
         
         if self._cube_dict.get("Work Status"):
             status = self._cube_dict.get("Work Status")
-            self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
+            self._graph.add((self._cube_uri, SCHEMA.creativeWorkStatus, URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
 
         if self._cube_dict.get("Accrual Periodicity"):
             accrual_periodicity_uri = self._get_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
@@ -231,6 +231,7 @@ class Cube:
 
     def _write_obs(self) -> None:
         """Apply the _add_observation method to each row in the dataframe."""
+        self._graph.add((self._cube_uri + "/ObservationSet", RDF.type, CUBE.ObservationSet))
         self._dataframe.apply(self._add_observation, axis=1)
 
     def _add_observation(self, obs: pd.DataFrame) -> None:
@@ -261,6 +262,7 @@ class Cube:
             Returns:
                 None
         """
+        self._graph.add((self._shape_URI, RDF.type, CUBE.Constraint))
         for dim, dim_dict in self._shape_dict.items():
             shape = self._write_dimension_shape(dim_dict, self._dataframe[dim])
             self._graph.add((self._shape_URI, SH.property, shape))

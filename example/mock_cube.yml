@@ -4,7 +4,7 @@ Name:
   it: Mock Cube
   en: Mock Cube
 Description:
-  de: Ein Beispiel Cube, der simulierten Daten enthält
+  de: Ein Beispiel Cube, der simulierte Daten enthält
   en: An example Cube containing some simulated data
 Publisher: 
   - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock

@@ -14,7 +14,7 @@
         dcat:Dataset,
         cube:Cube ;
     dct:accrualPeriodicity <http://publications.europe.eu/resource/authority/frequency/ANNUAL> ;
-    dct:description "Ein Beispiel Cube, der simulierten Daten enthält"@de,
+    dct:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     dct:title "Mock Cube"@de,
         "Mock Cube"@en,
@@ -23,23 +23,24 @@
     schema1:contactPoint [ schema1:email "contact@mock.ld.admin.ch" ;
             schema1:name "Bundesamt für Mock Data" ] ;
     schema1:contributor <https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-umwelt-bafu> ;
+    schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-09-11T14:29:35+00:00"^^xsd:dateTime ;
+    schema1:dateModified "2024-09-11T18:55:03+00:00"^^xsd:dateTime ;
     schema1:datePublished "2024-09-11"^^xsd:date ;
-    schema1:description "Ein Beispiel Cube, der simulierten Daten enthält"@de,
+    schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     schema1:name "Mock Cube"@de,
         "Mock Cube"@en,
         "Mock Cube"@fr,
         "Mock Cube"@it ;
     schema1:publisher <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
-    schema1:workExample <https://ld.admin.ch/application/visualize>,
-        <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
+    schema1:workExample <https://ld.admin.ch/application/visualize> ;
     cube:observationConstraint <https://mock.ld.admin.ch/cube/mock-example/1/shape> ;
     cube:observationSet <https://mock.ld.admin.ch/cube/mock-example/1/ObservationSet> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/ObservationSet> cube:observation <https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Bern>,
+<https://mock.ld.admin.ch/cube/mock-example/1/ObservationSet> a cube:ObservationSet ;
+    cube:observation <https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Bern>,
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Zürich>,
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Bern>,
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Zürich>,
@@ -316,7 +317,8 @@
     mock:value 7.984094086903241 ;
     mock:year <https://ld.admin.ch/time/year/2022> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/shape> sh:property [ a cube:MeasureDimension ;
+<https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
+    sh:property [ a cube:MeasureDimension ;
             qudt:scaleType qudt:RatioScale ;
             schema1:description "Standardfehler des berechneten Werts"@de ;
             schema1:name "Standardfehler"@de,
@@ -328,18 +330,6 @@
             sh:min 3.648574e-01 ;
             sh:minCount 1 ;
             sh:path mock:standardError ],
-        [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gemessener Wert an der Station"@de ;
-            schema1:name "Wert"@de,
-                "Value"@en,
-                "Valeur"@fr,
-                "Valore"@it ;
-            sh:max 2.355574e+01 ;
-            sh:maxCount 1 ;
-            sh:min 6.873746e+00 ;
-            sh:minCount 1 ;
-            sh:path mock:value ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
@@ -352,6 +342,18 @@
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
             sh:path mock:year ],
+        [ a cube:MeasureDimension ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Gemessener Wert an der Station"@de ;
+            schema1:name "Wert"@de,
+                "Value"@en,
+                "Valeur"@fr,
+                "Valore"@it ;
+            sh:max 2.355574e+01 ;
+            sh:maxCount 1 ;
+            sh:min 6.873746e+00 ;
+            sh:minCount 1 ;
+            sh:path mock:value ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:NominalSclae ;
             schema1:description "Station der Untersuchung"@de ;

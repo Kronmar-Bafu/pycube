@@ -32,5 +32,6 @@ def upload_ttl(filename: str, db_file: str, environment: str):
 
     with stardog.Connection("lindas", **conn_details) as conn:
         conn.begin()
-        conn.add(stardog.content.File(file=filename))
+        # todo: hard-coded graph_uri...
+        conn.add(stardog.content.File(file=filename), graph_uri="https://lindas.admin.ch/foentest/pipeline-dev-testing")
         conn.commit()
