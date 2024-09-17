@@ -62,3 +62,12 @@ Writes the `cube:Observation`s and the `cube:ObservationSet`. The URI for the ob
 cube.write_shape()
 ```
 Writes the `cube:ObservationConstraint`. 
+
+### The full work-flow
+```
+cube = pycube.Cube(dataframe: pd.DataFrame, cube_yaml: dict, shape_yaml: dict)
+cube.apply_mapping()
+cube.write_cube()
+cube.write_observations()
+cube.write_shape()
+```
