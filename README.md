@@ -30,3 +30,35 @@ If you wish to contribute to this project, feel free to clone this repository an
 Alternatively feel free to open an issue with a suggestion on what we could implement. We laid out a rough road map for the features ahead on our [Timetable](https://github.com/Kronmar-Bafu/cubelink/wiki/Timetable)
 
 
+## Functionality
+To avoid the feeling of a black box, our philosophy is to make the construction of cubes modular. The process will take place in multiple steps, outlined below.
+
+1. **Initialization** 
+```
+cube = pycube.Cube(dataframe: pd.Dataframe, cube_yaml: dict, shape_yaml: dict)
+```
+This step sets some need background information about the cube up. 
+
+2. **Mapping**
+```
+cube.apply_mapping()
+```
+Applies the mappings as described in the shape yaml. 
+
+3. **Write `cube:Cube`**
+```
+cube.write_cube()
+```
+Writes the `cube:Cube`.
+
+4. **Write `cube:Observation`**
+```
+cube.write_observations()
+```
+Writes the `cube:Observation`s and the `cube:ObservationSet`. The URI for the observations are written as `<cube_URI/observations/[list_of_key_dimensions]>`. This should avoid the possibilities of conflicts in their uniqueness.
+
+5. **Write `cube:ObersvationConstraint`**
+```
+cube.write_shape()
+```
+Writes the `cube:ObservationConstraint`. 
