@@ -29,7 +29,7 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-09-12T07:47:38+00:00"^^xsd:dateTime ;
+    schema1:dateModified "2024-09-12T08:22:33+00:00"^^xsd:dateTime ;
     schema1:datePublished "2024-09-12"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
