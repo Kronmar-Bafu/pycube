@@ -65,9 +65,13 @@ Writes the `cube:ObservationConstraint`.
 
 ### The full work-flow
 ```
+# Write the cube
 cube = pycube.Cube(dataframe: pd.DataFrame, cube_yaml: dict, shape_yaml: dict)
 cube.apply_mapping()
 cube.write_cube()
 cube.write_observations()
 cube.write_shape()
+
+# Upload the cube
+cube.upload(endpoint: str, named_graph: str)
 ```
