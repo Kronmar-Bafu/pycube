@@ -29,7 +29,11 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
+<<<<<<< HEAD
     schema1:dateModified "2024-09-12T08:22:33+00:00"^^xsd:dateTime ;
+=======
+    schema1:dateModified "2024-09-12T08:22:49+00:00"^^xsd:dateTime ;
+>>>>>>> 2aeffa24dfd6021614124d1fcf4d8027c6d2de12
     schema1:datePublished "2024-09-12"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
@@ -340,6 +344,23 @@
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
             sh:path mock:value ],
+<<<<<<< HEAD
+=======
+        [ a cube:KeyDimension ;
+            qudt:scaleType qudt:OrdinalScale ;
+            schema1:description "Jahr der Erhebung"@de ;
+            schema1:name "Jahr"@de,
+                "Year"@en,
+                "An"@fr,
+                "Anno"@it ;
+            sh:in ( <https://ld.admin.ch/time/year/2000> <https://ld.admin.ch/time/year/2001> <https://ld.admin.ch/time/year/2002> <https://ld.admin.ch/time/year/2003> <https://ld.admin.ch/time/year/2004> <https://ld.admin.ch/time/year/2005> <https://ld.admin.ch/time/year/2006> <https://ld.admin.ch/time/year/2007> <https://ld.admin.ch/time/year/2008> <https://ld.admin.ch/time/year/2009> <https://ld.admin.ch/time/year/2010> <https://ld.admin.ch/time/year/2011> <https://ld.admin.ch/time/year/2012> <https://ld.admin.ch/time/year/2013> <https://ld.admin.ch/time/year/2014> <https://ld.admin.ch/time/year/2015> <https://ld.admin.ch/time/year/2016> <https://ld.admin.ch/time/year/2017> <https://ld.admin.ch/time/year/2018> <https://ld.admin.ch/time/year/2019> <https://ld.admin.ch/time/year/2020> <https://ld.admin.ch/time/year/2021> <https://ld.admin.ch/time/year/2022> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mock:year ;
+            meta:dataKind [ a time:GeneralDateTimeDescription ;
+                    time:unitType time:unitYear ] ],
+>>>>>>> 2aeffa24dfd6021614124d1fcf4d8027c6d2de12
         [ qudt:hasUnit unit:PERCENT ;
             qudt:scaleType qudt:RatioScale ;
             schema1:description "Standardfehler des berechneten Werts"@de ;
@@ -366,6 +387,7 @@
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
+<<<<<<< HEAD
             sh:path mock:station ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
@@ -381,4 +403,7 @@
             sh:path mock:year ;
             meta:dataKind [ a time:GeneralDateTimeDescription ;
                     time:unitType time:unitYear ] ] .
+=======
+            sh:path mock:station ] .
+>>>>>>> 2aeffa24dfd6021614124d1fcf4d8027c6d2de12
 
