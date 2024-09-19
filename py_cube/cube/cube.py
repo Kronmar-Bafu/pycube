@@ -1,16 +1,11 @@
-from rdflib import BNode, Graph, Literal, Namespace, RDF, URIRef, XSD
+from rdflib import BNode, Graph, Literal, RDF, URIRef, XSD
 from rdflib.collection import Collection
 from datetime import datetime, timezone
 import pandas as pd
 import numbers
 import sys
-import yaml
 from py_cube.lindas.namespaces import *
 from py_cube.lindas.query import query_lindas
-
-
-
-cube = Namespace("https://cube.link/")
 
 
 class Cube:
@@ -23,58 +18,170 @@ class Cube:
     _shape_URI: URIRef
 
     
-    def __init__(self, dataframe: pd.DataFrame, shape_yaml: dict, cube_yaml: dict, environment: str, local=False):
-        """Initialize the CubeBuilder object.
-        
+    def __init__(self, dataframe: pd.DataFrame, cube_yaml: dict, environment: str, local=False):
+        """
+        Initialize a Cube object.
+
         Args:
-            dataframe (pd.DataFrame): The input dataframe containing the data.
-            shape_yaml (dict): The YAML configuration for the shape of the data cube.
-            cube_yaml (dict): The YAML configuration for the data cube.
-        
+            dataframe (pd.DataFrame): The Pandas DataFrame representing the cube data.
+            cube_yaml (dict): A dictionary containing cube information.
+            environment (str): The environment of the cube.
+            local (bool): A flag indicating whether the cube is local.
+
         Returns:
             None
         """
         self._dataframe = dataframe
         self._setup_cube_dict(cube_yaml=cube_yaml)
-        self._setup_cube_uri(local)
-        self._setup_shape_dicts(shape_yaml=shape_yaml)
+        self._cube_uri = self._setup_cube_uri(local=local, environment=environment)
+        self._setup_shape_dicts()
         self._graph = self._setup_graph()
+        # self._graph.serialize("example/mock-cube.ttl", format="turtle")
+
+    def __str__(self) -> str:
+        """
+        Return a string representation of the Cube object.
+
+        This method returns a string representation of the Cube object, including its URI and name.
+
+        Returns:
+            str: A string representation of the Cube object.
+        """
+        how_many_triples_query = (
+            "SELECT (COUNT(*) as ?Triples)"
+            "WHERE {"
+            "    ?s ?p ?o."
+            "}"
+        )
+        how_many_triples = self._graph.query(how_many_triples_query).bindings[0].get("Triples").value
+        output = (f"Cube Object <{self._cube_uri}> with name '{self._cube_dict.get('Name').get('en')}'.\n\n"
+                  f"{self._dataframe.head()}\n"
+                  f"Number of triples in Graph: {how_many_triples}")
+        return output
+
+    def prepare_data(self):
+        """
+        Prepare the cube data by constructing observation URIs and applying mappings.
+
+        This method constructs observation URIs for each row in the dataframe and applies mappings to the dataframe.
+
+        Returns:
+            None
+        """
         self._construct_obs_uri()
         self._apply_mappings()
-        self._write_cube()
-        self._write_obs()
-        self._write_shape()
-        self._graph.serialize("example/mock-cube.ttl", format="turtle")
+
+    def write_cube(self) -> None:
+        """
+        Write the cube metadata to the graph.
+
+        This method writes the cube metadata to the graph, including its URI, name, description, publisher, creator, contributor, contact point, version, and date information.
+
+        Returns:
+            None
+        """
+        self._graph.add((self._cube_uri, RDF.type, CUBE.Cube))
+        self._graph.add((self._cube_uri, RDF.type, SCHEMA.Dataset))
+        self._graph.add((self._cube_uri, RDF.type, DCAT.Dataset))
+        self._graph.add((self._cube_uri, RDF.type, VOID.Dataset))
+
+        names = self._cube_dict.get("Name")
+        for lan, name in names.items():
+            self._graph.add((self._cube_uri, SCHEMA.name, Literal(name, lang=lan)))
+            self._graph.add((self._cube_uri, DCT.title, Literal(name, lang=lan)))
+
+        descriptions = self._cube_dict.get("Description")
+        for lan, desc in descriptions.items():
+            self._graph.add((self._cube_uri, SCHEMA.description, Literal(desc, lang=lan)))
+            self._graph.add((self._cube_uri, DCT.description, Literal(desc, lang=lan)))
+
+        publisher = self._cube_dict.get("Publisher")
+        for pblshr in publisher:
+            self._graph.add((self._cube_uri, SCHEMA.publisher, URIRef(pblshr.get("IRI"))))
+
+        creator = self._cube_dict.get("Creator")
+        for crtr in creator:
+            self._graph.add((self._cube_uri, SCHEMA.creator, URIRef(crtr.get("IRI"))))
+
+        contributor = self._cube_dict.get("Contributor")
+        for cntrbtr in contributor:
+            self._graph.add((self._cube_uri, SCHEMA.contributor, URIRef(cntrbtr.get("IRI"))))
+
+        contact_node = self._write_contact_point(self._cube_dict.get("Contact Point"))
+        self._graph.add((self._cube_uri, DCAT.contactPoint, contact_node))
+
+        version = self._cube_dict.get("Version")
+        self._graph.add((self._cube_uri, SCHEMA.version, Literal(version)))
+
+        today = datetime.today().strftime("%Y-%m-%d")
+        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
+
+        self._graph.add(
+            (self._cube_uri, SCHEMA.dateCreated, Literal(self._cube_dict.get("Date Created"), datatype=XSD.date)))
+        self._graph.add((self._cube_uri, SCHEMA.datePublished, Literal(today, datatype=XSD.date)))
+        # todo: serialization yields improper format for datetime (with timezone as +02:00 instead of proper UTC)
+        self._graph.add((self._cube_uri, SCHEMA.dateModified, Literal(now, datatype=XSD.dateTime)))
+
+        self._graph.add((self._cube_uri, CUBE.observationSet, self._cube_uri + "/ObservationSet"))
+        self._graph.add((self._cube_uri, CUBE.observationConstraint, self._shape_URI))
+
+        if self._cube_dict.get("Visualize"):
+            self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef("https://ld.admin.ch/application/visualize")))
+
+        if self._cube_dict.get("Work Status"):
+            status = self._cube_dict.get("Work Status")
+            self._graph.add((self._cube_uri, SCHEMA.creativeWorkStatus,
+                             URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
+
+        if self._cube_dict.get("Accrual Periodicity"):
+            accrual_periodicity_uri = self._get_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
+            self._graph.add((self._cube_uri, DCT.accrualPeriodicity, accrual_periodicity_uri))
 
     def _setup_cube_dict(self, cube_yaml: dict) -> None:
-        """Set up the cube dictionary with the provided YAML data.
-        
-            Args:
-                cube_yaml (dict): A dictionary containing cube information.
-        
-            Returns:
-                None
+        """
+        Set up the cube dictionary with the provided YAML data.
+
+        Args:
+            cube_yaml (dict): A dictionary containing cube information.
+
+        Returns:
+            None
         """
         self._base_uri = URIRef(cube_yaml.get("Base-URI"))
         self._cube_dict = cube_yaml
-        self._cube_uri = URIRef(self._base_uri + "/".join(["cube", str(cube_yaml.get("Identifier")), str(cube_yaml.get("Version"))]))
-    
-    def _setup_cube_uri(self, local):
+
+    def _setup_cube_uri(self, local: bool, environment="TEST") -> URIRef:
+        """
+        Set up the cube URI by concatenating the base URI and the cube identifier with the version.
+
+        This function checks whether a cube already exists in the provided environment using the Lindas query endpoint.
+        If the cube already exists and the local flag is not set, the function will exit with an appropriate error message.
+        Otherwise, the function will return the constructed cube URI as a URIRef object.
+
+        Args:
+            local (bool): A flag indicating whether the cube is local.
+            environment (str): The environment of the cube.
+
+        Returns:
+            URIRef: The constructed cube URI as a URIRef object.
+        """
+        # todo: is it really the right place to ask whether a cube already exists? Maybe better idea during upload?
         cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
         query = f"ASK {{ <{cube_uri}> ?p ?o}}"
-        if query_lindas(query, environment="TEST") == True and not local:
+        if query_lindas(query, environment=environment) == True and not local:
             sys.exit("Cube already exist! Please update your yaml")
+        else:
+            return URIRef(cube_uri)
     
-    def _setup_shape_dicts(self, shape_yaml: dict) -> None:
-        """Set up shape dictionaries based on the provided YAML file.
+    def _setup_shape_dicts(self) -> None:
+        """Set up shape dictionaries by extracting key dimensions from cube dictionary.
         
-            Args:
-                shape_yaml (dict): A dictionary containing shape information.
+            This function initializes the shape dictionary, shape URI, and key dimensions list based on the cube dictionary.
         
             Returns:
                 None
         """
-        self._shape_dict = shape_yaml.get("dimensions")
+        self._shape_dict = self._cube_dict.pop("dimensions")
         self._shape_URI = URIRef(self._cube_uri + "/shape") 
         self._key_dimensions = [dim_name for dim_name, dim in self._shape_dict.items() if dim.get("dimension-type") == "Key Dimension"]
 
@@ -131,68 +238,6 @@ class Cube:
                         self._dataframe[dim_name] = self._dataframe[dim_name].map(mapping.get("replacements"))
                 self._dataframe[dim_name] = self._dataframe[dim_name].map(URIRef)
 
-    def _write_cube(self) -> None:
-        """Writes metadata about the cube to the graph including name, description, publisher, creator, contributor, contact point, dates, observation set, 
-        observation constraint, visualization link, work status link, and accrual periodicity.
-        
-        Returns:
-            None
-        """
-        self._graph.add((self._cube_uri, RDF.type, CUBE.Cube))
-        self._graph.add((self._cube_uri, RDF.type, SCHEMA.Dataset))
-        self._graph.add((self._cube_uri, RDF.type, DCAT.Dataset))
-        self._graph.add((self._cube_uri, RDF.type, VOID.Dataset))
-
-        names = self._cube_dict.get("Name")
-        for lan, name in names.items():
-            self._graph.add((self._cube_uri, SCHEMA.name, Literal(name, lang=lan)))
-            self._graph.add((self._cube_uri, DCT.title, Literal(name, lang=lan)))
-        
-        descriptions = self._cube_dict.get("Description")
-        for lan, desc in descriptions.items():
-            self._graph.add((self._cube_uri, SCHEMA.description, Literal(desc, lang=lan)))
-            self._graph.add((self._cube_uri, DCT.description, Literal(desc, lang=lan)))
-
-        publisher = self._cube_dict.get("Publisher")
-        for pblshr in publisher:
-            self._graph.add((self._cube_uri, SCHEMA.publisher, URIRef(pblshr.get("IRI"))))
-
-        creator = self._cube_dict.get("Creator")
-        for crtr in creator:
-            self._graph.add((self._cube_uri, SCHEMA.creator, URIRef(crtr.get("IRI"))))
-
-        contributor = self._cube_dict.get("Contributor")
-        for cntrbtr in contributor:
-            self._graph.add((self._cube_uri, SCHEMA.contributor, URIRef(cntrbtr.get("IRI"))))
-        
-        contact_Node = self._write_contact_point(self._cube_dict.get("Contact Point"))
-        self._graph.add((self._cube_uri, DCAT.contactPoint, contact_Node))
-
-        version = self._cube_dict.get("Version")
-        self._graph.add((self._cube_uri, SCHEMA.version, Literal(version)))
-
-        today = datetime.today().strftime("%Y-%m-%d")
-        now = datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ")
-        
-        self._graph.add((self._cube_uri, SCHEMA.dateCreated, Literal(self._cube_dict.get("Date Created"), datatype=XSD.date)))
-        self._graph.add((self._cube_uri, SCHEMA.datePublished, Literal(today, datatype=XSD.date)))
-        # todo: serialization yields improper format for datetime (with timezone as +02:00 instead of proper UTC)
-        self._graph.add((self._cube_uri, SCHEMA.dateModified, Literal(now, datatype=XSD.dateTime)))
-        
-        self._graph.add((self._cube_uri, CUBE.observationSet, self._cube_uri + "/ObservationSet"))
-        self._graph.add((self._cube_uri, CUBE.observationConstraint, self._shape_URI))
-
-        if self._cube_dict.get("Visualize"):
-            self._graph.add((self._cube_uri, SCHEMA.workExample, URIRef("https://ld.admin.ch/application/visualize")))
-        
-        if self._cube_dict.get("Work Status"):
-            status = self._cube_dict.get("Work Status")
-            self._graph.add((self._cube_uri, SCHEMA.creativeWorkStatus, URIRef(f"https://ld.admin.ch/vocabulary/CreativeWorkStatus/{status}")))
-
-        if self._cube_dict.get("Accrual Periodicity"):
-            accrual_periodicity_uri = self._get_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
-            self._graph.add((self._cube_uri, DCT.accrualPeriodicity, accrual_periodicity_uri))
-
     def _write_contact_point(self, contact_dict: dict) -> BNode|URIRef:
         """Writes a contact point to the graph.
         
@@ -211,7 +256,8 @@ class Cube:
             self._graph.add((contact_node, VCARD.fn, Literal(contact_dict.get("Name"), datatype=XSD.string)))
             return contact_node
 
-    def _get_accrual_periodicity(self, periodicity: str) -> URIRef:
+    @staticmethod
+    def _get_accrual_periodicity(periodicity: str) -> URIRef:
         """Get the URIRef for the given accrual periodicity.
         
         Args:
@@ -233,10 +279,30 @@ class Cube:
             case "irregular":
                 return URIRef(base_uri + "IRREG")
 
-    def _write_obs(self) -> None:
-        """Apply the _add_observation method to each row in the dataframe."""
+    def write_observations(self) -> None:
+        """Write observations to the cube.
+
+        This function iterates over the rows in the dataframe and adds each row as an observation to the cube.
+        It also adds the observation URI to the observation set of the cube.
+
+        Returns:
+            None
+        """
         self._graph.add((self._cube_uri + "/ObservationSet", RDF.type, CUBE.ObservationSet))
         self._dataframe.apply(self._add_observation, axis=1)
+
+    def serialize(self, filename: str) -> None:
+        """Serialize the cube to a file.
+
+        This function serializes the cube to the given file name in turtle format.
+
+        Args:
+            filename (str): The name of the file to write the cube to.
+
+        Returns:
+            None
+        """
+        self._graph.serialize(destination=filename, format="turtle", encoding="utf-8")
 
     def _add_observation(self, obs: pd.DataFrame) -> None:
         """Add an observation to the cube.
@@ -247,22 +313,21 @@ class Cube:
             Returns:
                 None
         """
-        self._graph.add((self._cube_uri + "/ObservationSet", cube.observation, obs.name))
+        self._graph.add((self._cube_uri + "/ObservationSet", CUBE.observation, obs.name))
+        self._graph.add((obs.name, RDF.type, CUBE.Observation))
+        self._graph.add((obs.name, CUBE.observedBy, URIRef(self._cube_dict.get("Creator")[0].get("IRI"))))
 
         for column in obs.keys():
             path = URIRef(self._base_uri + self._shape_dict.get(column).get("path"))
             sanitized_value = self._sanitize_value(obs.get(column))
             self._graph.add((obs.name, URIRef(path), sanitized_value))
 
-    def _write_shape(self) -> None:
-        """Writes the shape of the data frame to the graph.
-        
-            This function iterates over the dimensions in the shape dictionary and writes the shape of each dimension to the graph by adding it as a 
-            SH:property of the shape URI.
-        
-            Args:
-                self: The object instance.
-            
+    def write_shape(self) -> None:
+        """Write the shape of the cube to the graph.
+
+            This function writes the shape of the cube to the graph, which is used to validate the cube as well as for
+            description of dimension metadata
+
             Returns:
                 None
         """

@@ -29,12 +29,8 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-<<<<<<< HEAD
-    schema1:dateModified "2024-09-12T08:22:33+00:00"^^xsd:dateTime ;
-=======
-    schema1:dateModified "2024-09-12T08:22:49+00:00"^^xsd:dateTime ;
->>>>>>> 2aeffa24dfd6021614124d1fcf4d8027c6d2de12
-    schema1:datePublished "2024-09-12"^^xsd:date ;
+    schema1:dateModified "2024-09-19T14:06:33+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-09-19"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     schema1:name "Mock Cube"@de,
@@ -98,270 +94,331 @@
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Bern>,
         <https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Zürich> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Bern> mock:standardError 5.0 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.0 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 23.0 ;
     mock:year <https://ld.admin.ch/time/year/2000> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Zürich> mock:standardError 7.517863529610764 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2000_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 7.517863529610764 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 23.555744036232408 ;
     mock:year <https://ld.admin.ch/time/year/2000> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Bern> mock:standardError 6.466524763963783 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 6.466524763963783 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 21.536090723505524 ;
     mock:year <https://ld.admin.ch/time/year/2001> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Zürich> mock:standardError 6.030296213104391 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2001_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 6.030296213104391 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
-    mock:value 21.65992433002125 ;
+    mock:value 21.659924330021255 ;
     mock:year <https://ld.admin.ch/time/year/2001> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2002_Bern> mock:standardError 1.493504195537817 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2002_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 1.493504195537817 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 22.575144684250287 ;
     mock:year <https://ld.admin.ch/time/year/2002> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2002_Zürich> mock:standardError 4.460656090931694 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2002_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.460656090931694 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 20.688211936144263 ;
     mock:year <https://ld.admin.ch/time/year/2002> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2003_Bern> mock:standardError 3.1225318830708093 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2003_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 3.1225318830708093 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 20.34210673843992 ;
     mock:year <https://ld.admin.ch/time/year/2003> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2003_Zürich> mock:standardError 9.256702605801236 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2003_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 9.256702605801236 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 21.515733621541955 ;
     mock:year <https://ld.admin.ch/time/year/2003> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Bern> mock:standardError 4.901117604444538 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.901117604444538 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 19.883669558588743 ;
     mock:year <https://ld.admin.ch/time/year/2004> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Zürich> mock:standardError 7.390939821011258 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 7.390939821011259 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 19.06703223788886 ;
     mock:year <https://ld.admin.ch/time/year/2004> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2005_Bern> mock:standardError 0.3648574303067509 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2005_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 0.3648574303067509 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 20.37741134479489 ;
     mock:year <https://ld.admin.ch/time/year/2005> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2005_Zürich> mock:standardError 5.334716140807069 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2005_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.334716140807069 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 19.10206139418359 ;
     mock:year <https://ld.admin.ch/time/year/2005> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Bern> mock:standardError 2.520552866392209 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 2.5205528663922094 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 17.851780950874087 ;
     mock:year <https://ld.admin.ch/time/year/2006> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Zürich> mock:standardError 9.574551975171314 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 9.574551975171314 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 19.16636437276704 ;
     mock:year <https://ld.admin.ch/time/year/2006> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Bern> mock:standardError 4.873759639672014 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.873759639672014 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
-    mock:value 18.321158320002034 ;
+    mock:value 18.32115832000203 ;
     mock:year <https://ld.admin.ch/time/year/2007> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Zürich> mock:standardError 7.127258811335302 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 7.127258811335302 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 16.70866751700804 ;
     mock:year <https://ld.admin.ch/time/year/2007> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2008_Bern> mock:standardError 0.9142998372297384 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2008_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 0.9142998372297384 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 17.89457243174931 ;
     mock:year <https://ld.admin.ch/time/year/2008> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2008_Zürich> mock:standardError 4.510509430147336 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2008_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.510509430147336 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 17.518675046034367 ;
     mock:year <https://ld.admin.ch/time/year/2008> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2009_Bern> mock:standardError 3.6030273778709576 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2009_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 3.6030273778709576 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 15.644260115877954 ;
     mock:year <https://ld.admin.ch/time/year/2009> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2009_Zürich> mock:standardError 8.255475397580657 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2009_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 8.255475397580657 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 16.57885415743719 ;
     mock:year <https://ld.admin.ch/time/year/2009> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2010_Bern> mock:standardError 6.403036956705559 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2010_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 6.403036956705559 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 16.67404534861387 ;
     mock:year <https://ld.admin.ch/time/year/2010> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2010_Zürich> mock:standardError 5.41838925075702 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2010_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.41838925075702 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 14.658857249625616 ;
     mock:year <https://ld.admin.ch/time/year/2010> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Bern> mock:standardError 2.768558605478989 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 2.7685586054789892 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 15.23952733205338 ;
     mock:year <https://ld.admin.ch/time/year/2011> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Zürich> mock:standardError 2.547974456080931 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 2.547974456080931 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 15.77006036400352 ;
     mock:year <https://ld.admin.ch/time/year/2011> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2012_Bern> mock:standardError 5.634558406905088 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2012_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.634558406905088 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 13.746463964437758 ;
     mock:year <https://ld.admin.ch/time/year/2012> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2012_Zürich> mock:standardError 6.195609420937518 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2012_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 6.195609420937518 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 13.898790381464226 ;
     mock:year <https://ld.admin.ch/time/year/2012> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2013_Bern> mock:standardError 8.450009649429939 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2013_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 8.450009649429939 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 14.79423943661537 ;
     mock:year <https://ld.admin.ch/time/year/2013> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2013_Zürich> mock:standardError 3.425280014313877 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2013_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 3.425280014313877 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 12.895269405129998 ;
     mock:year <https://ld.admin.ch/time/year/2013> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2014_Bern> mock:standardError 4.667912290722137 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2014_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.667912290722137 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 12.57895406130142 ;
     mock:year <https://ld.admin.ch/time/year/2014> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2014_Zürich> mock:standardError 0.780391898961843 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2014_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 0.780391898961843 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 13.739824320879595 ;
     mock:year <https://ld.admin.ch/time/year/2014> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2015_Bern> mock:standardError 7.234991659001383 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2015_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 7.234991659001383 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 12.08858766109956 ;
     mock:year <https://ld.admin.ch/time/year/2015> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2015_Zürich> mock:standardError 4.794358156286226 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2015_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.794358156286226 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 11.300664194959296 ;
     mock:year <https://ld.admin.ch/time/year/2015> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2016_Bern> mock:standardError 9.624032873046964 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2016_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 9.624032873046964 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 12.606317539212023 ;
     mock:year <https://ld.admin.ch/time/year/2016> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2016_Zürich> mock:standardError 2.5019829145341275 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2016_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 2.5019829145341275 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 11.306186956398 ;
     mock:year <https://ld.admin.ch/time/year/2016> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2017_Bern> mock:standardError 5.322003468934927 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2017_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.322003468934927 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 10.081257039139402 ;
     mock:year <https://ld.admin.ch/time/year/2017> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2017_Zürich> mock:standardError 0.4085982816951822 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2017_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 0.4085982816951822 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 11.399522010793316 ;
     mock:year <https://ld.admin.ch/time/year/2017> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2018_Bern> mock:standardError 7.317046263544459 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2018_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 7.317046263544459 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 10.525901301404176 ;
     mock:year <https://ld.admin.ch/time/year/2018> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2018_Zürich> mock:standardError 5.003684887934572 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2018_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.003684887934572 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 8.933378287580624 ;
     mock:year <https://ld.admin.ch/time/year/2018> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2019_Bern> mock:standardError 9.12751448116438 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2019_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 9.12751448116438 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 10.131078794353764 ;
     mock:year <https://ld.admin.ch/time/year/2019> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2019_Zürich> mock:standardError 3.27575514766154 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2019_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 3.27575514766154 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 9.725396222849866 ;
     mock:year <https://ld.admin.ch/time/year/2019> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2020_Bern> mock:standardError 4.286464451069697 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2020_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 4.286464451069697 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 7.863975722345669 ;
     mock:year <https://ld.admin.ch/time/year/2020> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2020_Zürich> mock:standardError 1.6851777638149157 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2020_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 1.6851777638149157 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 8.817539768108874 ;
     mock:year <https://ld.admin.ch/time/year/2020> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2021_Bern> mock:standardError 5.824977064184451 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2021_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.824977064184451 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 8.883947915155796 ;
     mock:year <https://ld.admin.ch/time/year/2021> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2021_Zürich> mock:standardError 6.681380029364922 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2021_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 6.681380029364922 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 6.873745757485178 ;
     mock:year <https://ld.admin.ch/time/year/2021> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Bern> mock:standardError 7.297772477326248 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Bern> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 7.297772477326248 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 7.479049116629595 ;
     mock:year <https://ld.admin.ch/time/year/2022> .
 
-<https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Zürich> mock:standardError 5.220921715260017 ;
+<https://mock.ld.admin.ch/cube/mock-example/1/observation/2022_Zürich> a cube:Observation ;
+    cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
+    mock:standardError 5.220921715260017 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 7.984094086903241 ;
     mock:year <https://ld.admin.ch/time/year/2022> .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
     sh:closed true ;
-    sh:property [ a cube:MeasureDimension ;
-            qudt:hasUnit unit:KiloGM ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gemessener Wert an der Station"@de ;
-            schema1:name "Wert"@de,
-                "Value"@en,
-                "Valeur"@fr,
-                "Valore"@it ;
-            sh:max 2.355574e+01 ;
-            sh:maxCount 1 ;
-            sh:min 6.873746e+00 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:value ],
-<<<<<<< HEAD
-=======
-        [ a cube:KeyDimension ;
-            qudt:scaleType qudt:OrdinalScale ;
-            schema1:description "Jahr der Erhebung"@de ;
-            schema1:name "Jahr"@de,
-                "Year"@en,
-                "An"@fr,
-                "Anno"@it ;
-            sh:in ( <https://ld.admin.ch/time/year/2000> <https://ld.admin.ch/time/year/2001> <https://ld.admin.ch/time/year/2002> <https://ld.admin.ch/time/year/2003> <https://ld.admin.ch/time/year/2004> <https://ld.admin.ch/time/year/2005> <https://ld.admin.ch/time/year/2006> <https://ld.admin.ch/time/year/2007> <https://ld.admin.ch/time/year/2008> <https://ld.admin.ch/time/year/2009> <https://ld.admin.ch/time/year/2010> <https://ld.admin.ch/time/year/2011> <https://ld.admin.ch/time/year/2012> <https://ld.admin.ch/time/year/2013> <https://ld.admin.ch/time/year/2014> <https://ld.admin.ch/time/year/2015> <https://ld.admin.ch/time/year/2016> <https://ld.admin.ch/time/year/2017> <https://ld.admin.ch/time/year/2018> <https://ld.admin.ch/time/year/2019> <https://ld.admin.ch/time/year/2020> <https://ld.admin.ch/time/year/2021> <https://ld.admin.ch/time/year/2022> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:year ;
-            meta:dataKind [ a time:GeneralDateTimeDescription ;
-                    time:unitType time:unitYear ] ],
->>>>>>> 2aeffa24dfd6021614124d1fcf4d8027c6d2de12
-        [ qudt:hasUnit unit:PERCENT ;
+    sh:property [ qudt:hasUnit unit:PERCENT ;
             qudt:scaleType qudt:RatioScale ;
             schema1:description "Standardfehler des berechneten Werts"@de ;
             schema1:name "Standardfehler"@de,
@@ -377,19 +434,6 @@
             meta:dimensionRelation [ a relation:StandardError ;
                     meta:relatesTo mock:value ] ],
         [ a cube:KeyDimension ;
-            qudt:scaleType qudt:NominalScale ;
-            schema1:description "Station der Untersuchung"@de ;
-            schema1:name "Station"@de,
-                "Station"@en,
-                "Station"@fr,
-                "Stazione"@it ;
-            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-<<<<<<< HEAD
-            sh:path mock:station ],
-        [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
             schema1:name "Jahr"@de,
@@ -402,8 +446,31 @@
             sh:nodeKind sh:IRI ;
             sh:path mock:year ;
             meta:dataKind [ a time:GeneralDateTimeDescription ;
-                    time:unitType time:unitYear ] ] .
-=======
+                    time:unitType time:unitYear ] ],
+        [ a cube:MeasureDimension ;
+            qudt:hasUnit unit:KiloGM ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Gemessener Wert an der Station"@de ;
+            schema1:name "Wert"@de,
+                "Value"@en,
+                "Valeur"@fr,
+                "Valore"@it ;
+            sh:max 2.355574e+01 ;
+            sh:maxCount 1 ;
+            sh:min 6.873746e+00 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path mock:value ],
+        [ a cube:KeyDimension ;
+            qudt:scaleType qudt:NominalScale ;
+            schema1:description "Station der Untersuchung"@de ;
+            schema1:name "Station"@de,
+                "Station"@en,
+                "Station"@fr,
+                "Stazione"@it ;
+            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
             sh:path mock:station ] .
->>>>>>> 2aeffa24dfd6021614124d1fcf4d8027c6d2de12
 

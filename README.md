@@ -41,9 +41,9 @@ This step sets some need background information about the cube up.
 
 2. **Mapping**
 ```
-cube.apply_mapping()
+cube.prepare_data()
 ```
-Applies the mappings as described in the shape yaml. 
+Adds observation URIs and applies the mappings as described in the shape yaml. 
 
 3. **Write `cube:Cube`**
 ```
