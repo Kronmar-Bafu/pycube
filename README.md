@@ -75,3 +75,16 @@ cube.write_shape()
 # Upload the cube
 cube.upload(endpoint: str, named_graph: str)
 ```
+
+For an upload, use `cube.upload(endpoint: str, named_graph: str)` with the proper `endpoint` as well as `named_graph`. 
+
+A `lindas.ini` file is read for this step, containing these information as well as a password. It contains the structure:
+
+```
+[TEST]
+endpoint=https://stardog-test.cluster.ldbar.ch
+username=a-lindas-user-name
+password=something-you-don't-need-to-see;)
+```
+
+With additional information for the other environments.

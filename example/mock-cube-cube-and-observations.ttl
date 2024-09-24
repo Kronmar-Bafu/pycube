@@ -1,15 +1,8 @@
 @prefix cube: <https://cube.link/> .
 @prefix dcat: <http://www.w3.org/ns/dcat#> .
 @prefix dct: <http://purl.org/dc/terms/> .
-@prefix meta: <https://cube.link/meta/> .
 @prefix mock: <https://mock.ld.admin.ch/> .
-@prefix qudt: <http://qudt.org/schema/qudt/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix relation: <https://cube.link/relation/> .
 @prefix schema1: <http://schema.org/> .
-@prefix sh: <http://www.w3.org/ns/shacl#> .
-@prefix time: <http://www.w3.org/2006/time#> .
-@prefix unit: <http://qudt.org/vocab/unit/> .
 @prefix vcard: <http://www.w3.org/2006/vcard/ns#> .
 @prefix void: <http://rdfs.org/ns/void#> .
 @prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
@@ -419,62 +412,4 @@
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 7.984094086903241 ;
     mock:year <https://ld.admin.ch/time/year/2022> .
-
-<https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
-    sh:closed true ;
-    sh:property [ a cube:KeyDimension ;
-            qudt:scaleType qudt:OrdinalScale ;
-            schema1:description "Jahr der Erhebung"@de ;
-            schema1:name "Jahr"@de,
-                "Year"@en,
-                "An"@fr,
-                "Anno"@it ;
-            sh:in ( <https://ld.admin.ch/time/year/2000> <https://ld.admin.ch/time/year/2001> <https://ld.admin.ch/time/year/2002> <https://ld.admin.ch/time/year/2003> <https://ld.admin.ch/time/year/2004> <https://ld.admin.ch/time/year/2005> <https://ld.admin.ch/time/year/2006> <https://ld.admin.ch/time/year/2007> <https://ld.admin.ch/time/year/2008> <https://ld.admin.ch/time/year/2009> <https://ld.admin.ch/time/year/2010> <https://ld.admin.ch/time/year/2011> <https://ld.admin.ch/time/year/2012> <https://ld.admin.ch/time/year/2013> <https://ld.admin.ch/time/year/2014> <https://ld.admin.ch/time/year/2015> <https://ld.admin.ch/time/year/2016> <https://ld.admin.ch/time/year/2017> <https://ld.admin.ch/time/year/2018> <https://ld.admin.ch/time/year/2019> <https://ld.admin.ch/time/year/2020> <https://ld.admin.ch/time/year/2021> <https://ld.admin.ch/time/year/2022> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:year ;
-            meta:dataKind [ a time:GeneralDateTimeDescription ;
-                    time:unitType time:unitYear ] ],
-        [ a cube:KeyDimension ;
-            qudt:scaleType qudt:NominalScale ;
-            schema1:description "Station der Untersuchung"@de ;
-            schema1:name "Station"@de,
-                "Station"@en,
-                "Station"@fr,
-                "Stazione"@it ;
-            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:station ],
-        [ qudt:hasUnit unit:PERCENT ;
-            qudt:scaleType qudt:RatioScale ;
-            schema1:description "Standardfehler des berechneten Werts"@de ;
-            schema1:name "Standardfehler"@de,
-                "Standard error"@en,
-                "Erreur standard"@fr,
-                "Errore standard"@it ;
-            sh:max 9.624033e+00 ;
-            sh:maxCount 1 ;
-            sh:min 3.648574e-01 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:standardError ;
-            meta:dimensionRelation [ a relation:StandardError ;
-                    meta:relatesTo mock:value ] ],
-        [ a cube:MeasureDimension ;
-            qudt:hasUnit unit:KiloGM ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gemessener Wert an der Station"@de ;
-            schema1:name "Wert"@de,
-                "Value"@en,
-                "Valeur"@fr,
-                "Valore"@it ;
-            sh:max 2.355574e+01 ;
-            sh:maxCount 1 ;
-            sh:min 6.873746e+00 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:value ] .
 
