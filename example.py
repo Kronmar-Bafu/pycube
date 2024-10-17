@@ -4,7 +4,7 @@ import py_cube
 import yaml
 
 import py_cube.lindas
-from py_cube.lindas.upload import upload_ttl
+from py_cube.lindas.upload import cube_exists, upload_ttl
 
 mock_df = pd.read_csv("example/mock/data.csv")
 
@@ -19,5 +19,6 @@ cube.write_shape()
 cube.serialize("example/mock/cube.ttl")
 print(cube)
 
-# upload_ttl(filename="./example/mock-cube.ttl", db_file="lindas.ini", environment="TEST")
+if not cube_exists(cube_uri=cube.get_iri(), environment="TEST"):
+    upload_ttl(filename="./example/mock-cube.ttl", db_file="lindas.ini", environment="TEST")
 

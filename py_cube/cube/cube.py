@@ -137,6 +137,9 @@ class Cube:
             accrual_periodicity_uri = self._get_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
             self._graph.add((self._cube_uri, DCT.accrualPeriodicity, accrual_periodicity_uri))
 
+    def get_iri(self) -> URIRef:
+        return self._cube_uri
+
     def _setup_cube_dict(self, cube_yaml: dict) -> None:
         """
         Set up the cube dictionary with the provided YAML data.
@@ -154,25 +157,13 @@ class Cube:
         """
         Set up the cube URI by concatenating the base URI and the cube identifier with the version.
 
-        This function checks whether a cube already exists in the provided environment using the Lindas query endpoint.
-        If the cube already exists and the local flag is not set, the function will exit with an appropriate error message.
-        Otherwise, the function will return the constructed cube URI as a URIRef object.
-
-        Args:
-            local (bool): A flag indicating whether the cube is local.
-            environment (str): The environment of the cube.
-
         Returns:
             URIRef: The constructed cube URI as a URIRef object.
         """
-        # todo: is it really the right place to ask whether a cube already exists? Maybe better idea during upload?
         cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
-        query = f"ASK {{ <{cube_uri}> ?p ?o}}"
-        if query_lindas(query, environment=environment) == True and not local:
-            sys.exit("Cube already exist! Please update your yaml")
-        else:
-            return URIRef(cube_uri)
-    
+        
+        return URIRef(cube_uri)
+
     def _setup_shape_dicts(self) -> None:
         """Set up shape dictionaries by extracting key dimensions from cube dictionary.
         
