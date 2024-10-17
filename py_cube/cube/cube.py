@@ -1,3 +1,4 @@
+from urllib.parse import quote
 from rdflib import BNode, Graph, Literal, RDF, URIRef, XSD
 from rdflib.collection import Collection
 from datetime import datetime, timezone
