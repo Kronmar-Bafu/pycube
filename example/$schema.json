@@ -140,9 +140,23 @@
         },
         "dimension-type": {
           "type": "string",
-          "enum": ["Key Dimension", "Measure", "Standard Error"]
+          "enum": ["Key Dimension", "Measure Dimension", "Standard Error"]
+        },
+        "data-kind": {
+          "type": "object",
+          "description": "See https://cube.link/#meta-datakind-temporal-spatial",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["temporal"]
+            },
+            "unit": {
+              "type": "string"
+            }
+          }
         },
         "scale-type": {
+          "description": "See https://cube.link/#qudt-scaletype",
           "type": "string",
           "enum": ["nominal", "ordinal", "interval", "ratio"]
         },
