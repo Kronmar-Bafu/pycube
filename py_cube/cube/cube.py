@@ -310,9 +310,16 @@ class Cube:
         self._graph.add((obs.name, CUBE.observedBy, URIRef(self._cube_dict.get("Creator")[0].get("IRI"))))
 
         for column in obs.keys():
-            path = URIRef(self._base_uri + self._shape_dict.get(column).get("path"))
+            path = URIRef(self._base_uri + self._get_shape_column(column).get("path"))
             sanitized_value = self._sanitize_value(obs.get(column))
             self._graph.add((obs.name, URIRef(path), sanitized_value))
+
+    def _get_shape_column(self, column: str):
+        c = self._shape_dict.get(column)
+        if not c:
+            print(self._shape_dict)
+            raise ValueError(f'Could not find {column}')
+        return c
 
     def write_shape(self) -> None:
         """Write the shape of the cube to the graph.
