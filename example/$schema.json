@@ -1,0 +1,159 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "Name": {
+      "type": "object",
+      "properties": {
+        "de": { "type": "string" },
+        "fr": { "type": "string" },
+        "it": { "type": "string" },
+        "en": { "type": "string" }
+      },
+      "required": ["de", "en"]
+    },
+    "Description": {
+      "type": "object",
+      "properties": {
+        "de": { "type": "string" },
+        "en": { "type": "string" }
+      },
+      "required": ["de", "en"]
+    },
+    "Publisher": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Publisher"
+      }
+    },
+    "Creator": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Creator"
+      }
+    },
+    "Contributor": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Contributor"
+      }
+    },
+    "Date Created": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "Contact Point": {
+      "$ref": "#/definitions/ContactPoint"
+    },
+    "Base-URI": {
+      "type": "string"
+    },
+    "Identifier": {
+      "type": "string"
+    },
+    "Version": {
+      "type": "number"
+    },
+    "Work Status": {
+      "type": "string",
+      "enum": ["Draft", "In Progress", "Published", "Obsolete"]
+    },
+    "Visualize": {
+      "type": "boolean"
+    },
+    "Accrual Periodicity": {
+      "type": "string",
+      "enum": ["daily", "weekly", "monthly", "quarterly", "yearly"]
+    },
+    "Namespace": {
+      "type": "string"
+    },
+    "dimensions": {
+      "type": "object",
+      "patternProperties": {
+        ".*": {
+          "$ref": "#/definitions/Dimension"
+        }
+      },
+      "additionalProperties": true
+    }
+  },
+  "definitions": {
+    "Publisher": {
+      "type": "object",
+      "properties": {
+        "IRI": {
+          "type": "string"
+        }
+      },
+      "required": ["IRI"]
+    },
+    "Creator": {
+      "type": "object",
+      "properties": {
+        "IRI": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        }
+      },
+      "required": ["IRI"]
+    },
+    "Contributor": {
+      "type": "object",
+      "properties": {
+        "IRI": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        }
+      },
+      "required": ["IRI", "Name"]
+    },
+    "ContactPoint": {
+      "type": "object",
+      "properties": {
+        "E-Mail": {
+          "type": "string",
+          "format": "email"
+        },
+        "Name": {
+          "type": "string"
+        }
+      },
+      "required": ["E-Mail", "Name"]
+    },
+    "Dimension": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "object",
+          "properties": {
+            "de": { "type": "string" },
+            "fr": { "type": "string" },
+            "it": { "type": "string" },
+            "en": { "type": "string" }
+          },
+          "required": ["de", "en"]
+        },
+        "dimension-type": {
+          "type": "string",
+          "enum": ["Key Dimension", "Measure", "Standard Error"]
+        },
+        "scale-type": {
+          "type": "string",
+          "enum": ["nominal", "ordinal", "interval", "ratio"]
+        },
+        "unit": {
+          "type": "string"
+        },
+        "path": {
+          "type": "string"
+        }
+      },
+      "required": ["name", "dimension-type", "scale-type"]
+    }
+  }
+}
