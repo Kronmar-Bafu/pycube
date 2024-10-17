@@ -26,7 +26,7 @@ def serialize(input_directory: str, output_ttl: str):
     cube.write_cube()
     cube.write_observations()
     cube.write_shape()
-    cube.serialize(os.path.join(input_directory, output_ttl))
+    cube.serialize(os.path.join(os.getcwd(), output_ttl))
     print(cube)
 
 if __name__ == "__main__":

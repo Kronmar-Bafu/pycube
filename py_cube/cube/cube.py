@@ -201,7 +201,7 @@ class Cube:
             None
         """
         self._dataframe['obs-uri'] = self._dataframe.apply(
-            lambda row: self._cube_uri + "/observation/" + "_".join([str(row[key_dim]) for key_dim in self._key_dimensions]), axis=1
+            lambda row: self._cube_uri + "/observation/" + "_".join([quote(str(row[key_dim])) for key_dim in self._key_dimensions]), axis=1
         )
         self._dataframe['obs-uri'] = self._dataframe['obs-uri'].map(URIRef)
         self._dataframe = self._dataframe.set_index("obs-uri")
@@ -224,7 +224,7 @@ class Cube:
                 match mapping.get("type"):
                     case "additive":
                         base = mapping.get("base") + "{}"
-                        self._dataframe[dim_name] = self._dataframe[dim_name].map(base.format)
+                        self._dataframe[dim_name] = self._dataframe[dim_name].map(lambda x: base.format(quote(str(x))))
                     case "replace":
                         self._dataframe[dim_name] = self._dataframe[dim_name].map(mapping.get("replacements"))
                 self._dataframe[dim_name] = self._dataframe[dim_name].map(URIRef)
