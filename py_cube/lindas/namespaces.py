@@ -15,6 +15,7 @@ TIME = Namespace("http://www.w3.org/2006/time#")
 UNIT = Namespace("http://qudt.org/vocab/unit/")
 VCARD = Namespace("http://www.w3.org/2006/vcard/ns#")
 VOID = Namespace("http://rdfs.org/ns/void#")
+GEO = Namespace("http://www.opengis.net/ont/geosparql#")
 
 
 Namespaces = {
@@ -30,5 +31,6 @@ Namespaces = {
     "time": TIME,
     "unit": UNIT,
     "vcard": VCARD,
-    "void": VOID
+    "void": VOID,
+    "geo": GEO,
 }
