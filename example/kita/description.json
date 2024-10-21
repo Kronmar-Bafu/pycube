@@ -1,0 +1,171 @@
+{
+  "$schema": "../$schema.json",
+  "Name": {
+    "de": "Anzahl Kinder in Kindertagesstätten",
+    "fr": "Nombre d'enfants dans les crèches",
+    "it": "Numero di bambini negli asili nido",
+    "en": "Number of kids in day care facilities"
+  },
+  "Description": {
+    "de": "Ein Datensatz, der die Anzahl der Kinder in Kindertagesstätten enthält",
+    "en": "A dataset containing the number of kids in day care facilities"
+  },
+  "Publisher": [
+    {
+      "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare"
+    }
+  ],
+  "Creator": [
+    {
+      "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare"
+    }
+  ],
+  "Contributor": [
+    {
+      "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare",
+      "Name": "Bundesamt für Kindertagesstätten"
+    }
+  ],
+  "Date Created": "2024-08-26T00:00:00.000Z",
+  "Contact Point": {
+    "E-Mail": "contact@daycare.ld.admin.ch",
+    "Name": "Bundesamt für Kindertagesstätten"
+  },
+  "Base-URI": "https://daycare.ld.admin.ch/",
+  "Identifier": "kids-daycare-facilities-per-lander",
+  "Version": 1,
+  "Work Status": "Draft",
+  "Visualize": true,
+  "Accrual Periodicity": "yearly",
+  "Namespace": "mock",
+  "dimensions": {
+    "Land": {
+      "name": {
+        "de": "Land",
+        "fr": "Etat",
+        "it": "Stato",
+        "en": "State"
+      },
+      "description": {
+        "de": "Bundesland, in dem die Daten erhoben wurden"
+      },
+      "dimension-type": "Key Dimension",
+      "scale-type": "nominal",
+      "path": "Land",
+      "mapping": {
+        "type": "additive",
+        "base": "https://example.org/land/"
+      }
+    },
+    "Jahr": {
+      "name": {
+        "de": "Jahr",
+        "fr": "Année",
+        "it": "Anno",
+        "en": "Year"
+      },
+      "description": {
+        "de": "Jahr der Erhebung",
+        "fr": "Année du relevé",
+        "it": "Anno di rilevamento",
+        "en": "Year of survey"
+      },
+      "dimension-type": "Key Dimension",
+      "scale-type": "ordinal",
+      "path": "Jahr",
+      "data-kind": {
+        "type": "temporal",
+        "unit": "year"
+      },
+      "mapping": {
+        "type": "additive",
+        "base": "https://ld.admin.ch/time/year/"
+      }
+    },
+    "Kinder bis unter 3 Jahren": {
+      "name": {
+        "fr": "Nombre d'enfants de moins de 3 ans",
+        "de": "Kinder bis unter 3 Jahren",
+        "it": "Numero di bambini di età inferiore a 3 anni",
+        "en": "Children under 3 years old"
+      },
+      "description": {
+        "de": "Anzahl der Kinder bis unter 3 Jahren",
+        "fr": "Nombre d'enfants de moins de 3 ans",
+        "it": "Numero di bambini di età inferiore a 3 anni",
+        "en": "Number of children under 3 years old"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "interval",
+      "path": "Kinder-bis-unter-3-Jahren"
+    },
+    "Kinder von 3 bis unter 7 Jahren (ohne Schulkinder)": {
+      "name": {
+        "fr": "Nombre d'enfants de 3 à moins de 7 ans (sans enfants scolarisés)",
+        "de": "Kinder von 3 bis unter 7 Jahren (ohne Schulkinder)",
+        "it": "Numero di bambini da 3 a meno di 7 anni (senza bambini scolastici)",
+        "en": "Children aged 3 to under 7 years (excluding school children)"
+      },
+      "description": {
+        "de": "Anzahl der Kinder von 3 bis unter 7",
+        "fr": "Nombre d'enfants de 3 à moins de 7 ans",
+        "it": "Numero di bambini da  3 a meno di 7 anni",
+        "en": "Number of children aged 3 to under 7"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "interval",
+      "path": "Kinder-von-3-bis-unter-7-Jahren"
+    },
+    "Kinder von 5 bis unter 14 Jahren (nur Schulkinder)": {
+      "name": {
+        "fr": "Nombre d'enfants de 5 à moins de 14 ans (uniquement scolarisés)",
+        "de": "Kinder von 5 bis unter 14 Jahren (nur Schulkinder)",
+        "it": "Numero di bambini da 5 a meno di 14 anni (solo scolari)",
+        "en": "Children aged 5 to under 14 years (school children only)"
+      },
+      "description": {
+        "de": "Anzahl der Kinder von 5 bis unter 15",
+        "fr": "Nombre d'enfants de 5 à moins de 14 ans",
+        "it": "Numero di bambini da  5 a meno di 14 anni",
+        "en": "Number of children aged 5 to under 14"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "interval",
+      "path": "Kinder-von-5-bis-unter-14-Jahren"
+    },
+    "Kinder von 7 Jahren und älter (Nicht-schulkinder)": {
+      "name": {
+        "fr": "Nombre d'enfants de 7 ans et plus (non scolarisés)",
+        "de": "Kinder von 7 Jahren und älter (Nicht-schulkinder)",
+        "it": "Numero di bambini di 7 anni e più (non scolari)",
+        "en": "Children aged 7 and older (non-school children)"
+      },
+      "description": {
+        "de": "Anzahl der Kinder von 7 Jahren und älter (Nicht-schulkinder)",
+        "fr": "Nombre d'enfants de 7 ans et plus (non scolarisés)",
+        "it": "Numero di bambini di 7 anni e più (non scolari)",
+        "en": "Number of children aged 7 and older (non-school children)"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "interval",
+      "path": "Kinder-von-7-Jahren-und-älter"
+    },
+    "Insgesamt": {
+      "name": {
+        "fr": "Nombre total d'enfants",
+        "de": "Gesamtzahl der Kinder",
+        "it": "Numero totale di bambini",
+        "en": "Total number of children"
+      },
+      "description": {
+        "de": "Gesamtzahl der Kinder in Kindertagesstätten",
+        "fr": "Nombre total d'enfants dans les crèches",
+        "it": "Numero totale di bambini negli asili nido",
+        "en": "Total number of children in day care facilities"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "interval",
+      "path": "Insgesamt"
+    }
+  }
+}
