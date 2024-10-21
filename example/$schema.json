@@ -148,7 +148,7 @@
           "properties": {
             "type": {
               "type": "string",
-              "enum": ["temporal"]
+              "enum": ["temporal", "spatial-shape", "spatial-coordinates"]
             },
             "unit": {
               "type": "string"
