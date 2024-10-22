@@ -1,0 +1,86 @@
+{
+  "$schema": "../$schema.json",
+  "Name": {
+    "de": "Windkraftanlagen — betriebene WKA pro Jahr in Schleswig-Holstein",
+    "en": "Wind turbines — operated WKA per year in Schleswig-Holstein"
+  },
+  "Description": {
+    "de": "Dieses Dataset enthält Daten zu Windkraftanlagen, die jährlich in Schleswig-Holstein in Betrieb genommen werden.",
+    "en": "This dataset contains data on wind turbines operated annually in Schleswig-Holstein."
+  },
+  "Publisher": [
+    {
+      "IRI": "https://schleswig-holstein.de/opendata/"
+    }
+  ],
+  "Creator": [
+    {
+      "IRI": "https://schleswig-holstein.de/opendata/"
+    }
+  ],
+  "Contributor": [
+    {
+      "IRI": "https://schleswig-holstein.de/opendata/",
+      "Name": "Schleswig Holstein Open Data"
+    }
+  ],
+  "Date Created": "2024-07-16T00:00:00Z",
+  "Contact Point": {
+    "E-Mail": "info@landesamt-umwelt.de",
+    "Name": "Landesamt für Umwelt"
+  },
+  "Base-URI": "https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362",
+  "Identifier": "wind-turbines-operated-wka-per-year-sh",
+  "Version": 1.0,
+  "Work Status": "Published",
+  "Visualize": true,
+  "Accrual Periodicity": "yearly",
+  "Namespace": "mock",
+  "dimensions": {
+    "Jahr": {
+      "name": {
+        "de": "Jahr",
+        "en": "Year"
+      },
+      "dimension-type": "Key Dimension",
+      "scale-type": "ordinal",
+      "mapping": {
+        "type": "additive",
+        "base": "https://ld.admin.ch/time/year/"
+      },
+      "path": "Jahr",
+      "description": {
+        "de": "Das Jahr, in dem die Daten erhoben wurden",
+        "en": "The year in which the data was collected"
+      }
+    },
+    "Anzahl_inBetrieb_WKA_SH": {
+      "name": {
+        "de": "Anzahl in Betrieb WKA SH",
+        "en": "Number of Operated WKA SH"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "ratio",
+      "unit": "count",
+      "path": "Anzahl_inBetrieb_WKA_SH",
+      "description": {
+        "de": "Die Anzahl der in Schleswig-Holstein in Betrieb genommenen Windkraftanlagen",
+        "en": "The number of wind turbines put into operation in Schleswig-Holstein"
+      }
+    },
+    "Leistung_MW": {
+      "name": {
+        "de": "Leistung MW",
+        "en": "Capacity MW"
+      },
+      "dimension-type": "Measure Dimension",
+      "scale-type": "ratio",
+      "unit": "MW",
+      "path": "Leistung_MW",
+      "description": {
+        "de": "Die installierte Leistung der in Schleswig-Holstein in Betrieb genommenen Windkraftanlagen",
+        "en": "The installed capacity of the wind turbines put into operation in Schleswig-Holstein"
+      }
+    }
+  }
+}

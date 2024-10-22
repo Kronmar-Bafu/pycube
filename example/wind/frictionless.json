@@ -1,0 +1,29 @@
+{
+  "path": "https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362/resource/b8a7b43c-3529-4b92-bb49-7bf4e9109dfb/download/opendata_wka_inbetrieb_sh_20230103.csv",
+  "name": "wka-inbetrieb",
+  "profile": "tabular-data-resource",
+  "format": "csv",
+  "encoding": "utf-8",
+  "dialect": {
+    "delimiter": ";"
+  },
+  "schema": {
+    "fields": [
+      {
+        "type": "integer",
+        "name": "Jahr"
+      },
+      {
+        "type": "integer",
+        "name": "Anzahl_inBetrieb_WKA_SH",
+        "title": "Anzahl"
+      },
+      {
+        "type": "number",
+        "decimalChar": ",",
+        "name": "Leistung_MW",
+        "unit": "MW"
+      }
+    ]
+  }
+}

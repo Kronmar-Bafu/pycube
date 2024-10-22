@@ -8,3 +8,7 @@ curl $BASE_URI -H 'Content-Type: text/turtle' -X POST -T example/shared/bundesla
 
 echo "Loading meta..."
 curl $BASE_URI -H 'Content-Type: text/turtle' -X POST -T /tmp/meta.ttl  
+
+echo "Loading wind..."
+curl $BASE_URI -H 'Content-Type: text/turtle' -X POST -T example/wind.ttl
+
