@@ -51,7 +51,9 @@
       },
       "dimension-type": "Key Dimension",
       "scale-type": "nominal",
-      "data-kind": "spatial-shape",
+      "data-kind": {
+        "type": "spatial-shape"
+      },
       "path": "Land",
       "mapping": {
         "type": "additive",
