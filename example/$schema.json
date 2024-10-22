@@ -167,7 +167,13 @@
           "type": "string"
         }
       },
-      "required": ["name", "dimension-type", "scale-type"]
+      "required": [
+        "name",
+        "dimension-type",
+        "scale-type",
+        "path",
+        "description"
+      ]
     }
   }
 }
