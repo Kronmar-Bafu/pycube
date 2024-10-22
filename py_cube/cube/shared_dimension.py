@@ -59,7 +59,7 @@ class SharedDimension:
             if name_key in properties:
                 self._graph.add((feature, URIRef("http://schema.org/name"), Literal(properties[name_key], lang=lang)))
 
-        geometry = BNode()
+        geometry = URIRef(f"{iri}/geometry")
         self._graph.add((feature, URIRef("http://www.opengis.net/ont/geosparql#hasGeometry"), geometry))
         wkt = self._geojson_to_wkt(geojson_feature['geometry'])
         if wkt:
