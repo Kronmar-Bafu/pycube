@@ -5,7 +5,7 @@ import yaml
 import py_cube
 from py_cube.lindas.upload import upload_ttl
 
-def serialize(input_directory: str, output_ttl: str):
+def serialize(input_directory: str, output_ttl: str, na_values: list[str]):
     csv_path = os.path.join(input_directory, "data.csv")
     yml_path = os.path.join(input_directory, "description.yml")
     json_path = os.path.join(input_directory, "description.json")
@@ -19,9 +19,9 @@ def serialize(input_directory: str, output_ttl: str):
     else:
         raise FileNotFoundError("Neither description.yml nor description.json found in the directory")
 
-    mock_df = pd.read_csv(csv_path)
+    df = pd.read_csv(csv_path, na_values=na_values)
 
-    cube = py_cube.Cube(dataframe=mock_df, cube_yaml=cube_yaml, environment="TEST", local=True)
+    cube = py_cube.Cube(dataframe=df, cube_yaml=cube_yaml, environment="TEST", local=True)
     cube.prepare_data()
     cube.write_cube()
     cube.write_observations()
@@ -36,8 +36,9 @@ if __name__ == "__main__":
     serialize_parser = subparsers.add_parser("serialize", help="Serialize cube data")
     serialize_parser.add_argument("input_directory", help="Directory containing the data files")
     serialize_parser.add_argument("output_ttl", help="Output TTL file")
+    serialize_parser.add_argument("--na_value", nargs="+", help="Values to treat as NA")
 
     args = parser.parse_args()
 
     if args.operation == "serialize":
-        serialize(args.input_directory, args.output_ttl)
+        serialize(args.input_directory, args.output_ttl, args.na_value)
