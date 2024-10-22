@@ -9,4 +9,4 @@ data.csv:
 cube.ttl: data.csv description.json
 	echo "Navigating to the project root directory"
 	cd ../.. && \
-		python cli.py serialize example/kita/ example/kita/cube.ttl
+		python cli.py serialize example/kita/ example/kita/cube.ttl --na_value "-"

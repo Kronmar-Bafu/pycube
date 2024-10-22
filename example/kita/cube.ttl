@@ -27,8 +27,8 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://schleswig-holstein.de/opendata/org/office_of_daycare> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-10-21T15:32:26+00:00"^^xsd:dateTime ;
-    schema1:datePublished "2024-10-21"^^xsd:date ;
+    schema1:dateModified "2024-10-22T09:01:04+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-10-22"^^xsd:date ;
     schema1:description "Ein Datensatz, der die Anzahl der Kinder in Kindertagesstätten enthält"@de,
         "A dataset containing the number of kids in day care facilities"@en ;
     schema1:name "Anzahl Kinder in Kindertagesstätten"@de,
@@ -375,6 +375,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 21193.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 344255.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 21981.0 ;
     mock:Kinder-von-7-Jahren-und-älter 508.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -384,6 +385,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 26978.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 329244.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 22424.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1088.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -393,6 +395,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 32289.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 319740.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 24955.0 ;
     mock:Kinder-von-7-Jahren-und-älter 938.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -402,6 +405,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 37538.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 316560.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 26812.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1325.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -411,6 +415,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 43711.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 310411.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28240.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1407.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -420,6 +425,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 49392.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 309360.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 29135.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1770.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -429,6 +435,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 54272.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 305970.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28941.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1474.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -438,6 +445,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 58805.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 306137.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30231.0 ;
     mock:Kinder-von-7-Jahren-und-älter 944.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -447,6 +455,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 66465.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 307285.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28941.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1591.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -456,6 +465,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 68909.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 307462.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 29242.0 ;
     mock:Kinder-von-7-Jahren-und-älter 817.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -465,6 +475,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 71936.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 312721.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 27603.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1349.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -474,6 +485,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 76748.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 318909.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28236.0 ;
     mock:Kinder-von-7-Jahren-und-älter 570.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -483,6 +495,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 79807.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 326105.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 26624.0 ;
     mock:Kinder-von-7-Jahren-und-älter 848.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -492,6 +505,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 81695.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 335386.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 25581.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1325.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -501,6 +515,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 83100.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 344940.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 25775.0 ;
     mock:Kinder-von-7-Jahren-und-älter 562.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -510,6 +525,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 79213.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 352162.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 24242.0 ;
     mock:Kinder-von-7-Jahren-und-älter 152.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -519,6 +535,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 83087.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 363457.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 24586.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -528,6 +545,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 85421.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 375055.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 23998.0 ;
     mock:Kinder-von-7-Jahren-und-älter 921.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -537,6 +555,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 85513.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 378526.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 24033.0 ;
     mock:Kinder-von-7-Jahren-und-älter 773.0 ;
     mock:Land <https://example.org/land/Baden-W%C3%BCrttemberg> .
 
@@ -546,6 +565,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 24281.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 362653.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 43291.0 ;
     mock:Kinder-von-7-Jahren-und-älter 3243.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -555,6 +575,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 31091.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 359299.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 51701.0 ;
     mock:Kinder-von-7-Jahren-und-älter 663.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -564,6 +585,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 37757.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 351627.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 58177.0 ;
     mock:Kinder-von-7-Jahren-und-älter 937.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -573,6 +595,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 45238.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 344776.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 63647.0 ;
     mock:Kinder-von-7-Jahren-und-älter 965.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -582,6 +605,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 53260.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 339538.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 67547.0 ;
     mock:Kinder-von-7-Jahren-und-älter 832.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -591,6 +615,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 59310.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 340393.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 69808.0 ;
     mock:Kinder-von-7-Jahren-und-älter 407.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -600,6 +625,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 66241.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 342710.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 72469.0 ;
     mock:Kinder-von-7-Jahren-und-älter 368.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -609,6 +635,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 72562.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 345101.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 74513.0 ;
     mock:Kinder-von-7-Jahren-und-älter 593.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -618,6 +645,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 81693.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 349735.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 76643.0 ;
     mock:Kinder-von-7-Jahren-und-älter 504.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -627,6 +655,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 85707.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 353189.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 80176.0 ;
     mock:Kinder-von-7-Jahren-und-älter 601.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -636,6 +665,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 88291.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 360769.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 83507.0 ;
     mock:Kinder-von-7-Jahren-und-älter 750.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -645,6 +675,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 92329.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 368638.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 87110.0 ;
     mock:Kinder-von-7-Jahren-und-älter 745.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -654,6 +685,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 95064.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 377754.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 88168.0 ;
     mock:Kinder-von-7-Jahren-und-älter 753.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -663,6 +695,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 100607.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 388388.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 89268.0 ;
     mock:Kinder-von-7-Jahren-und-älter 829.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -672,6 +705,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 104949.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 403084.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 90924.0 ;
     mock:Kinder-von-7-Jahren-und-älter 846.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -681,6 +715,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 104590.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 415666.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 88711.0 ;
     mock:Kinder-von-7-Jahren-und-älter 905.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -690,6 +725,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 111322.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 424475.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 92268.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1039.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -699,6 +735,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 115974.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 432280.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 96283.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1031.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -708,6 +745,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 117413.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 436208.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 99973.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1089.0 ;
     mock:Land <https://example.org/land/Bayern> .
 
@@ -717,6 +755,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 29437.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 76005.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 84.0 ;
     mock:Kinder-von-7-Jahren-und-älter 57.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -726,6 +765,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 31363.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78524.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 62.0 ;
     mock:Kinder-von-7-Jahren-und-älter 38.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -735,6 +775,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 32732.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 80949.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8.0 ;
     mock:Kinder-von-7-Jahren-und-älter 35.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -744,6 +785,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 34929.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 82525.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3.0 ;
     mock:Kinder-von-7-Jahren-und-älter 62.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -753,6 +795,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 36408.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 84569.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 59.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -762,6 +805,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 36978.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 88153.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 59.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -771,6 +815,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 37725.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 91562.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 88.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -780,6 +825,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 39566.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 95119.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 91.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -789,6 +835,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 42632.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 98591.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 124.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -798,6 +845,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 44568.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 101813.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 202.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -807,6 +855,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 46331.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 105368.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 229.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -816,6 +865,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 47462.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 108914.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 338.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -825,6 +875,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 47557.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 112661.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 309.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -834,6 +885,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 47692.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 115242.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 553.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -843,6 +895,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 48329.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 118289.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 486.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -852,6 +905,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 48040.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 119954.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 476.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -861,6 +915,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 49327.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 120710.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 650.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -870,6 +925,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 49825.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 121195.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 666.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -879,6 +935,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 49088.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 119690.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren ""^^cube:Undefined ;
     mock:Kinder-von-7-Jahren-und-älter 671.0 ;
     mock:Land <https://example.org/land/Berlin> .
 
@@ -888,6 +945,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 19902.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61431.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 46272.0 ;
     mock:Kinder-von-7-Jahren-und-älter 937.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -897,6 +955,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 21013.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61610.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 52309.0 ;
     mock:Kinder-von-7-Jahren-und-älter 563.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -906,6 +965,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 21623.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 62500.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 55288.0 ;
     mock:Kinder-von-7-Jahren-und-älter 575.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -915,6 +975,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 23530.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 62549.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 58093.0 ;
     mock:Kinder-von-7-Jahren-und-älter 332.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -924,6 +985,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 25171.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 62677.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 59855.0 ;
     mock:Kinder-von-7-Jahren-und-älter 275.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -933,6 +995,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 25673.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 63775.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 61742.0 ;
     mock:Kinder-von-7-Jahren-und-älter 312.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -942,6 +1005,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 26410.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 65542.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 63409.0 ;
     mock:Kinder-von-7-Jahren-und-älter 260.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -951,6 +1015,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 26777.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 66839.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 64988.0 ;
     mock:Kinder-von-7-Jahren-und-älter 299.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -960,6 +1025,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 29078.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 68681.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 66045.0 ;
     mock:Kinder-von-7-Jahren-und-älter 399.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -969,6 +1035,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 29462.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 69471.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 68460.0 ;
     mock:Kinder-von-7-Jahren-und-älter 179.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -978,6 +1045,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 30524.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 70863.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 70992.0 ;
     mock:Kinder-von-7-Jahren-und-älter 213.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -987,6 +1055,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 31395.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 71151.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 73865.0 ;
     mock:Kinder-von-7-Jahren-und-älter 350.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -996,6 +1065,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 32269.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 72545.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 75892.0 ;
     mock:Kinder-von-7-Jahren-und-älter 277.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1005,6 +1075,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 32907.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 74193.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 76280.0 ;
     mock:Kinder-von-7-Jahren-und-älter 260.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1014,6 +1085,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 32855.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 77189.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 78382.0 ;
     mock:Kinder-von-7-Jahren-und-älter 439.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1023,6 +1095,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 31798.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78496.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 77913.0 ;
     mock:Kinder-von-7-Jahren-und-älter 463.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1032,6 +1105,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 31562.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 79530.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 79544.0 ;
     mock:Kinder-von-7-Jahren-und-älter 545.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1041,6 +1115,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 31816.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 79877.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 85651.0 ;
     mock:Kinder-von-7-Jahren-und-älter 535.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1050,6 +1125,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 30812.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78357.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 90412.0 ;
     mock:Kinder-von-7-Jahren-und-älter 501.0 ;
     mock:Land <https://example.org/land/Brandenburg> .
 
@@ -1059,6 +1135,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 1198.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16606.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 4043.0 ;
     mock:Kinder-von-7-Jahren-und-älter 39.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1068,6 +1145,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 1404.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16200.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 4048.0 ;
     mock:Kinder-von-7-Jahren-und-älter 30.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1077,6 +1155,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 1723.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 15979.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3704.0 ;
     mock:Kinder-von-7-Jahren-und-älter 43.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1086,6 +1165,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 1846.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16151.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3656.0 ;
     mock:Kinder-von-7-Jahren-und-älter 44.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1095,6 +1175,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 2125.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16313.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3660.0 ;
     mock:Kinder-von-7-Jahren-und-älter 29.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1104,6 +1185,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 2564.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16743.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3530.0 ;
     mock:Kinder-von-7-Jahren-und-älter 16.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1113,6 +1195,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 2737.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16840.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3484.0 ;
     mock:Kinder-von-7-Jahren-und-älter 21.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1122,6 +1205,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 3062.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 16974.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3459.0 ;
     mock:Kinder-von-7-Jahren-und-älter 21.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1131,6 +1215,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 3620.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 17282.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3228.0 ;
     mock:Kinder-von-7-Jahren-und-älter 19.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1140,6 +1225,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 3865.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 17362.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3194.0 ;
     mock:Kinder-von-7-Jahren-und-älter 37.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1149,6 +1235,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 4120.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 17515.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2989.0 ;
     mock:Kinder-von-7-Jahren-und-älter 40.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1158,6 +1245,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 4304.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 18102.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2731.0 ;
     mock:Kinder-von-7-Jahren-und-älter 119.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1167,6 +1255,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 4860.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 18870.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2983.0 ;
     mock:Kinder-von-7-Jahren-und-älter 108.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1176,6 +1265,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 4906.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 19437.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3075.0 ;
     mock:Kinder-von-7-Jahren-und-älter 29.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1185,6 +1275,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 5102.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 19929.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3055.0 ;
     mock:Kinder-von-7-Jahren-und-älter 32.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1194,6 +1285,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 5193.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 20776.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2955.0 ;
     mock:Kinder-von-7-Jahren-und-älter 63.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1203,6 +1295,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 5347.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 21557.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2556.0 ;
     mock:Kinder-von-7-Jahren-und-älter 90.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1212,6 +1305,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 5416.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 22057.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2504.0 ;
     mock:Kinder-von-7-Jahren-und-älter 80.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1221,6 +1315,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 5189.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 22599.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2409.0 ;
     mock:Kinder-von-7-Jahren-und-älter 127.0 ;
     mock:Land <https://example.org/land/Bremen> .
 
@@ -1230,6 +1325,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 7705.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 38126.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 13970.0 ;
     mock:Kinder-von-7-Jahren-und-älter 756.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1239,6 +1335,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 8286.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 39892.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 15925.0 ;
     mock:Kinder-von-7-Jahren-und-älter 399.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1248,6 +1345,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 8723.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 40091.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 17102.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1313.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1257,6 +1355,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 10017.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 40415.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 18395.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1203.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1266,6 +1365,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 11673.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 41690.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 19909.0 ;
     mock:Kinder-von-7-Jahren-und-älter 647.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1275,6 +1375,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 13753.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 43493.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 18157.0 ;
     mock:Kinder-von-7-Jahren-und-älter 543.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1284,6 +1385,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 15480.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 44575.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 19013.0 ;
     mock:Kinder-von-7-Jahren-und-älter 376.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1293,6 +1395,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 17266.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 45823.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 17398.0 ;
     mock:Kinder-von-7-Jahren-und-älter 313.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1302,6 +1405,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 19857.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 46923.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 5043.0 ;
     mock:Kinder-von-7-Jahren-und-älter 53.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1311,6 +1415,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 20945.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 47919.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 5050.0 ;
     mock:Kinder-von-7-Jahren-und-älter 163.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1320,6 +1425,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 21803.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 48201.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 5205.0 ;
     mock:Kinder-von-7-Jahren-und-älter 366.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1329,6 +1435,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 24153.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 50101.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1687.0 ;
     mock:Kinder-von-7-Jahren-und-älter 51.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1338,6 +1445,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 24428.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 52527.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1556.0 ;
     mock:Kinder-von-7-Jahren-und-älter 161.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1347,6 +1455,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 26442.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 53651.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1557.0 ;
     mock:Kinder-von-7-Jahren-und-älter 35.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1356,6 +1465,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 26273.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 56137.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1542.0 ;
     mock:Kinder-von-7-Jahren-und-älter 93.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1365,6 +1475,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 26369.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 56781.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1646.0 ;
     mock:Kinder-von-7-Jahren-und-älter 34.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1374,6 +1485,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 27438.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 56842.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1635.0 ;
     mock:Kinder-von-7-Jahren-und-älter 57.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1383,6 +1495,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 27685.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 57013.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1605.0 ;
     mock:Kinder-von-7-Jahren-und-älter 52.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1392,6 +1505,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 26670.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 56626.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2118.0 ;
     mock:Kinder-von-7-Jahren-und-älter 275.0 ;
     mock:Land <https://example.org/land/Hamburg> .
 
@@ -1401,6 +1515,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 12515.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 181955.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 25654.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1455.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1410,6 +1525,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 15759.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 181077.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28187.0 ;
     mock:Kinder-von-7-Jahren-und-älter 805.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1419,6 +1535,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 18297.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 178673.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 29174.0 ;
     mock:Kinder-von-7-Jahren-und-älter 757.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1428,6 +1545,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 20487.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 177533.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 29675.0 ;
     mock:Kinder-von-7-Jahren-und-älter 924.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1437,6 +1555,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 24602.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 175806.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30349.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1038.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1446,6 +1565,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 27097.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 175878.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30014.0 ;
     mock:Kinder-von-7-Jahren-und-älter 941.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1455,6 +1575,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 29917.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 176032.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30516.0 ;
     mock:Kinder-von-7-Jahren-und-älter 469.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1464,6 +1585,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 32885.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 176564.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30059.0 ;
     mock:Kinder-von-7-Jahren-und-älter 555.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1473,6 +1595,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 37719.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 178468.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28610.0 ;
     mock:Kinder-von-7-Jahren-und-älter 632.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1482,6 +1605,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 40468.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 179272.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28873.0 ;
     mock:Kinder-von-7-Jahren-und-älter 250.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1491,6 +1615,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 42371.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 181695.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 27974.0 ;
     mock:Kinder-von-7-Jahren-und-älter 286.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1500,6 +1625,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 44984.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 185382.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 27744.0 ;
     mock:Kinder-von-7-Jahren-und-älter 323.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1509,6 +1635,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 46769.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 188602.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 26988.0 ;
     mock:Kinder-von-7-Jahren-und-älter 359.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1518,6 +1645,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 48581.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 193989.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 25600.0 ;
     mock:Kinder-von-7-Jahren-und-älter 399.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1527,6 +1655,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 48934.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 199453.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 24348.0 ;
     mock:Kinder-von-7-Jahren-und-älter 247.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1536,6 +1665,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 47379.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 202456.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 22573.0 ;
     mock:Kinder-von-7-Jahren-und-älter 271.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1545,6 +1675,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 49468.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 205147.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 22280.0 ;
     mock:Kinder-von-7-Jahren-und-älter 312.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1554,6 +1685,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 50551.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 207380.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 21938.0 ;
     mock:Kinder-von-7-Jahren-und-älter 351.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1563,6 +1695,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 50863.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 207081.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 21596.0 ;
     mock:Kinder-von-7-Jahren-und-älter 442.0 ;
     mock:Land <https://example.org/land/Hessen> .
 
@@ -1572,6 +1705,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 253884.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2331776.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 356144.0 ;
     mock:Kinder-von-7-Jahren-und-älter 12179.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1581,6 +1715,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 278642.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2311790.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 383476.0 ;
     mock:Kinder-von-7-Jahren-und-älter 8085.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1590,6 +1725,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 313114.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2294890.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 399737.0 ;
     mock:Kinder-von-7-Jahren-und-älter 10155.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1599,6 +1735,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 356274.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2266641.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 417779.0 ;
     mock:Kinder-von-7-Jahren-und-älter 10222.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1608,6 +1745,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 400336.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2238480.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 431539.0 ;
     mock:Kinder-von-7-Jahren-und-älter 8546.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1617,6 +1755,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 437390.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2238118.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 439922.0 ;
     mock:Kinder-von-7-Jahren-und-älter 7270.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1626,6 +1765,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 472176.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2233171.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 452073.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6179.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1635,6 +1775,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 503926.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2242276.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 460553.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6410.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1644,6 +1785,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 561569.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2263451.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 453973.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6133.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1653,6 +1795,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 593639.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2275306.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 468034.0 ;
     mock:Kinder-von-7-Jahren-und-älter 4807.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1662,6 +1805,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 614600.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2312214.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 480383.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6356.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1671,6 +1815,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 645077.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2354261.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 494673.0 ;
     mock:Kinder-von-7-Jahren-und-älter 5195.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1680,6 +1825,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 665302.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2404402.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 502205.0 ;
     mock:Kinder-von-7-Jahren-und-älter 5686.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1689,6 +1835,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 687427.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2464737.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 504725.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6455.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1698,6 +1845,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 695048.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2538861.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 512774.0 ;
     mock:Kinder-von-7-Jahren-und-älter 5739.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1707,6 +1855,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 680502.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2586471.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 505375.0 ;
     mock:Kinder-von-7-Jahren-und-älter 5507.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1716,6 +1865,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 705793.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2625257.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 516327.0 ;
     mock:Kinder-von-7-Jahren-und-älter 6209.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1725,6 +1875,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 721551.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2662913.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 534506.0 ;
     mock:Kinder-von-7-Jahren-und-älter 7453.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1734,6 +1885,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 717248.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 2661244.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 550373.0 ;
     mock:Kinder-von-7-Jahren-und-älter 8265.0 ;
     mock:Land <https://example.org/land/L%C3%A4nder%20insgesamt> .
 
@@ -1743,6 +1895,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 12960.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 42398.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 22234.0 ;
     mock:Kinder-von-7-Jahren-und-älter 487.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1752,6 +1905,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 12899.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 43067.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 25007.0 ;
     mock:Kinder-von-7-Jahren-und-älter 178.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1761,6 +1915,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 12939.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 43216.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 27376.0 ;
     mock:Kinder-von-7-Jahren-und-älter 192.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1770,6 +1925,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 14524.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 43327.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28939.0 ;
     mock:Kinder-von-7-Jahren-und-älter 159.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1779,6 +1935,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 15050.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 43660.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30100.0 ;
     mock:Kinder-von-7-Jahren-und-älter 129.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1788,6 +1945,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 15622.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 43926.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 31244.0 ;
     mock:Kinder-von-7-Jahren-und-älter 212.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1797,6 +1955,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 16139.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 44623.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 32256.0 ;
     mock:Kinder-von-7-Jahren-und-älter 154.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1806,6 +1965,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 16405.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 45517.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 32988.0 ;
     mock:Kinder-von-7-Jahren-und-älter 155.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1815,6 +1975,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 16962.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 46654.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 33799.0 ;
     mock:Kinder-von-7-Jahren-und-älter 135.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1824,6 +1985,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 17431.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 47047.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 34732.0 ;
     mock:Kinder-von-7-Jahren-und-älter 157.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1833,6 +1995,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 18133.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 47335.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 35951.0 ;
     mock:Kinder-von-7-Jahren-und-älter 226.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1842,6 +2005,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 18696.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 47491.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 37383.0 ;
     mock:Kinder-von-7-Jahren-und-älter 208.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1851,6 +2015,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 19187.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 47856.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 38489.0 ;
     mock:Kinder-von-7-Jahren-und-älter 173.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1860,6 +2025,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 19327.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 48462.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 39099.0 ;
     mock:Kinder-von-7-Jahren-und-älter 204.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1869,6 +2035,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 19480.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 49198.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 40760.0 ;
     mock:Kinder-von-7-Jahren-und-älter 204.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1878,6 +2045,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 19389.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 49358.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 42785.0 ;
     mock:Kinder-von-7-Jahren-und-älter 166.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1887,6 +2055,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 19490.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 49153.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 44353.0 ;
     mock:Kinder-von-7-Jahren-und-älter 208.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1896,6 +2065,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 19368.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 49220.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 46055.0 ;
     mock:Kinder-von-7-Jahren-und-älter 233.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1905,6 +2075,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 18576.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 48354.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 47373.0 ;
     mock:Kinder-von-7-Jahren-und-älter 224.0 ;
     mock:Land <https://example.org/land/Mecklenburg-Vorpommern> .
 
@@ -1914,6 +2085,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 9406.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 229158.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 13162.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1383.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1923,6 +2095,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 12283.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 231152.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 15557.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1220.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1932,6 +2105,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 15140.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 230386.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 17187.0 ;
     mock:Kinder-von-7-Jahren-und-älter 948.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1941,6 +2115,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 18795.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 227878.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 19751.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1095.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1950,6 +2125,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 23330.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 225159.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 21782.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1250.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1959,6 +2135,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 27915.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 220546.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 23791.0 ;
     mock:Kinder-von-7-Jahren-und-älter 806.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1968,6 +2145,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 32094.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 215291.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 25991.0 ;
     mock:Kinder-von-7-Jahren-und-älter 776.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1977,6 +2155,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 35765.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 211860.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 27457.0 ;
     mock:Kinder-von-7-Jahren-und-älter 823.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1986,6 +2165,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 41286.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 211722.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 28923.0 ;
     mock:Kinder-von-7-Jahren-und-älter 736.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -1995,6 +2175,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 43894.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 210885.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30437.0 ;
     mock:Kinder-von-7-Jahren-und-älter 548.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2004,6 +2185,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 46314.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 212749.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 32119.0 ;
     mock:Kinder-von-7-Jahren-und-älter 386.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2013,6 +2195,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 50097.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 216809.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 33318.0 ;
     mock:Kinder-von-7-Jahren-und-älter 510.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2022,6 +2205,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 53082.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 221308.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 33716.0 ;
     mock:Kinder-von-7-Jahren-und-älter 468.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2031,6 +2215,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 56239.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 229379.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 33656.0 ;
     mock:Kinder-von-7-Jahren-und-älter 544.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2040,6 +2225,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 57616.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 239824.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 33618.0 ;
     mock:Kinder-von-7-Jahren-und-älter 645.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2049,6 +2235,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 56438.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 245605.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 31373.0 ;
     mock:Kinder-von-7-Jahren-und-älter 512.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2058,6 +2245,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 61095.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 251964.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 31465.0 ;
     mock:Kinder-von-7-Jahren-und-älter 511.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2067,6 +2255,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 64043.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 258126.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 31607.0 ;
     mock:Kinder-von-7-Jahren-und-älter 639.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2076,6 +2265,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 64853.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 260314.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 31670.0 ;
     mock:Kinder-von-7-Jahren-und-älter 959.0 ;
     mock:Land <https://example.org/land/Niedersachsen> .
 
@@ -2085,6 +2275,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 24925.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 517909.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 40988.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1449.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2094,6 +2285,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 23834.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 514239.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 30559.0 ;
     mock:Kinder-von-7-Jahren-und-älter 933.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2103,6 +2295,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 32203.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 518069.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 17303.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1234.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2112,6 +2305,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 39376.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 508024.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 11686.0 ;
     mock:Kinder-von-7-Jahren-und-älter 698.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2121,6 +2315,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 46140.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 493548.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7944.0 ;
     mock:Kinder-von-7-Jahren-und-älter 550.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2130,6 +2325,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 50724.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 488169.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 6362.0 ;
     mock:Kinder-von-7-Jahren-und-älter 517.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2139,6 +2335,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 55697.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 478954.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 4923.0 ;
     mock:Kinder-von-7-Jahren-und-älter 527.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2148,6 +2345,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 60624.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 476154.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3857.0 ;
     mock:Kinder-von-7-Jahren-und-älter 554.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2157,6 +2355,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 73999.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 476353.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3539.0 ;
     mock:Kinder-von-7-Jahren-und-älter 373.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2166,6 +2365,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 84831.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 476719.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3786.0 ;
     mock:Kinder-von-7-Jahren-und-älter 125.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2175,6 +2375,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 86925.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 483719.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3360.0 ;
     mock:Kinder-von-7-Jahren-und-älter 143.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2184,6 +2385,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 90918.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 490239.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3533.0 ;
     mock:Kinder-von-7-Jahren-und-älter 148.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2193,6 +2395,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 94620.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 500598.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3568.0 ;
     mock:Kinder-von-7-Jahren-und-älter 165.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2202,6 +2405,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 98458.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 513270.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3103.0 ;
     mock:Kinder-von-7-Jahren-und-älter 216.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2211,6 +2415,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 100653.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 527694.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 3013.0 ;
     mock:Kinder-von-7-Jahren-und-älter 440.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2220,6 +2425,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 101851.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 539536.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2826.0 ;
     mock:Kinder-von-7-Jahren-und-älter 541.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2229,6 +2435,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 104477.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 546285.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2715.0 ;
     mock:Kinder-von-7-Jahren-und-älter 566.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2238,6 +2445,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 106486.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 551977.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2453.0 ;
     mock:Kinder-von-7-Jahren-und-älter 732.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2247,6 +2455,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 108615.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 551944.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2500.0 ;
     mock:Kinder-von-7-Jahren-und-älter 762.0 ;
     mock:Land <https://example.org/land/Nordrhein-Westfalen> .
 
@@ -2256,6 +2465,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 8949.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 126627.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7616.0 ;
     mock:Kinder-von-7-Jahren-und-älter 488.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2265,6 +2475,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 11150.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 122783.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7943.0 ;
     mock:Kinder-von-7-Jahren-und-älter 425.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2274,6 +2485,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 13467.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 120010.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8598.0 ;
     mock:Kinder-von-7-Jahren-und-älter 546.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2283,6 +2495,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 15588.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 114411.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8666.0 ;
     mock:Kinder-von-7-Jahren-und-älter 450.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2292,6 +2505,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 17702.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111693.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8850.0 ;
     mock:Kinder-von-7-Jahren-und-älter 438.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2301,6 +2515,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 21731.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111137.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8898.0 ;
     mock:Kinder-von-7-Jahren-und-älter 342.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2310,6 +2525,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 23556.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111018.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8672.0 ;
     mock:Kinder-von-7-Jahren-und-älter 317.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2319,6 +2535,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 25017.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111229.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8518.0 ;
     mock:Kinder-von-7-Jahren-und-älter 302.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2328,6 +2545,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 27483.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111657.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8314.0 ;
     mock:Kinder-von-7-Jahren-und-älter 229.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2337,6 +2555,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 28393.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111719.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8294.0 ;
     mock:Kinder-von-7-Jahren-und-älter 203.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2346,6 +2565,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 29217.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 113993.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8366.0 ;
     mock:Kinder-von-7-Jahren-und-älter 270.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2355,6 +2575,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 31238.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 116392.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8306.0 ;
     mock:Kinder-von-7-Jahren-und-älter 179.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2364,6 +2585,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 32186.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 119001.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8368.0 ;
     mock:Kinder-von-7-Jahren-und-älter 251.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2373,6 +2595,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 32979.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 122041.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8336.0 ;
     mock:Kinder-von-7-Jahren-und-älter 354.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2382,6 +2605,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 32829.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 125835.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8338.0 ;
     mock:Kinder-von-7-Jahren-und-älter 215.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2391,6 +2615,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 30501.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 127815.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7805.0 ;
     mock:Kinder-von-7-Jahren-und-älter 226.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2400,6 +2625,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 32129.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 129214.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7948.0 ;
     mock:Kinder-von-7-Jahren-und-älter 113.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2409,6 +2635,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 33419.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 130513.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7615.0 ;
     mock:Kinder-von-7-Jahren-und-älter 307.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2418,6 +2645,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 33464.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 130683.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7474.0 ;
     mock:Kinder-von-7-Jahren-und-älter 300.0 ;
     mock:Land <https://example.org/land/Rheinland-Pfalz> .
 
@@ -2427,6 +2655,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 2253.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 28504.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2453.0 ;
     mock:Kinder-von-7-Jahren-und-älter 138.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2436,6 +2665,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 2565.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 27198.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2564.0 ;
     mock:Kinder-von-7-Jahren-und-älter 113.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2445,6 +2675,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 2899.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 26420.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2554.0 ;
     mock:Kinder-von-7-Jahren-und-älter 162.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2454,6 +2685,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 2984.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25887.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2291.0 ;
     mock:Kinder-von-7-Jahren-und-älter 135.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2463,6 +2695,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 3444.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25398.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1882.0 ;
     mock:Kinder-von-7-Jahren-und-älter 76.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2472,6 +2705,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 3899.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25209.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2059.0 ;
     mock:Kinder-von-7-Jahren-und-älter 84.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2481,6 +2715,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 4195.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 24802.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2012.0 ;
     mock:Kinder-von-7-Jahren-und-älter 115.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2490,6 +2725,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 4666.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25009.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2159.0 ;
     mock:Kinder-von-7-Jahren-und-älter 127.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2499,6 +2735,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 5152.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 24942.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2118.0 ;
     mock:Kinder-von-7-Jahren-und-älter 58.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2508,6 +2745,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 5557.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25067.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2251.0 ;
     mock:Kinder-von-7-Jahren-und-älter 109.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2517,6 +2755,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 5923.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25595.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2529.0 ;
     mock:Kinder-von-7-Jahren-und-älter 101.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2526,6 +2765,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 6244.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 25739.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2866.0 ;
     mock:Kinder-von-7-Jahren-und-älter 90.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2535,6 +2775,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 6425.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 26126.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2353.0 ;
     mock:Kinder-von-7-Jahren-und-älter 155.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2544,6 +2785,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 6800.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 26593.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2438.0 ;
     mock:Kinder-von-7-Jahren-und-älter 57.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2553,6 +2795,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 6584.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 27124.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2539.0 ;
     mock:Kinder-von-7-Jahren-und-älter 100.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2562,6 +2805,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 6600.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 27340.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2403.0 ;
     mock:Kinder-von-7-Jahren-und-älter 88.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2571,6 +2815,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 7101.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 27464.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2381.0 ;
     mock:Kinder-von-7-Jahren-und-älter 138.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2580,6 +2825,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 7379.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 28003.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2525.0 ;
     mock:Kinder-von-7-Jahren-und-älter 139.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2589,6 +2835,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 7363.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 28222.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 2655.0 ;
     mock:Kinder-von-7-Jahren-und-älter 169.0 ;
     mock:Land <https://example.org/land/Saarland> .
 
@@ -2598,6 +2845,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 25568.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 59164.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 31072.0 ;
     mock:Kinder-von-7-Jahren-und-älter 264.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2607,6 +2855,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 26309.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58739.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 34934.0 ;
     mock:Kinder-von-7-Jahren-und-älter 115.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2616,6 +2865,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 26722.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58500.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 38445.0 ;
     mock:Kinder-von-7-Jahren-und-älter 203.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2625,6 +2875,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 28234.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58009.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 41168.0 ;
     mock:Kinder-von-7-Jahren-und-älter 225.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2634,6 +2885,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 28815.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58343.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 42356.0 ;
     mock:Kinder-von-7-Jahren-und-älter 163.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2643,6 +2895,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 28876.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58941.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 43657.0 ;
     mock:Kinder-von-7-Jahren-und-älter 141.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2652,6 +2905,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 29080.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 59676.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 45648.0 ;
     mock:Kinder-von-7-Jahren-und-älter 184.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2661,6 +2915,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 29064.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 60468.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 46940.0 ;
     mock:Kinder-von-7-Jahren-und-älter 211.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2670,6 +2925,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 29115.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61120.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 47576.0 ;
     mock:Kinder-von-7-Jahren-und-älter 191.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2679,6 +2935,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 29216.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61186.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 49157.0 ;
     mock:Kinder-von-7-Jahren-und-älter 198.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2688,6 +2945,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 29702.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61431.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 50934.0 ;
     mock:Kinder-von-7-Jahren-und-älter 253.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2697,6 +2955,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 30302.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61929.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 53534.0 ;
     mock:Kinder-von-7-Jahren-und-älter 223.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2706,6 +2965,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 30516.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 62670.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 55387.0 ;
     mock:Kinder-von-7-Jahren-und-älter 216.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2715,6 +2975,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 30779.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 63434.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 56177.0 ;
     mock:Kinder-von-7-Jahren-und-älter 210.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2724,6 +2985,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 29950.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 64282.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 56749.0 ;
     mock:Kinder-von-7-Jahren-und-älter 253.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2733,6 +2995,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 28196.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 64489.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 57130.0 ;
     mock:Kinder-von-7-Jahren-und-älter 274.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2742,6 +3005,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 28335.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 64180.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 59097.0 ;
     mock:Kinder-von-7-Jahren-und-älter 309.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2751,6 +3015,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 28075.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 64496.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 61773.0 ;
     mock:Kinder-von-7-Jahren-und-älter 281.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2760,6 +3025,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 26559.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 63230.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 64085.0 ;
     mock:Kinder-von-7-Jahren-und-älter 346.0 ;
     mock:Land <https://example.org/land/Sachsen-Anhalt> .
 
@@ -2769,6 +3035,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 30632.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 108297.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 75092.0 ;
     mock:Kinder-von-7-Jahren-und-älter 340.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2778,6 +3045,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 31182.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 109840.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 83290.0 ;
     mock:Kinder-von-7-Jahren-und-älter 513.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2787,6 +3055,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 32644.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 111376.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 91136.0 ;
     mock:Kinder-von-7-Jahren-und-älter 581.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2796,6 +3065,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 35929.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 112674.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 95617.0 ;
     mock:Kinder-von-7-Jahren-und-älter 633.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2805,6 +3075,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 38593.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 114518.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 99076.0 ;
     mock:Kinder-von-7-Jahren-und-älter 671.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2814,6 +3085,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 40220.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 115883.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 102320.0 ;
     mock:Kinder-von-7-Jahren-und-älter 612.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2823,6 +3095,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 42408.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 118123.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 105584.0 ;
     mock:Kinder-von-7-Jahren-und-älter 608.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2832,6 +3105,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 42909.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 120779.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 108423.0 ;
     mock:Kinder-von-7-Jahren-und-älter 675.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2841,6 +3115,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 45207.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 123903.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 111921.0 ;
     mock:Kinder-von-7-Jahren-und-älter 602.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2850,6 +3125,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 46867.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 125551.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 115200.0 ;
     mock:Kinder-von-7-Jahren-und-älter 666.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2859,6 +3135,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 48462.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 127628.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 119346.0 ;
     mock:Kinder-von-7-Jahren-und-älter 734.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2868,6 +3145,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 49837.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 129237.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 124300.0 ;
     mock:Kinder-von-7-Jahren-und-älter 804.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2877,6 +3155,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 50203.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 131154.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 128281.0 ;
     mock:Kinder-von-7-Jahren-und-älter 899.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2886,6 +3165,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 50905.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 132206.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 130843.0 ;
     mock:Kinder-von-7-Jahren-und-älter 921.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2895,6 +3175,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 50036.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 134593.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 133657.0 ;
     mock:Kinder-von-7-Jahren-und-älter 621.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2904,6 +3185,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 48314.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 134434.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 132848.0 ;
     mock:Kinder-von-7-Jahren-und-älter 857.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2913,6 +3195,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 48126.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 133418.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 135228.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1209.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2922,6 +3205,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 47967.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 132808.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 141075.0 ;
     mock:Kinder-von-7-Jahren-und-älter 904.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2931,6 +3215,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 45349.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 128812.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 144306.0 ;
     mock:Kinder-von-7-Jahren-und-älter 951.0 ;
     mock:Land <https://example.org/land/Sachsen> .
 
@@ -2940,6 +3225,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 4263.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 79833.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 6578.0 ;
     mock:Kinder-von-7-Jahren-und-älter 387.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -2949,6 +3235,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 4310.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 79988.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7232.0 ;
     mock:Kinder-von-7-Jahren-und-älter 760.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -2958,6 +3245,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 5133.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78649.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7049.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1440.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -2967,6 +3255,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 6329.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 77714.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7669.0 ;
     mock:Kinder-von-7-Jahren-und-älter 1728.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -2976,6 +3265,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 7997.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 77169.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8407.0 ;
     mock:Kinder-von-7-Jahren-und-älter 765.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -2985,6 +3275,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 10197.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78054.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7870.0 ;
     mock:Kinder-von-7-Jahren-und-älter 319.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -2994,6 +3285,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 11425.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78337.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 7954.0 ;
     mock:Kinder-von-7-Jahren-und-älter 261.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3003,6 +3295,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 12655.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78555.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8480.0 ;
     mock:Kinder-von-7-Jahren-und-älter 546.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3012,6 +3305,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 14961.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78797.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8349.0 ;
     mock:Kinder-von-7-Jahren-und-älter 305.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3021,6 +3315,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 16670.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 78932.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8366.0 ;
     mock:Kinder-von-7-Jahren-und-älter 371.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3030,6 +3325,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 17029.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 79937.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 8774.0 ;
     mock:Kinder-von-7-Jahren-und-älter 820.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3039,6 +3335,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 18076.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 81273.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9494.0 ;
     mock:Kinder-von-7-Jahren-und-älter 346.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3048,6 +3345,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 19553.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 82030.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9358.0 ;
     mock:Kinder-von-7-Jahren-und-älter 334.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3057,6 +3355,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 20448.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 83717.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9298.0 ;
     mock:Kinder-von-7-Jahren-und-älter 285.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3066,6 +3365,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 20569.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 85301.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9663.0 ;
     mock:Kinder-von-7-Jahren-und-älter 302.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3075,6 +3375,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 20518.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 86169.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9844.0 ;
     mock:Kinder-von-7-Jahren-und-älter 168.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3084,6 +3385,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 21603.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 87485.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9900.0 ;
     mock:Kinder-von-7-Jahren-und-älter 161.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3093,6 +3395,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 22730.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 89135.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9085.0 ;
     mock:Kinder-von-7-Jahren-und-älter 258.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3102,6 +3405,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 22938.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 88686.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 9432.0 ;
     mock:Kinder-von-7-Jahren-und-älter 373.0 ;
     mock:Land <https://example.org/land/Schleswig-Holstein> .
 
@@ -3111,6 +3415,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2006> ;
     mock:Kinder-bis-unter-3-Jahren 18697.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58855.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1654.0 ;
     mock:Kinder-von-7-Jahren-und-älter 248.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3120,6 +3425,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2007> ;
     mock:Kinder-bis-unter-3-Jahren 18216.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58938.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1734.0 ;
     mock:Kinder-von-7-Jahren-und-älter 242.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3129,6 +3435,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2008> ;
     mock:Kinder-bis-unter-3-Jahren 18823.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58705.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1681.0 ;
     mock:Kinder-von-7-Jahren-und-älter 251.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3138,6 +3445,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2009> ;
     mock:Kinder-bis-unter-3-Jahren 20930.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58208.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1711.0 ;
     mock:Kinder-von-7-Jahren-und-älter 244.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3147,6 +3455,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2010> ;
     mock:Kinder-bis-unter-3-Jahren 22315.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 57988.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1582.0 ;
     mock:Kinder-von-7-Jahren-und-älter 217.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3156,6 +3465,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2011> ;
     mock:Kinder-bis-unter-3-Jahren 23439.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 58458.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1335.0 ;
     mock:Kinder-von-7-Jahren-und-älter 189.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3165,6 +3475,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Kinder-bis-unter-3-Jahren 24800.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 59116.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1201.0 ;
     mock:Kinder-von-7-Jahren-und-älter 181.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3174,6 +3485,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Kinder-bis-unter-3-Jahren 25898.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 60148.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 1083.0 ;
     mock:Kinder-von-7-Jahren-und-älter 201.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3183,6 +3495,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Kinder-bis-unter-3-Jahren 26340.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61338.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 924.0 ;
     mock:Kinder-von-7-Jahren-und-älter 182.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3192,6 +3505,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Kinder-bis-unter-3-Jahren 26856.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61712.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 816.0 ;
     mock:Kinder-von-7-Jahren-und-älter 181.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3201,6 +3515,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Kinder-bis-unter-3-Jahren 27519.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 62695.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 734.0 ;
     mock:Kinder-von-7-Jahren-und-älter 190.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3210,6 +3525,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Kinder-bis-unter-3-Jahren 28294.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 63955.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 566.0 ;
     mock:Kinder-von-7-Jahren-und-älter 191.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3219,6 +3535,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Kinder-bis-unter-3-Jahren 28776.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 64595.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 474.0 ;
     mock:Kinder-von-7-Jahren-und-älter 210.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3228,6 +3545,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Kinder-bis-unter-3-Jahren 28662.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 65349.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 414.0 ;
     mock:Kinder-von-7-Jahren-und-älter 234.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3237,6 +3555,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Kinder-bis-unter-3-Jahren 27789.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 65989.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 411.0 ;
     mock:Kinder-von-7-Jahren-und-älter 254.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3246,6 +3565,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Kinder-bis-unter-3-Jahren 26113.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 65434.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 321.0 ;
     mock:Kinder-von-7-Jahren-und-älter 311.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3255,6 +3575,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Kinder-bis-unter-3-Jahren 25886.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 64376.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 371.0 ;
     mock:Kinder-von-7-Jahren-und-älter 295.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3264,6 +3585,7 @@
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Kinder-bis-unter-3-Jahren 25396.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 63778.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 339.0 ;
     mock:Kinder-von-7-Jahren-und-älter 324.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
@@ -3273,73 +3595,13 @@
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Kinder-bis-unter-3-Jahren 23983.0 ;
     mock:Kinder-von-3-bis-unter-7-Jahren 61912.0 ;
+    mock:Kinder-von-5-bis-unter-14-Jahren 337.0 ;
     mock:Kinder-von-7-Jahren-und-älter 303.0 ;
     mock:Land <https://example.org/land/Th%C3%BCringen> .
 
 <https://daycare.ld.admin.ch/cube/kids-daycare-facilities-per-lander/1/shape> a cube:Constraint ;
     sh:closed true ;
     sh:property [ a cube:KeyDimension ;
-            qudt:scaleType qudt:NominalScale ;
-            schema1:description "Bundesland, in dem die Daten erhoben wurden"@de ;
-            schema1:name "Land"@de,
-                "State"@en,
-                "Etat"@fr,
-                "Stato"@it ;
-            sh:in ( <https://example.org/land/Baden-W%C3%BCrttemberg> <https://example.org/land/Bayern> <https://example.org/land/Berlin> <https://example.org/land/Brandenburg> <https://example.org/land/Bremen> <https://example.org/land/Hamburg> <https://example.org/land/Hessen> <https://example.org/land/Mecklenburg-Vorpommern> <https://example.org/land/Niedersachsen> <https://example.org/land/Nordrhein-Westfalen> <https://example.org/land/Rheinland-Pfalz> <https://example.org/land/Saarland> <https://example.org/land/Sachsen> <https://example.org/land/Sachsen-Anhalt> <https://example.org/land/Schleswig-Holstein> <https://example.org/land/Th%C3%BCringen> <https://example.org/land/L%C3%A4nder%20insgesamt> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:Land ;
-            meta:dataKind [ a schema1:GeoShape ] ],
-        [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Anzahl der Kinder von 5 bis unter 15"@de,
-                "Number of children aged 5 to under 14"@en,
-                "Nombre d'enfants de 5 à moins de 14 ans"@fr,
-                "Numero di bambini da  5 a meno di 14 anni"@it ;
-            schema1:name "Kinder von 5 bis unter 14 Jahren (nur Schulkinder)"@de,
-                "Children aged 5 to under 14 years (school children only)"@en,
-                "Nombre d'enfants de 5 à moins de 14 ans (uniquement scolarisés)"@fr,
-                "Numero di bambini da 5 a meno di 14 anni (solo scolari)"@it ;
-            sh:max "99973" ;
-            sh:maxCount 1 ;
-            sh:min "-" ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:Kinder-von-5-bis-unter-14-Jahren ],
-        [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Anzahl der Kinder bis unter 3 Jahren"@de,
-                "Number of children under 3 years old"@en,
-                "Nombre d'enfants de moins de 3 ans"@fr,
-                "Numero di bambini di età inferiore a 3 anni"@it ;
-            schema1:name "Kinder bis unter 3 Jahren"@de,
-                "Children under 3 years old"@en,
-                "Nombre d'enfants de moins de 3 ans"@fr,
-                "Numero di bambini di età inferiore a 3 anni"@it ;
-            sh:max "721551" ;
-            sh:maxCount 1 ;
-            sh:min "1198" ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:Kinder-bis-unter-3-Jahren ],
-        [ a cube:MeasureDimension ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Anzahl der Kinder von 3 bis unter 7"@de,
-                "Number of children aged 3 to under 7"@en,
-                "Nombre d'enfants de 3 à moins de 7 ans"@fr,
-                "Numero di bambini da  3 a meno di 7 anni"@it ;
-            schema1:name "Kinder von 3 bis unter 7 Jahren (ohne Schulkinder)"@de,
-                "Children aged 3 to under 7 years (excluding school children)"@en,
-                "Nombre d'enfants de 3 à moins de 7 ans (sans enfants scolarisés)"@fr,
-                "Numero di bambini da 3 a meno di 7 anni (senza bambini scolastici)"@it ;
-            sh:max "2662913" ;
-            sh:maxCount 1 ;
-            sh:min "15979" ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:Kinder-von-3-bis-unter-7-Jahren ],
-        [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de,
                 "Year of survey"@en,
@@ -3358,6 +3620,67 @@
                     time:unitType time:unitYear ] ],
         [ a cube:MeasureDimension ;
             qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Anzahl der Kinder von 5 bis unter 15"@de,
+                "Number of children aged 5 to under 14"@en,
+                "Nombre d'enfants de 5 à moins de 14 ans"@fr,
+                "Numero di bambini da  5 a meno di 14 anni"@it ;
+            schema1:name "Kinder von 5 bis unter 14 Jahren (nur Schulkinder)"@de,
+                "Children aged 5 to under 14 years (school children only)"@en,
+                "Nombre d'enfants de 5 à moins de 14 ans (uniquement scolarisés)"@fr,
+                "Numero di bambini da 5 a meno di 14 anni (solo scolari)"@it ;
+            sh:max 5.50373e+05 ;
+            sh:maxCount 1 ;
+            sh:min 3e+00 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path mock:Kinder-von-5-bis-unter-14-Jahren ],
+        [ a cube:MeasureDimension ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Gesamtzahl der Kinder in Kindertagesstätten"@de,
+                "Total number of children in day care facilities"@en,
+                "Nombre total d'enfants dans les crèches"@fr,
+                "Numero totale di bambini negli asili nido"@it ;
+            schema1:name "Gesamtzahl der Kinder"@de,
+                "Total number of children"@en,
+                "Nombre total d'enfants"@fr,
+                "Numero totale di bambini"@it ;
+            sh:max "3937130" ;
+            sh:maxCount 1 ;
+            sh:min "21449" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path mock:Insgesamt ],
+        [ a cube:MeasureDimension ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Anzahl der Kinder von 3 bis unter 7"@de,
+                "Number of children aged 3 to under 7"@en,
+                "Nombre d'enfants de 3 à moins de 7 ans"@fr,
+                "Numero di bambini da  3 a meno di 7 anni"@it ;
+            schema1:name "Kinder von 3 bis unter 7 Jahren (ohne Schulkinder)"@de,
+                "Children aged 3 to under 7 years (excluding school children)"@en,
+                "Nombre d'enfants de 3 à moins de 7 ans (sans enfants scolarisés)"@fr,
+                "Numero di bambini da 3 a meno di 7 anni (senza bambini scolastici)"@it ;
+            sh:max "2662913" ;
+            sh:maxCount 1 ;
+            sh:min "15979" ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path mock:Kinder-von-3-bis-unter-7-Jahren ],
+        [ a cube:KeyDimension ;
+            qudt:scaleType qudt:NominalScale ;
+            schema1:description "Bundesland, in dem die Daten erhoben wurden"@de ;
+            schema1:name "Land"@de,
+                "State"@en,
+                "Etat"@fr,
+                "Stato"@it ;
+            sh:in ( <https://example.org/land/Baden-W%C3%BCrttemberg> <https://example.org/land/Bayern> <https://example.org/land/Berlin> <https://example.org/land/Brandenburg> <https://example.org/land/Bremen> <https://example.org/land/Hamburg> <https://example.org/land/Hessen> <https://example.org/land/Mecklenburg-Vorpommern> <https://example.org/land/Niedersachsen> <https://example.org/land/Nordrhein-Westfalen> <https://example.org/land/Rheinland-Pfalz> <https://example.org/land/Saarland> <https://example.org/land/Sachsen> <https://example.org/land/Sachsen-Anhalt> <https://example.org/land/Schleswig-Holstein> <https://example.org/land/Th%C3%BCringen> <https://example.org/land/L%C3%A4nder%20insgesamt> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mock:Land ;
+            meta:dataKind [ a schema1:GeoShape ] ],
+        [ a cube:MeasureDimension ;
+            qudt:scaleType qudt:IntervalScale ;
             schema1:description "Anzahl der Kinder von 7 Jahren und älter (Nicht-schulkinder)"@de,
                 "Number of children aged 7 and older (non-school children)"@en,
                 "Nombre d'enfants de 7 ans et plus (non scolarisés)"@fr,
@@ -3374,18 +3697,18 @@
             sh:path mock:Kinder-von-7-Jahren-und-älter ],
         [ a cube:MeasureDimension ;
             qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gesamtzahl der Kinder in Kindertagesstätten"@de,
-                "Total number of children in day care facilities"@en,
-                "Nombre total d'enfants dans les crèches"@fr,
-                "Numero totale di bambini negli asili nido"@it ;
-            schema1:name "Gesamtzahl der Kinder"@de,
-                "Total number of children"@en,
-                "Nombre total d'enfants"@fr,
-                "Numero totale di bambini"@it ;
-            sh:max "3937130" ;
+            schema1:description "Anzahl der Kinder bis unter 3 Jahren"@de,
+                "Number of children under 3 years old"@en,
+                "Nombre d'enfants de moins de 3 ans"@fr,
+                "Numero di bambini di età inferiore a 3 anni"@it ;
+            schema1:name "Kinder bis unter 3 Jahren"@de,
+                "Children under 3 years old"@en,
+                "Nombre d'enfants de moins de 3 ans"@fr,
+                "Numero di bambini di età inferiore a 3 anni"@it ;
+            sh:max "721551" ;
             sh:maxCount 1 ;
-            sh:min "21449" ;
+            sh:min "1198" ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:path mock:Insgesamt ] .
+            sh:path mock:Kinder-bis-unter-3-Jahren ] .
 
