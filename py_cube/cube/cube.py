@@ -1,3 +1,4 @@
+import re
 from urllib.parse import quote
 from rdflib import BNode, Graph, Literal, RDF, URIRef, XSD
 from rdflib.collection import Collection
@@ -35,6 +36,7 @@ class Cube:
         self._dataframe = dataframe
         self._setup_cube_dict(cube_yaml=cube_yaml)
         self._cube_uri = self._setup_cube_uri(local=local, environment=environment)
+        assert self._cube_uri is not None
         self._setup_shape_dicts()
         self._graph = self._setup_graph()
         # self._graph.serialize("example/mock-cube.ttl", format="turtle")
@@ -228,6 +230,10 @@ class Cube:
                         self._dataframe[dim_name] = self._dataframe[dim_name].map(lambda x: base.format(quote(str(x))))
                     case "replace":
                         self._dataframe[dim_name] = self._dataframe[dim_name].map(mapping.get("replacements"))
+                    case "regex":
+                        pat = re.compile(mapping.get("pattern"))
+                        repl = mapping.get("replacement")
+                        self._dataframe[dim_name] = self._dataframe[dim_name].map(lambda x: re.sub(pat, repl, x))
                 self._dataframe[dim_name] = self._dataframe[dim_name].map(URIRef)
 
     def _write_contact_point(self, contact_dict: dict) -> BNode|URIRef:
@@ -477,6 +483,8 @@ class Cube:
                 return Literal(value, datatype=XSD.decimal)
         elif isinstance(value, URIRef):
             return value
+        else:
+            return Literal(str(value))
 
 
 
