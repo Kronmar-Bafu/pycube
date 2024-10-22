@@ -1,4 +1,4 @@
-.PHONY: all download
+.PHONY: all download ../../../py_cube/cube/shared_dimensions.py
 
 all: data.pretty.geojson data.transformed.geojson data.ttl
 
@@ -14,6 +14,6 @@ data.pretty.geojson: data.geojson
 data.transformed.geojson: transform.py data.pretty.geojson
 	python transform.py data.geojson $@
 
-data.ttl: data.transformed.geojson
+data.ttl: data.transformed.geojson ../../../py_cube/cube/shared_dimensions.py
 	cd ../../.. && \
 	python py_cube/cube/shared_dimension.py example/shared/bundeslander/data.transformed.geojson example/shared/bundeslander/data.ttl
