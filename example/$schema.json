@@ -163,6 +163,10 @@
         "mapping": {
           "type": "object",
           "properties": {
+            "value-type": {
+              "type": "string",
+              "enum": ["Shared", "Literal"]
+            },
             "type": {
               "type": "string",
               "enum": ["regex", "lookup", "replace", "additive"]

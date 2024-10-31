@@ -234,7 +234,9 @@ class Cube:
                         pat = re.compile(mapping.get("pattern"))
                         repl = mapping.get("replacement")
                         self._dataframe[dim_name] = self._dataframe[dim_name].map(lambda x: re.sub(pat, repl, x))
-                self._dataframe[dim_name] = self._dataframe[dim_name].map(URIRef)
+                value_type = mapping.get("value-type", 'Shared')
+                assert value_type in ['Shared', 'Literal']
+                self._dataframe[dim_name] = self._dataframe[dim_name].map(lambda v: URIRef(v) if value_type == "Shared" else Literal(v))
 
     def _write_contact_point(self, contact_dict: dict) -> BNode|URIRef:
         """Writes a contact point to the graph.

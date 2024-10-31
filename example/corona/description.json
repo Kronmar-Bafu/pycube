@@ -49,11 +49,11 @@
         "en": "Date in format dd.mm.yyyy",
         "de": "Datum im Format TT.MM.JJJJ"
       },
-
       "mapping": {
         "type": "regex",
         "pattern": "(?P<day>[0-9]{2})\\.(?P<month>[0-9]{2})\\.(?P<year>[0-9]{4})",
-        "replacement": "\\g<day>/\\g<month>/\\g<year>"
+        "replacement": "\\g<day>/\\g<month>/\\g<year>",
+        "value-type": "Literal"
       }
     },
     "Gemeldete Fälle": {
