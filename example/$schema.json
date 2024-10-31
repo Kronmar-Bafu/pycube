@@ -160,6 +160,56 @@
           "type": "string",
           "enum": ["nominal", "ordinal", "interval", "ratio"]
         },
+        "mapping": {
+          "type": "object",
+          "properties": {
+            "type": {
+              "type": "string",
+              "enum": ["regex", "lookup", "replace", "additive"]
+            },
+            "pattern": {
+              "type": "string"
+            },
+            "replacement": {
+              "type": "string"
+            },
+            "replacements": {
+              "type": "array",
+              "items": {
+                "type": "string"
+              }
+            },
+            "base": {
+              "type": "string"
+            }
+          },
+          "allOf": [
+            {
+              "if": {
+                "properties": { "type": { "const": "regex" } }
+              },
+              "then": {
+                "required": ["pattern", "replacement"]
+              }
+            },
+            {
+              "if": {
+                "properties": { "type": { "const": "replace" } }
+              },
+              "then": {
+                "required": ["replacements"]
+              }
+            },
+            {
+              "if": {
+                "properties": { "type": { "const": "additive" } }
+              },
+              "then": {
+                "required": ["base"]
+              }
+            }
+          ]
+        },
         "unit": {
           "type": "string"
         },
