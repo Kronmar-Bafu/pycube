@@ -215,11 +215,11 @@ class DataEuropaFetcher(object):
 
         distributions = self._get_distributions(data['result']['distributions'])
 
-        logger.debug(f"Writing {data_csv_filename}")
+        logger.info(f"Writing {data_csv_filename}")
         with open(data_csv_filename, 'wb') as f:
             f.write(distributions['csv'])
 
-        logger.debug(f"Writing {frictionless_json_filename}")
+        logger.info(f"Writing {frictionless_json_filename}")
         with open(frictionless_json_filename, 'w') as f:
             f.write(json.dumps(distributions['frictionless'], indent=2))
 
@@ -230,8 +230,13 @@ class DataEuropaFetcher(object):
         with open(description_json_filename, 'w') as f:
             f.write(json.dumps(description, indent=2))
 
+        logger.info(f"""Success ! The data and description have been downloaded, you may now verify it, adjust it, and then run serialize to create RDF triples
 
-def fetch(input_url, output_dir):
+python cli.py serialize {output_dir} {os.path.join(output_dir, 'cube.ttl')}
+""")
+
+
+def fetch(input_url: str, output_dir: str):
     if input_url.startswith('https://data.europa.eu'):
         fetcher = DataEuropaFetcher()
         fetcher.fetch_dataset(input_url, output_dir)
