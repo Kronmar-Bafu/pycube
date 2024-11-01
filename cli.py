@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import yaml
 import py_cube
-from py_cube.fetch import fetch_dataset
+from py_cube.fetch import fetch
 from py_cube.lindas.upload import upload_ttl
 import logging
 
@@ -83,4 +83,4 @@ if __name__ == "__main__":
     if args.operation == "serialize":
         serialize(args.input_directory, args.output_ttl, args.na_value, args.sep, args.decimal)
     elif args.operation == "fetch":
-        fetch_dataset(args.input_url, args.output)
+        fetch(args.input_url, args.output)
