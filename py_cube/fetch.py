@@ -10,7 +10,9 @@ import json
 import os
 from datetime import datetime
 from typing import Dict, Any, List
-from jsonschema import validate
+from jsonschema import Draft202012Validator, validate
+from jsonschema.exceptions import ValidationError
+
 import logging
 
 logger = logging.getLogger('pycube')
@@ -24,17 +26,6 @@ def download_json(url):
 def read_schema(schema_path):
     with open(schema_path, 'r') as f:
         return json.load(f)
-
-
-def validate_schema(schema: Dict[Any, Any], data: Dict[Any, Any]) -> bool:
-    """Validate the transformed data against the JSON schema."""
-    try:
-        validate(instance=data, schema=schema)
-        return True
-    except Exception as e:
-        print(f"Validation error: {str(e)}")
-        return False
-
 
 class DataEuropaFetcher(object):
     def __init__(self):
@@ -190,15 +181,6 @@ class DataEuropaFetcher(object):
         return output
 
 
-    def _transform_and_validate_description(self, description_schema, metadata, data_metadata):
-        transformed_data = self._transform_metadata(metadata, data_metadata)
-        
-        if validate_schema(description_schema, transformed_data):
-            return transformed_data
-        else:
-            raise ValueError('Could not transfom data to conform to the JSON schema.')
-
-
     def fetch_dataset(self, input_url, output_dir):
         transformed_url = self._transform_url(input_url)
         data = download_json(transformed_url)
@@ -223,16 +205,28 @@ class DataEuropaFetcher(object):
         with open(frictionless_json_filename, 'w') as f:
             f.write(json.dumps(distributions['frictionless'], indent=2))
 
-        schema = read_schema('example/$schema.json')
-        description = self._transform_and_validate_description(schema, metadata, distributions['frictionless'])
+        description_schema = read_schema('example/$schema.json')
+        description = self._transform_metadata(metadata, distributions['frictionless'])
 
         logger.info(f"Writing {description_json_filename}")
         with open(description_json_filename, 'w') as f:
             f.write(json.dumps(description, indent=2))
+        
+        validator = Draft202012Validator(description_schema)
+        errors = list(validator.iter_errors(description))
+        for error in errors:
+            logger.warning(f"Validation Error: {error.message}")
 
-        logger.info(f"""Success ! The data and description have been downloaded, you may now verify it, adjust it, and then run serialize to create RDF triples
+        serialize_command = f"python cli.py serialize {output_dir} {os.path.join(output_dir, 'cube.ttl')}"
+        if len(errors):
+            logger.warning(f"""The data and description have been downloaded. There were validation errors during description validation, you should fix them before running the following command
 
-python cli.py serialize {output_dir} {os.path.join(output_dir, 'cube.ttl')}
+{serialize_command}
+""")
+        else:
+            logger.info(f"""Success ! The data and description have been downloaded, you may now verify it, adjust it, and then run serialize to create RDF triples
+
+{serialize_command}
 """)
 
 
