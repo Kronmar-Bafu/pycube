@@ -140,7 +140,7 @@ class DataEuropaFetcher(object):
                     "unit": "year"
                 }
                 
-            dimensions[field_name.lower()] = dimension
+            dimensions[field_name] = dimension
         
         return dimensions
 
