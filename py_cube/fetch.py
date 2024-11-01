@@ -221,7 +221,8 @@ class DataEuropaFetcher(object):
         for error in errors:
             logger.warning(f"Validation Error: {error.message}")
 
-        serialize_command = f"python cli.py serialize {output_dir} {os.path.join(output_dir, 'cube.ttl')}"
+        serialize_command = f"""# You may want to adjust the command with --sep and --decimal, depending on the data.csv
+python cli.py serialize {output_dir} {os.path.join(output_dir, 'cube.ttl')}"""
         if len(errors):
             logger.warning(f"""The data and description have been downloaded. There were validation errors during description validation, you should fix them before running the following command
 
