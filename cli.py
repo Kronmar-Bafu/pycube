@@ -3,7 +3,7 @@ import os
 import pandas as pd
 import yaml
 import py_cube
-from py_cube.frictionless import convert_frictionless_from_url
+from py_cube.fetch import fetch_dataset
 from py_cube.lindas.upload import upload_ttl
 import logging
 
@@ -70,10 +70,10 @@ if __name__ == "__main__":
     serialize_parser.add_argument("--decimal", default=".", nargs="?", help="Decimal separator")
     serialize_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
 
-    frictionless_parser = subparsers.add_parser("frictionless", help="Converts a frictionless dataset")
-    frictionless_parser.add_argument("input_url", type=str, help="The URL of the dataset to process")
-    frictionless_parser.add_argument("output", type=str, help="The directory to save the output files")
-    frictionless_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
+    fetch_parser = subparsers.add_parser("fetch", help="Fetches a dataset from a URL")
+    fetch_parser.add_argument("input_url", type=str, help="The URL of the dataset to fetch")
+    fetch_parser.add_argument("output", type=str, help="The directory to save the output files")
+    fetch_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
 
     args = parser.parse_args()
     log_level = logging.DEBUG if args.verbose == 1 else logging.INFO
@@ -82,5 +82,5 @@ if __name__ == "__main__":
 
     if args.operation == "serialize":
         serialize(args.input_directory, args.output_ttl, args.na_value, args.sep, args.decimal)
-    elif args.operation == "frictionless":
-        convert_frictionless_from_url(args.input_url, args.output)
+    elif args.operation == "fetch":
+        fetch_dataset(args.input_url, args.output)

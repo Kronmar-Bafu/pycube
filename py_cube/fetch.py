@@ -194,7 +194,7 @@ def transform_and_validate_description(description_schema, metadata, data_metada
         raise ValueError('Could not transfom data to conform to the JSON schema.')
 
 
-def convert_frictionless_from_url(input_url, output_dir):
+def fetch_dataset(input_url, output_dir):
     transformed_url = transform_url(input_url)
     data = download_json(transformed_url)
 
