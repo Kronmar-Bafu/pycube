@@ -129,3 +129,17 @@ For additional help and options, you can use:
 ```
 python cli.py --help
 ```
+
+### Frictionless conversion
+
+Datasets with a [Frictionless](https://frictionlessdata.io/introduction/#why-frictionless) description can be more easily converted.
+
+A CLI tool is there to convert a dataset with frictionless metadata coming from europa.eu
+into the necessary csv and description.json, ready to be ingested by pycube.
+
+```
+python from-frictionless.py 'https://data.europa.eu/data/datasets/fc49eebf-3750-4c9c-a29e-6696eb644362?locale=en' example/corona/
+```
+
+Will download the CSV, and frictionless metadata, infer a description and output
+a description.json.
