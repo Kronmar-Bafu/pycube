@@ -203,8 +203,10 @@ class Cube:
         Returns:
             None
         """
+        def make_iri(row):
+            return self._cube_uri + "/observation/" + "_".join([quote(str(row[key_dim])) for key_dim in self._key_dimensions])
         self._dataframe['obs-uri'] = self._dataframe.apply(
-            lambda row: self._cube_uri + "/observation/" + "_".join([quote(str(row[key_dim])) for key_dim in self._key_dimensions]), axis=1
+            make_iri, axis=1
         )
         self._dataframe['obs-uri'] = self._dataframe['obs-uri'].map(URIRef)
         self._dataframe = self._dataframe.set_index("obs-uri")
