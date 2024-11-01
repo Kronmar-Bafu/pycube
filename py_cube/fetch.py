@@ -148,8 +148,8 @@ class DataEuropaFetcher(object):
     def _transform_metadata(self, metadata: Dict[Any, Any], data_metadata: Dict[Any, Any]) -> Dict[Any, Any]:
         """Transform metadata to conform to the JSON schema."""
         
-        # Initialize the output structure
         output = {
+            "$schema": "../$schema.json",
             "Name": {
                 "de": metadata["title"]["de"],
                 "en": metadata["title"]["en"]
@@ -163,6 +163,14 @@ class DataEuropaFetcher(object):
                     "IRI": metadata["publisher"]["resource"]
                 }
             ],
+            "Creator": [
+                {
+                    "IRI": metadata["publisher"]["resource"]
+                }
+            ],
+
+            "Contributor": [],
+
             "Date Created": datetime.now().isoformat(),
             "Contact Point": {
                 "E-Mail": "opendata@example.ch",  # Example email
@@ -170,10 +178,10 @@ class DataEuropaFetcher(object):
             },
             "Base-URI": data_metadata["path"],
             "Identifier": data_metadata["name"],
-            "Version": 1.0,
-            "Work Status": "Published",
+            "Version": 0.1,
+            "Work Status": "Draft",
             "Visualize": True,
-            "Accrual Periodicity": "yearly",
+            "Accrual Periodicity": "",
             "Namespace": "https://opendata.example.ch",
             "dimensions": self._generate_dimensions(data_metadata)
         }
