@@ -78,6 +78,24 @@
       "additionalProperties": true
     }
   },
+
+  "required": [
+    "Name",
+    "Description",
+    "Publisher",
+    "Creator",
+    "Contributor",
+    "Date Created",
+    "Contact Point",
+    "Base-URI",
+    "Identifier",
+    "Version",
+    "Work Status",
+    "Visualize",
+    "Accrual Periodicity",
+    "Namespace",
+    "dimensions"
+  ],
   "definitions": {
     "Publisher": {
       "type": "object",
