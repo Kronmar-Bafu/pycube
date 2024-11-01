@@ -187,10 +187,6 @@ class DataEuropaFetcher(object):
 
         metadata = self._extract_metadata(data)
 
-        # create the output dir if it does not exist
-        if output_dir and not os.path.exists(output_dir):
-            os.makedirs(output_dir, exist_ok=True)
-        
         data_csv_filename = os.path.join(output_dir, 'data.csv')
         description_json_filename = os.path.join(output_dir, 'description.json')
         frictionless_json_filename = os.path.join(output_dir, 'frictionless.json')
@@ -231,6 +227,10 @@ class DataEuropaFetcher(object):
 
 
 def fetch(input_url: str, output_dir: str):
+    # create the output dir if it does not exist
+    if output_dir and not os.path.exists(output_dir):
+        os.makedirs(output_dir, exist_ok=True)
+
     if input_url.startswith('https://data.europa.eu'):
         fetcher = DataEuropaFetcher()
         fetcher.fetch_dataset(input_url, output_dir)
