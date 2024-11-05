@@ -28,6 +28,10 @@ def read_schema(schema_path):
         return json.load(f)
 
 class DataEuropaFetcher(object):
+    """
+    In the future, the class should be splitted into frictionless parsing methods and
+    data.europa.eu fetch methods.
+    """
     def __init__(self):
         pass
 
