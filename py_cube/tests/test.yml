@@ -113,7 +113,7 @@ dimensions:
       de: Upper Unsicherheit
     description:
       de: Upper Unsicherheit
-    dimension-type: Upper uncertainty
+    dimension-type: Confidence interval
     relates-to: value2
     scale-type: ratio
     path: upperUncertainty
