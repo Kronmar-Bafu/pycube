@@ -5,6 +5,7 @@ import yaml
 import py_cube
 from py_cube.fetch import fetch
 from py_cube.lindas.upload import upload_ttl
+from py_cube.example import list_examples, load_example
 import logging
 
 logger = logging.getLogger('pycube')
@@ -75,6 +76,21 @@ if __name__ == "__main__":
     fetch_parser.add_argument("output", type=str, help="The directory to save the output files")
     fetch_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
 
+    example_parser = subparsers.add_parser("example", help="Example operations")
+    example_subparsers = example_parser.add_subparsers(dest="suboperation", help="Example sub-operations")
+
+    list_parser = example_subparsers.add_parser("list", help="List all examples")
+    list_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
+
+    start_fuseki_parser = example_subparsers.add_parser("start-fuseki", help="Start a Fuseki database")
+    start_fuseki_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
+
+    load_parser = example_subparsers.add_parser("load", help="Load an example by name")
+    load_parser.add_argument("example_name", type=str, help="The name of the example to load", choices=[example["id"] for example in list_examples()])
+    # add optional base_uri argument to load parser
+    load_parser.add_argument("--base-uri", type=str, help="The base URI for a SPARQL database (Fuseki supported)", default="http://localhost:3030/dataset")
+    load_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
+
     args = parser.parse_args()
     log_level = logging.DEBUG if args.verbose == 1 else logging.INFO
 
@@ -84,3 +100,12 @@ if __name__ == "__main__":
         serialize(args.input_directory, args.output_ttl, args.na_value, args.sep, args.decimal)
     elif args.operation == "fetch":
         fetch(args.input_url, args.output)
+    elif args.operation == "example":
+        if args.suboperation == "list":
+            examples = list_examples()
+            for example in examples:
+                print(f'{example["id"]}: {example["name"]}')
+        elif args.suboperation == "load":
+            load_example(args.example_name, args.base_uri)
+        elif args.suboperation == "start-fuseki":
+            os.system("scripts/fuseki/start.sh")

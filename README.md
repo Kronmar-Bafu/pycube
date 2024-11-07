@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ### Published Version
 
-**NOT yet implemented** Once Published, you'll be able to intall this package through pip without cloning the repository.
+**NOT yet implemented** Once Published, you'll be able to install this package through pip without cloning the repository.
 
 ```
 pip install py-cube
@@ -144,9 +144,26 @@ See [Frictionless](https://frictionlessdata.io/introduction/#why-frictionless) f
 python fetch.py 'https://data.europa.eu/data/datasets/fc49eebf-3750-4c9c-a29e-6696eb644362?locale=en' example/corona/
 ```
 
-```
-python from-frictionless.py 'https://data.europa.eu/data/datasets/fc49eebf-3750-4c9c-a29e-6696eb644362?locale=en' example/corona/
+### Examples
+
+Multiple cube example are ready in the `example` directory.
+
+```bash
+$ python cli.py example list
+corona: Corona Numbers Timeline
+kita: Number of kids in day care facilities
+wind: Wind turbines — operated WKA per year in Schleswig-Holstein
 ```
 
-Will download the CSV, and frictionless metadata, infer a description and output
-a description.json.
+To load an example in a Fuseki database, you can use the load subcommand of the example command.
+
+```bash
+$ python cli.py example load kita
+```
+
+There is a `start-fuseki` command that can be used to start a Fuseki server containing data
+from the examples.
+
+```bash
+$ python cli.py example start-fuseki
+```
