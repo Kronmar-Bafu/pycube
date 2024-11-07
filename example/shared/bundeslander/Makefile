@@ -16,4 +16,4 @@ data.transformed.geojson: transform.py data.pretty.geojson
 
 data.ttl: data.transformed.geojson ../../../py_cube/cube/shared_dimensions.py
 	cd ../../.. && \
-	python py_cube/cube/shared_dimension.py example/shared/bundeslander/data.transformed.geojson example/shared/bundeslander/data.ttl
+	python cli.py shared convert_geojson example/shared/bundeslander/data.transformed.geojson example/shared/bundeslander/data.ttl  

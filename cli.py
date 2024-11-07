@@ -3,10 +3,13 @@ import os
 import pandas as pd
 import yaml
 import py_cube
+import logging
+
 from py_cube.fetch import fetch
 from py_cube.lindas.upload import upload_ttl
 from py_cube.example import list_examples, load_example
-import logging
+from py_cube.cube.shared_dimension import convert_geojson_to_ttl
+
 
 logger = logging.getLogger('pycube')
 
@@ -76,6 +79,14 @@ if __name__ == "__main__":
     fetch_parser.add_argument("output", type=str, help="The directory to save the output files")
     fetch_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
 
+    shared_parser = subparsers.add_parser("shared", help="Shared Dimension operations")
+    shared_subparsers = shared_parser.add_subparsers(dest="suboperation", help="Shared sub-operations")
+
+    convert_geojson_parser = shared_subparsers.add_parser("convert_geojson", help="Convert GeoJSON to TTL")
+    convert_geojson_parser.add_argument("input_geojson", type=str, help="Input GeoJSON file")
+    convert_geojson_parser.add_argument("output_ttl", type=str, help="Output TTL file")
+    convert_geojson_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
+
     example_parser = subparsers.add_parser("example", help="Example operations")
     example_subparsers = example_parser.add_subparsers(dest="suboperation", help="Example sub-operations")
 
@@ -109,3 +120,7 @@ if __name__ == "__main__":
             load_example(args.example_name, args.base_uri)
         elif args.suboperation == "start-fuseki":
             os.system("scripts/fuseki/start.sh")
+    elif args.operation == "shared":
+        if args.suboperation == "convert_geojson":
+            convert_geojson_to_ttl(args.input_geojson, args.output_ttl)
+

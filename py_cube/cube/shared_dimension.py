@@ -1,11 +1,11 @@
-from rdflib import BNode, Graph, Literal, RDF, URIRef
+from rdflib import Graph, Literal, RDF, URIRef
 from py_cube.lindas.namespaces import *
 from shapely.geometry import shape
 import json
 import argparse
 
 
-class SharedDimension:
+class GeoSharedDimension(object):
     _base_uri: URIRef
     _graph: Graph
     _description: dict
@@ -80,16 +80,7 @@ class SharedDimension:
         self._graph.serialize(destination=filename, format="turtle", encoding="utf-8")
 
 
-def main():
-    parser = argparse.ArgumentParser(description="Convert GeoJSON to TTL")
-    parser.add_argument("geojson_filename", type=str, help="Input GeoJSON file")
-    parser.add_argument("ttl_filename", type=str, help="Output TTL file")
-
-    args = parser.parse_args()
-
-    geojson_filename = args.geojson_filename
-    ttl_filename = args.ttl_filename
-
+def convert_geojson_to_ttl(geojson_filename, ttl_filename):
     with open(geojson_filename, 'r') as f:
         geojson_data = json.load(f)
 
@@ -97,13 +88,10 @@ def main():
     description = {}
     graph = Graph()
 
-    shared_dimension = SharedDimension(base_uri, description, graph)
+    shared_dimension = GeoSharedDimension(base_uri, description, graph)
 
     for feature in geojson_data.get("features", []):
         print(f"Adding feature {feature['properties']['name_de']}")
         shared_dimension._add_geo_feature_to_graph(feature)
 
     shared_dimension.serialize(ttl_filename)
-
-if __name__ == "__main__":
-    main()
