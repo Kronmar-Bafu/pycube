@@ -130,12 +130,19 @@ For additional help and options, you can use:
 python cli.py --help
 ```
 
-### Frictionless conversion
+### Fetching from data sources
 
-Datasets with a [Frictionless](https://frictionlessdata.io/introduction/#why-frictionless) description can be more easily converted.
+There is the possibility to download datasets from other data sources. Right now, the functionality is basic, but
+it could be possible in the future to extend it.
 
-A CLI tool is there to convert a dataset with frictionless metadata coming from europa.eu
-into the necessary csv and description.json, ready to be ingested by pycube.
+- It supports only datasets coming from data.europa.eu
+- It supports only datasets with a Frictionless datapackage
+
+See [Frictionless](https://frictionlessdata.io/introduction/#why-frictionless) for more information on Frictionless.
+
+```
+python fetch.py 'https://data.europa.eu/data/datasets/fc49eebf-3750-4c9c-a29e-6696eb644362?locale=en' example/corona/
+```
 
 ```
 python from-frictionless.py 'https://data.europa.eu/data/datasets/fc49eebf-3750-4c9c-a29e-6696eb644362?locale=en' example/corona/
