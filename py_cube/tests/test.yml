@@ -81,40 +81,13 @@ dimensions:
     path: value
     unit: kilogramm
 
-  Standardfehler:
-    name:
-      de: Standardfehler
-      fr: Erreur standard
-      it: Errore standard
-      en: Standard error
-    description:
-      de: Standardfehler des berechneten Werts
-    dimension-type: Standard Error
-    relates-to: value
-    scale-type: ratio
-    path: standardError
-    unit: percent
-
-  Wert2:
-    name:
-      de: Wert 2
-      fr: Valeur 2
-      it: Valore 2
-      en: Value 2
-    description:
-      de: alternativ gemessener Wert mit Unsicherheit
-    dimension-type: Measure Dimension
-    scale-type: interval
-    path: value2
-    unit: kilogramm
-
   UpperUnsicherheit:
     name:
       de: Upper Unsicherheit
     description:
       de: Upper Unsicherheit
-    dimension-type: Confidence interval
-    relates-to: value2
+    dimension-type: Upper uncertainty
+    relates-to: value
     scale-type: ratio
     path: upperUncertainty
     unit: percent
@@ -125,7 +98,7 @@ dimensions:
     description:
       de: Lower Unsicherheit
     dimension-type: Lower uncertainty
-    relates-to: value2
+    relates-to: value
     scale-type: ratio
     path: lowerUncertainty
     unit: percent

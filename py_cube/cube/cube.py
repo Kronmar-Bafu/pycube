@@ -168,8 +168,9 @@ class Cube:
         # todo: is it really the right place to ask whether a cube already exists? Maybe better idea during upload?
         cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
         query = f"ASK {{ <{cube_uri}> ?p ?o}}"
-        if query_lindas(query, environment=environment) == True and not local:
-            sys.exit("Cube already exist! Please update your yaml")
+        if not local:
+            if query_lindas(query, environment=environment) == True:
+                sys.exit("Cube already exist! Please update your yaml")
         else:
             return URIRef(cube_uri)
     
@@ -228,7 +229,6 @@ class Cube:
             None
         """
         for dim_name, dim_dict in self._shape_dict.items():
-            print(dim_name)
             if "mapping" in dim_dict:
                 mapping = dim_dict.get("mapping")
                 match mapping.get("type"):
