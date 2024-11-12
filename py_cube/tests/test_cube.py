@@ -13,6 +13,10 @@ class TestClass:
             dataframe=test_df, cube_yaml=cube_yaml,
             environment="TEST", local=True
         )
+        self.cube.prepare_data()
+        self.cube.write_cube()
+        self.cube.write_observations()
+        self.cube.write_shape()
 
     def test_upper_uncertainty(self):
         sparql = (
@@ -20,15 +24,14 @@ class TestClass:
             "{"
             "  ?shape a cube:Constraint ;"
             "    sh:property ?prop ."
-            "  ?prop schema1:name 'Upper Unsicherheit'@de ;"
-            "    schema1:description 'Upper Unsicherheit'@de ;"
-            "    sh:path mock:upperUncertainty ;"
+            "  ?prop sh:path mock:upperUncertainty ;"
+            "    schema1:name 'Upper Unsicherheit'@de ;"
+            "    sh:maxCount 1 ;"
             "    qudt:scaleType qudt:RatioScale ;"
-            "    qudt:hasUnit unit:PERCENT ;"
             "    meta:dimensionRelation ["
             "      a relation:ConfidenceUpperBound ;"
-            "      dcterms:type 'Confidence interval' ;"
-            "      meta:relatesTo mock:value2 ;"
+            '      dct:type "Upper uncertainty" ;'
+            "      meta:relatesTo mock:value ;"
             "    ] ."
             "}"
         )
@@ -42,15 +45,15 @@ class TestClass:
             "{"
             "  ?shape a cube:Constraint ;"
             "    sh:property ?prop ."
-            "  ?prop schema:name 'Lower Unsicherheit'@de ;"
-            "    schema:description 'Lower Unsicherheit'@de ;"
+            "  ?prop schema1:name 'Lower Unsicherheit'@de ;"
+            "    schema1:description 'Lower Unsicherheit'@de ;"
             "    sh:path mock:lowerUncertainty ;"
             "    qudt:scaleType qudt:RatioScale ;"
             "    qudt:hasUnit unit:PERCENT ;"
             "    meta:dimensionRelation ["
             "      a relation:ConfidenceLowerBound ;"
-            "      dcterms:type \"Confidence interval\" ;"
-            "      meta:relatesTo mock:value2 ;"
+            "      dct:type 'Confidence interval' ;"
+            "      meta:relatesTo mock:value ;"
             "    ] ."
             "}"
         )
