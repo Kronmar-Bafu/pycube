@@ -1,11 +1,11 @@
 Name:
-  de: Mock Cube
-  fr: Mock Cube
-  it: Mock Cube
-  en: Mock Cube
+  de: Mock Cube - two sided error
+  fr: Mock Cube - two sided error
+  it: Mock Cube - two sided error
+  en: Mock Cube - two sided error
 Description:
-  de: Ein Beispiel Cube, der simulierte Daten enthält
-  en: An example Cube containing some simulated data
+  de: Ein Beispiel Cube, der simulierte Daten enthält mit zweiseitiger Unsicherheit
+  en: An example Cube containing some simulated data with two-sided uncertainty
 Publisher:
   - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
 Creator:
@@ -14,12 +14,12 @@ Contributor:
   - IRI: https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-umwelt-bafu
     Name: Bundesamt für Mock Data
 Date Created:
-  2024-08-26
+  2024-11-12
 Contact Point:
   E-Mail: contact@mock.ld.admin.ch
   Name: Bundesamt für Mock Data
 Base-URI: https://mock.ld.admin.ch/
-Identifier: mock-example
+Identifier: mock-two-sided
 Version: 1
 Work Status:
   Draft

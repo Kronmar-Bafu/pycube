@@ -29,8 +29,8 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-11-11T12:11:47+00:00"^^xsd:dateTime ;
-    schema1:datePublished "2024-11-11"^^xsd:date ;
+    schema1:dateModified "2024-11-12T12:10:37+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-11-12"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     schema1:name "Mock Cube"@de,
@@ -119,7 +119,7 @@
     cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     mock:standardError 6.030296213104391 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
-    mock:value 21.65992433002125 ;
+    mock:value 21.659924330021255 ;
     mock:year <https://ld.admin.ch/time/year/2001> .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2002_Bern> a cube:Observation ;
@@ -159,7 +159,7 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2004_Zürich> a cube:Observation ;
     cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
-    mock:standardError 7.390939821011258 ;
+    mock:standardError 7.390939821011259 ;
     mock:station <https://mock.ld.admin.ch/station/02> ;
     mock:value 19.06703223788886 ;
     mock:year <https://ld.admin.ch/time/year/2004> .
@@ -180,7 +180,7 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2006_Bern> a cube:Observation ;
     cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
-    mock:standardError 2.520552866392209 ;
+    mock:standardError 2.5205528663922094 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 17.851780950874087 ;
     mock:year <https://ld.admin.ch/time/year/2006> .
@@ -196,7 +196,7 @@
     cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     mock:standardError 4.873759639672014 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
-    mock:value 18.321158320002034 ;
+    mock:value 18.32115832000203 ;
     mock:year <https://ld.admin.ch/time/year/2007> .
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2007_Zürich> a cube:Observation ;
@@ -250,7 +250,7 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/observation/2011_Bern> a cube:Observation ;
     cube:observedBy <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
-    mock:standardError 2.768558605478989 ;
+    mock:standardError 2.7685586054789892 ;
     mock:station <https://mock.ld.admin.ch/station/01> ;
     mock:value 15.23952733205338 ;
     mock:year <https://ld.admin.ch/time/year/2011> .
@@ -418,20 +418,21 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
     sh:closed true ;
-    sh:property [ a cube:MeasureDimension ;
-            qudt:hasUnit unit:KiloGM ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gemessener Wert an der Station"@de ;
-            schema1:name "Wert"@de,
-                "Value"@en,
-                "Valeur"@fr,
-                "Valore"@it ;
-            sh:max 2.355574e+01 ;
+    sh:property [ qudt:hasUnit unit:PERCENT ;
+            qudt:scaleType qudt:RatioScale ;
+            schema1:description "Standardfehler des berechneten Werts"@de ;
+            schema1:name "Standardfehler"@de,
+                "Standard error"@en,
+                "Erreur standard"@fr,
+                "Errore standard"@it ;
+            sh:max 9.624033e+00 ;
             sh:maxCount 1 ;
-            sh:min 6.873746e+00 ;
+            sh:min 3.648574e-01 ;
             sh:minCount 1 ;
             sh:nodeKind sh:Literal ;
-            sh:path mock:value ],
+            sh:path mock:standardError ;
+            meta:dimensionRelation [ a relation:StandardError ;
+                    meta:relatesTo mock:value ] ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
@@ -446,6 +447,20 @@
             sh:path mock:year ;
             meta:dataKind [ a time:GeneralDateTimeDescription ;
                     time:unitType time:unitYear ] ],
+        [ a cube:MeasureDimension ;
+            qudt:hasUnit unit:KiloGM ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Gemessener Wert an der Station"@de ;
+            schema1:name "Wert"@de,
+                "Value"@en,
+                "Valeur"@fr,
+                "Valore"@it ;
+            sh:max 2.355574e+01 ;
+            sh:maxCount 1 ;
+            sh:min 6.873746e+00 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path mock:value ],
         [ a cube:KeyDimension ;
             qudt:scaleType qudt:NominalScale ;
             schema1:description "Station der Untersuchung"@de ;
@@ -457,20 +472,5 @@
             sh:maxCount 1 ;
             sh:minCount 1 ;
             sh:nodeKind sh:IRI ;
-            sh:path mock:station ],
-        [ qudt:hasUnit unit:PERCENT ;
-            qudt:scaleType qudt:RatioScale ;
-            schema1:description "Standardfehler des berechneten Werts"@de ;
-            schema1:name "Standardfehler"@de,
-                "Standard error"@en,
-                "Erreur standard"@fr,
-                "Errore standard"@it ;
-            sh:max 9.624033e+00 ;
-            sh:maxCount 1 ;
-            sh:min 3.648574e-01 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:standardError ;
-            meta:dimensionRelation [ a relation:StandardError ;
-                    meta:relatesTo mock:value ] ] .
+            sh:path mock:station ] .
 

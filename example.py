@@ -30,25 +30,5 @@ cube_two_sided.write_cube()
 cube_two_sided.write_observations()
 cube_two_sided.write_shape()
 
-# realization: tests of strings and floats sind üüüüäääärch
-sparql = sparql = (
-            
-            "ASK"
-            "{"
-            "  ?shape a cube:Constraint ;"
-            "    sh:property ?prop ."
-            "  ?prop sh:path mock:upperUncertainty ;"
-            "    schema1:name 'Upper Unsicherheit'@de ;"
-            "    sh:maxCount 1 ;"
-            "    qudt:scaleType qudt:RatioScale ;"
-            "    meta:dimensionRelation ["
-            "      a relation:ConfidenceUpperBound ;"
-            '      dct:type "Upper uncertainty" ;'
-            "      meta:relatesTo mock:value ;"
-            "    ] ."
-            "}"
-        )
-
-result = cube_two_sided._graph.query(sparql)
-cube_two_sided.serialize("dummy.ttl")
-print(bool(result))
+cube_two_sided.serialize("./example/mock-cube-two-sided.ttl")
+upload_ttl(filename="./example/mock-cube-two-sided.ttl", db_file="lindas.ini", environment="TEST")
