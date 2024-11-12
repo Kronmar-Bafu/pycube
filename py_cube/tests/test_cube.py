@@ -30,7 +30,7 @@ class TestClass:
             "    qudt:scaleType qudt:RatioScale ;"
             "    meta:dimensionRelation ["
             "      a relation:ConfidenceUpperBound ;"
-            '      dct:type "Upper uncertainty" ;'
+            '      dct:type "Confidence interval" ;'
             "      meta:relatesTo mock:value ;"
             "    ] ."
             "}"

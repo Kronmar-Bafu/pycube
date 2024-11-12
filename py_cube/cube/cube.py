@@ -386,8 +386,7 @@ class Cube:
                 self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
                 self._graph.add((dim_node, META.dimensionRelation, relation_node))
                 self._graph.add((dim_node, SH.nodeKind, SH.Literal))
-                dim_type = dim_dict.get("dimension-type")
-                self._graph.add((relation_node, DCT.type, Literal(dim_type)))
+                self._graph.add((relation_node, DCT.type, Literal("Confidence interval")))
 
             case "Lower uncertainty":
                 relation_node = BNode()
@@ -396,8 +395,7 @@ class Cube:
                 self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
                 self._graph.add((dim_node, META.dimensionRelation, relation_node))
                 self._graph.add((dim_node, SH.nodeKind, SH.Literal))
-                dim_type = dim_dict.get("dimension-type")
-                self._graph.add((relation_node, DCT.type, Literal(dim_type)))
+                self._graph.add((relation_node, DCT.type, Literal("Confidence interval")))
 
             case _ as unrecognized:
                 print(f"Dimension Type '{unrecognized}' is not recognized")
