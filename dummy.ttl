@@ -29,8 +29,8 @@
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Draft> ;
     schema1:creator <https://register.ld.admin.ch/opendataswiss/org/office_of_Mock> ;
     schema1:dateCreated "2024-08-26"^^xsd:date ;
-    schema1:dateModified "2024-11-08T10:00:17+00:00"^^xsd:dateTime ;
-    schema1:datePublished "2024-11-08"^^xsd:date ;
+    schema1:dateModified "2024-11-11T12:11:47+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-11-11"^^xsd:date ;
     schema1:description "Ein Beispiel Cube, der simulierte Daten enthält"@de,
         "An example Cube containing some simulated data"@en ;
     schema1:name "Mock Cube"@de,
@@ -104,7 +104,33 @@
 
 <https://mock.ld.admin.ch/cube/mock-example/1/shape> a cube:Constraint ;
     sh:closed true ;
-    sh:property [ a cube:KeyDimension ;
+    sh:property [ a cube:MeasureDimension ;
+            qudt:hasUnit unit:KiloGM ;
+            qudt:scaleType qudt:IntervalScale ;
+            schema1:description "Gemessener Wert an der Station"@de ;
+            schema1:name "Wert"@de,
+                "Value"@en,
+                "Valeur"@fr,
+                "Valore"@it ;
+            sh:max 2.355574e+01 ;
+            sh:maxCount 1 ;
+            sh:min 2.068821e+01 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:Literal ;
+            sh:path mock:value ],
+        [ a cube:KeyDimension ;
+            qudt:scaleType qudt:NominalScale ;
+            schema1:description "Station der Untersuchung"@de ;
+            schema1:name "Station"@de,
+                "Station"@en,
+                "Station"@fr,
+                "Stazione"@it ;
+            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
+            sh:maxCount 1 ;
+            sh:minCount 1 ;
+            sh:nodeKind sh:IRI ;
+            sh:path mock:station ],
+        [ a cube:KeyDimension ;
             qudt:scaleType qudt:OrdinalScale ;
             schema1:description "Jahr der Erhebung"@de ;
             schema1:name "Jahr"@de,
@@ -118,18 +144,6 @@
             sh:path mock:year ;
             meta:dataKind [ a time:GeneralDateTimeDescription ;
                     time:unitType time:unitYear ] ],
-        [ a cube:KeyDimension ;
-            qudt:scaleType qudt:NominalScale ;
-            schema1:description "Station der Untersuchung"@de ;
-            schema1:name "Station"@de,
-                "Station"@en,
-                "Station"@fr,
-                "Stazione"@it ;
-            sh:in ( <https://mock.ld.admin.ch/station/01> <https://mock.ld.admin.ch/station/02> ) ;
-            sh:maxCount 1 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:IRI ;
-            sh:path mock:station ],
         [ qudt:hasUnit unit:PERCENT ;
             qudt:scaleType qudt:RatioScale ;
             schema1:description "Upper Unsicherheit"@de ;
@@ -151,19 +165,5 @@
             sh:maxCount 1 ;
             sh:min 1e+00 ;
             sh:minCount 1 ;
-            sh:path mock:lowerUncertainty ],
-        [ a cube:MeasureDimension ;
-            qudt:hasUnit unit:KiloGM ;
-            qudt:scaleType qudt:IntervalScale ;
-            schema1:description "Gemessener Wert an der Station"@de ;
-            schema1:name "Wert"@de,
-                "Value"@en,
-                "Valeur"@fr,
-                "Valore"@it ;
-            sh:max 2.355574e+01 ;
-            sh:maxCount 1 ;
-            sh:min 2.068821e+01 ;
-            sh:minCount 1 ;
-            sh:nodeKind sh:Literal ;
-            sh:path mock:value ] .
-d
+            sh:path mock:lowerUncertainty ] .
+
