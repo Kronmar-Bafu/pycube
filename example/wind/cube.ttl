@@ -15,16 +15,17 @@
         dcat:Dataset,
         cube:Cube ;
     dct:accrualPeriodicity <http://publications.europe.eu/resource/authority/frequency/ANNUAL> ;
+    dct:creator <https://schleswig-holstein.de/termsets/category/tech> ;
     dct:description "Dieses Dataset enthält Daten zu Windkraftanlagen, die jährlich in Schleswig-Holstein in Betrieb genommen werden."@de,
         "This dataset contains data on wind turbines operated annually in Schleswig-Holstein."@en ;
     dct:title "Windkraftanlagen — betriebene WKA pro Jahr in Schleswig-Holstein"@de,
         "Wind turbines — operated WKA per year in Schleswig-Holstein"@en ;
     schema1:contributor <https://schleswig-holstein.de/opendata/> ;
     schema1:creativeWorkStatus <https://ld.admin.ch/vocabulary/CreativeWorkStatus/Published> ;
-    schema1:creator <https://schleswig-holstein.de/opendata/> ;
+    schema1:creator <https://schleswig-holstein.de/termsets/category/tech> ;
     schema1:dateCreated "2024-07-16"^^xsd:date ;
-    schema1:dateModified "2024-10-22T10:20:34+00:00"^^xsd:dateTime ;
-    schema1:datePublished "2024-10-22"^^xsd:date ;
+    schema1:dateModified "2024-11-12T22:16:42+00:00"^^xsd:dateTime ;
+    schema1:datePublished "2024-11-12"^^xsd:date ;
     schema1:description "Dieses Dataset enthält Daten zu Windkraftanlagen, die jährlich in Schleswig-Holstein in Betrieb genommen werden."@de,
         "This dataset contains data on wind turbines operated annually in Schleswig-Holstein."@en ;
     schema1:name "Windkraftanlagen — betriebene WKA pro Jahr in Schleswig-Holstein"@de,
@@ -35,6 +36,7 @@
     dcat:contactPoint [ a vcard:Organization ;
             vcard:fn "Landesamt für Umwelt"^^xsd:string ;
             vcard:hasEmail "info@landesamt-umwelt.de"^^xsd:string ] ;
+    dcat:theme <https://schleswig-holstein.de/termsets/category/tech> ;
     cube:observationConstraint <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/shape> ;
     cube:observationSet <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/ObservationSet> .
 
@@ -54,79 +56,79 @@
         <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2024.0> .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2012.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2194.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2012> ;
     mock:Leistung_MW 3270.125 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2013.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2243.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2013> ;
     mock:Leistung_MW 3634.157 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2014.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2583.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2014> ;
     mock:Leistung_MW 4812.401 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2015.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2779.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2015> ;
     mock:Leistung_MW 5638.156 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2016.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2942.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2016> ;
     mock:Leistung_MW 6198.915 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2017.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2991.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2017> ;
     mock:Leistung_MW 6598.15 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2018.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 3007.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2018> ;
     mock:Leistung_MW 6698.53 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2019.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 3009.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2019> ;
     mock:Leistung_MW 6718.22 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2020.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 3025.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2020> ;
     mock:Leistung_MW 6811.57 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2021.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 2980.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2021> ;
     mock:Leistung_MW 6939.67 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2022.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 3040.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2022> ;
     mock:Leistung_MW 7383.92 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2023.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 3173.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2023> ;
     mock:Leistung_MW 8505.24 .
 
 <https://opendata.schleswig-holstein.de/dataset/fc49eebf-3750-4c9c-a29e-6696eb644362cube/wind-turbines-operated-wka-per-year-sh/1.0/observation/2024.0> a cube:Observation ;
-    cube:observedBy <https://schleswig-holstein.de/opendata/> ;
+    cube:observedBy <https://schleswig-holstein.de/termsets/category/tech> ;
     mock:Anzahl_inBetrieb_WKA_SH 3170.0 ;
     mock:Jahr <https://ld.admin.ch/time/year/2024> ;
     mock:Leistung_MW 8592.34 .

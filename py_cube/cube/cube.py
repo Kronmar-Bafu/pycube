@@ -113,6 +113,16 @@ class Cube:
         contact_node = self._write_contact_point(self._cube_dict.get("Contact Point"))
         self._graph.add((self._cube_uri, DCAT.contactPoint, contact_node))
 
+        for creator in self._cube_dict.get("Creator", []):
+            iri = creator.get('IRI')
+            self._graph.add((self._cube_uri, DCT.creator, URIRef(iri)))
+
+        for theme in self._cube_dict.get("Themes", []):
+            iri = theme.get('IRI')
+            if not iri:
+                continue
+            self._graph.add((self._cube_uri, DCAT.theme, URIRef(theme['IRI'])))
+
         version = self._cube_dict.get("Version")
         self._graph.add((self._cube_uri, SCHEMA.version, Literal(version)))
 
