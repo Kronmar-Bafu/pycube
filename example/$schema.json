@@ -38,6 +38,13 @@
         "$ref": "#/definitions/Contributor"
       }
     },
+    "Themes": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/Theme"
+      }
+    },
+
     "Date Created": {
       "type": "string",
       "format": "date-time"
@@ -129,6 +136,18 @@
         }
       },
       "required": ["IRI", "Name"]
+    },
+    "Theme": {
+      "type": "object",
+      "properties": {
+        "IRI": {
+          "type": "string"
+        },
+        "Name": {
+          "type": "string"
+        }
+      },
+      "required": ["IRI"]
     },
     "ContactPoint": {
       "type": "object",
