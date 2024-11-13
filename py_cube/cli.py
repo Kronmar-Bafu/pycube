@@ -6,7 +6,6 @@ import py_cube
 import logging
 
 from py_cube.fetch import fetch
-from py_cube.lindas.upload import upload_ttl
 from py_cube.example import list_examples, load_example
 from py_cube.cube.shared_dimension import convert_geojson_to_ttl
 
@@ -62,7 +61,7 @@ def configure_logging(log_level):
     logger.addHandler(console_handler)
 
 
-if __name__ == "__main__":
+def main():
     parser = argparse.ArgumentParser(description="Cube data operations")
     subparsers = parser.add_subparsers(dest="operation", help="Operation to perform")
 
@@ -124,3 +123,6 @@ if __name__ == "__main__":
         if args.suboperation == "convert_geojson":
             convert_geojson_to_ttl(args.input_geojson, args.output_ttl)
 
+
+if __name__ == "__main__":
+    main()
