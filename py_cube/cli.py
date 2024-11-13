@@ -101,6 +101,13 @@ def main():
     load_parser.add_argument("--base-uri", type=str, help="The base URI for a SPARQL database (Fuseki supported)", default="http://localhost:3030/dataset")
     load_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
 
+    schema_parser = subparsers.add_parser("schema", help="Schema operations")
+    schema_subparsers = schema_parser.add_subparsers(dest="suboperation", help="Schema sub-operations")
+    schema_subparsers.add_parser("import", help="Import the description schema file")
+    schema_parser.add_argument("output", type=str, help="Output file")
+    schema_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
+
+
     args = parser.parse_args()
     log_level = logging.DEBUG if args.verbose == 1 else logging.INFO
 
@@ -122,6 +129,15 @@ def main():
     elif args.operation == "shared":
         if args.suboperation == "convert_geojson":
             convert_geojson_to_ttl(args.input_geojson, args.output_ttl)
+    elif args.operation == 'schema':
+        if args.suboperation == "import-description":
+            description_schema_path = os.path.join(os.path.dirname(os.path.realpath(__file__)), 'description.schema.json')
+            with open(description_schema_path, 'r') as f:
+                schema = f.read()
+            with open(args.output, 'w') as f:
+                f.write(schema)
+                logger.debug(f"Imported description into current directory: {args.output}")
+
 
 
 if __name__ == "__main__":
