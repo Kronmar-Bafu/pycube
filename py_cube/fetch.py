@@ -153,7 +153,6 @@ class DataEuropaFetcher(object):
         """Transform metadata to conform to the JSON schema."""
         
         output = {
-            "$schema": "../$schema.json",
             "Name": {
                 "de": metadata["title"]["de"],
                 "en": metadata["title"]["en"]
@@ -213,9 +212,18 @@ class DataEuropaFetcher(object):
         with open(frictionless_json_filename, 'w') as f:
             f.write(json.dumps(distributions['frictionless'], indent=2))
 
-        description_schema = read_schema('example/$schema.json')
+        current_file_dir = os.path.dirname(os.path.realpath(__file__))
+        description_schema_path = os.path.join(current_file_dir, 'description.schema.json')
+        description_schema = read_schema(description_schema_path)
         description = self._transform_metadata(metadata, distributions['frictionless'])
-
+        schema_path = os.path.relpath(
+            description_schema_path,
+            start=os.path.join(os.getcwd(), output_dir)
+        )
+        description = {
+            "$schema": f"{schema_path}",
+            **description
+        }
         logger.info(f"Writing {description_json_filename}")
         with open(description_json_filename, 'w') as f:
             f.write(json.dumps(description, indent=2))

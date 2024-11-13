@@ -1,5 +1,5 @@
 {
-  "$schema": "../$schema.json",
+  "$schema": "../../py_cube/description.schema.json",
   "Name": {
     "de": "Corona-Zahlen Zeitverlauf",
     "en": "Corona Numbers Timeline"

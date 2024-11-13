@@ -1,5 +1,5 @@
 {
-  "$schema": "../$schema.json",
+  "$schema": "../../py_cube/description.schema.json",
   "Name": {
     "de": "Anzahl Kinder in Kindertagesstätten",
     "fr": "Nombre d'enfants dans les crèches",
