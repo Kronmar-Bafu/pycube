@@ -104,7 +104,7 @@ class Cube:
 
         creator = self._cube_dict.get("Creator")
         for crtr in creator:
-            self._graph.add((self._cube_uri, SCHEMA.creator, URIRef(crtr.get("IRI"))))
+            self._graph.add((self._cube_uri, DCTERMS.creator, URIRef(crtr.get("IRI"))))
 
         contributor = self._cube_dict.get("Contributor")
         for cntrbtr in contributor:
