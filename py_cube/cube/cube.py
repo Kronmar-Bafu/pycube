@@ -103,8 +103,8 @@ class Cube:
             self._graph.add((self._cube_uri, SCHEMA.publisher, URIRef(pblshr.get("IRI"))))
 
         creator = self._cube_dict.get("Creator")
-        for crtr in creator:
-            self._graph.add((self._cube_uri, DCTERMS.creator, URIRef(crtr.get("IRI"))))
+        if creator and creator.get('IRI'):
+            self._graph.add((self._cube_uri, DCT.creator, URIRef(creator["IRI"])))
 
         contributor = self._cube_dict.get("Contributor")
         for cntrbtr in contributor:
@@ -112,10 +112,6 @@ class Cube:
 
         contact_node = self._write_contact_point(self._cube_dict.get("Contact Point"))
         self._graph.add((self._cube_uri, DCAT.contactPoint, contact_node))
-
-        for creator in self._cube_dict.get("Creator", []):
-            iri = creator.get('IRI')
-            self._graph.add((self._cube_uri, DCT.creator, URIRef(iri)))
 
         for theme in self._cube_dict.get("Themes", []):
             iri = theme.get('IRI')
@@ -331,7 +327,9 @@ class Cube:
         """
         self._graph.add((self._cube_uri + "/ObservationSet", CUBE.observation, obs.name))
         self._graph.add((obs.name, RDF.type, CUBE.Observation))
-        self._graph.add((obs.name, CUBE.observedBy, URIRef(self._cube_dict.get("Creator")[0].get("IRI"))))
+        creator = self._cube_dict.get("Creator")
+        if creator:
+            self._graph.add((obs.name, CUBE.observedBy, URIRef(creator.get("IRI"))))
 
         for column in obs.keys():
             path = URIRef(self._base_uri + self._get_shape_column(column).get("path"))

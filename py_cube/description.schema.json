@@ -27,10 +27,7 @@
       }
     },
     "Creator": {
-      "type": "array",
-      "items": {
-        "$ref": "#/definitions/Creator"
-      }
+      "$ref": "#/definitions/Creator"
     },
     "Contributor": {
       "type": "array",
