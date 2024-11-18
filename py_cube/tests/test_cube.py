@@ -62,7 +62,7 @@ class TestClass:
         assert bool(result)
 
     def test_standard_error(self):
-        sparql = 
+        pass
 
     def test_point_limit(self):
         sparql = (
