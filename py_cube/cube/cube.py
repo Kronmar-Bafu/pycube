@@ -174,9 +174,13 @@ class Cube:
             URIRef: The constructed cube URI as a URIRef object.
         """
         cube_uri = self._base_uri + "/".join(["cube", str(self._cube_dict.get("Identifier")), str(self._cube_dict.get("Version"))])
-        
-        return URIRef(cube_uri)
-
+        query = f"ASK {{ <{cube_uri}> ?p ?o}}"
+        if not local:
+            if query_lindas(query, environment=environment) == True:
+                sys.exit("Cube already exist! Please update your yaml")
+        else:
+            return URIRef(cube_uri)
+    
     def _setup_shape_dicts(self) -> None:
         """Set up shape dictionaries by extracting key dimensions from cube dictionary.
         
@@ -395,6 +399,26 @@ class Cube:
                 self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
                 self._graph.add((dim_node, META.dimensionRelation, relation_node))
                 self._graph.add((dim_node, SH.nodeKind, SH.Literal))
+            
+            # todo: in Doc beschreiben
+            case "Upper uncertainty":
+                relation_node = BNode()
+                relation_path = dim_dict.get("relates-to")
+                self._graph.add((relation_node, RDF.type, RELATION.ConfidenceUpperBound))
+                self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
+                self._graph.add((dim_node, META.dimensionRelation, relation_node))
+                self._graph.add((dim_node, SH.nodeKind, SH.Literal))
+                self._graph.add((relation_node, DCT.type, Literal("Confidence interval")))
+
+            case "Lower uncertainty":
+                relation_node = BNode()
+                relation_path = dim_dict.get("relates-to")
+                self._graph.add((relation_node, RDF.type, RELATION.ConfidenceLowerBound))
+                self._graph.add((relation_node, META.relatesTo, URIRef(self._base_uri + relation_path)))
+                self._graph.add((dim_node, META.dimensionRelation, relation_node))
+                self._graph.add((dim_node, SH.nodeKind, SH.Literal))
+                self._graph.add((relation_node, DCT.type, Literal("Confidence interval")))
+
             case _ as unrecognized:
                 print(f"Dimension Type '{unrecognized}' is not recognized")
         

@@ -1,0 +1,104 @@
+Name:
+  de: Mock Cube - two sided error
+  fr: Mock Cube - two sided error
+  it: Mock Cube - two sided error
+  en: Mock Cube - two sided error
+Description:
+  de: Ein Beispiel Cube, der simulierte Daten enthält mit zweiseitiger Unsicherheit
+  en: An example Cube containing some simulated data with two-sided uncertainty
+Publisher:
+  - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+Creator:
+  - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+Contributor:
+  - IRI: https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-umwelt-bafu
+    Name: Bundesamt für Mock Data
+Date Created:
+  2024-11-12
+Contact Point:
+  E-Mail: contact@mock.ld.admin.ch
+  Name: Bundesamt für Mock Data
+Base-URI: https://mock.ld.admin.ch/
+Identifier: mock-two-sided
+Version: 1
+Work Status:
+  Draft
+Visualize:
+  True
+# Optional but recommended
+Accrual Periodicity: yearly
+
+# Optional
+Namespace: mock
+
+dimensions:
+  # required
+  Jahr:
+    name:
+      de: Jahr
+      fr: An
+      it: Anno
+      en: Year
+    description:
+      de: Jahr der Erhebung
+    dimension-type: Key Dimension
+    scale-type: ordinal
+    path: year
+    data-kind:
+      type: temporal
+      unit: year
+    mapping:
+      type: additive
+      base: https://ld.admin.ch/time/year/
+
+  Station:
+    name:
+      de: Station
+      fr: Station
+      it: Stazione
+      en: Station
+    description:
+      de: Station der Untersuchung
+    dimension-type: Key Dimension
+    scale-type: nominal
+    path: station
+    mapping:
+      type: replace
+      replacements:
+        Bern: https://mock.ld.admin.ch/station/01
+        Zürich: https://mock.ld.admin.ch/station/02
+
+  Wert:
+    name:
+      de: Wert
+      fr: Valeur
+      it: Valore
+      en: Value
+    description:
+      de: Gemessener Wert an der Station
+    dimension-type: Measure Dimension
+    scale-type: interval
+    path: value
+    unit: kilogramm
+
+  UpperUnsicherheit:
+    name:
+      de: Upper Unsicherheit
+    description:
+      de: Upper Unsicherheit
+    dimension-type: Upper uncertainty
+    relates-to: value
+    scale-type: ratio
+    path: upperUncertainty
+    unit: percent
+
+  LowerUnsicherheit:
+    name:
+      de: Lower Unsicherheit
+    description:
+      de: Lower Unsicherheit
+    dimension-type: Lower uncertainty
+    relates-to: value
+    scale-type: ratio
+    path: lowerUncertainty
+    unit: percent
