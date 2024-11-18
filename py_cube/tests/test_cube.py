@@ -61,4 +61,30 @@ class TestClass:
         result = self.cube._graph.query(sparql)
         assert bool(result)
 
+    def test_standard_error(self):
+        sparql = 
+
+    def test_point_limit(self):
+        sparql = (
+            "ASK"
+            "{"
+            "  ?shape a cube:Constraint ;"
+            "    sh:property ?prop ."
+            "  ?prop sh:path mock:value2 ;"
+            "    meta:annotation ?annotation ."
+            "  ?annotation a meta:Limit ;"
+            "    schema:value 11 ;"
+            "    schema1:name 'Richtwert 2020 in Zürich'@de ;"
+            "    meta:annotationContext ["
+            "      sh:path mock:year ;"
+            "      sh:hasValue <https://ld.admin.ch/time/year/2000> ;"
+            "    ] , ["
+            "      sh:path mock:station ;"
+            "      sh:hasValue <https://mock.ld.admin.ch/station/01> ;"
+            "    ] ."
+            "}"
+        )
+
+        result = self.cube._graph.query(sparql)
+        assert bool(result)
 
