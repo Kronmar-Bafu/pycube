@@ -470,8 +470,9 @@ class Cube:
             pass
         
         if dim_dict.get("annotation"):
-            annotation_node = self._write_annotation(dim_dict.get("annotation"))
-            self._graph.add((dim_node, META.annotation, annotation_node))
+            for antn in dim_dict.get("annotation"):
+                annotation_node = self._write_annotation(antn)
+                self._graph.add((dim_node, META.annotation, annotation_node))
 
         return dim_node
     
@@ -502,6 +503,10 @@ class Cube:
             case "limit":
                 self._graph.add((annotation_node, RDF.type, META.Limit))
                 self._graph.add((annotation_node, SCHEMA.value, Literal(annotation_dict.get("value"))))
+            case "limit-range":
+                self._graph.add((annotation_node, RDF.type, META.Limit))
+                self._graph.add((annotation_node, SCHEMA.minValue, Literal(annotation_dict.get("min-value"))))
+                self._graph.add((annotation_node, SCHEMA.maxValue, Literal(annotation_dict.get("max-value"))))
 
         return annotation_node
     
