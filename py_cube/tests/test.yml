@@ -124,7 +124,7 @@ dimensions:
       en: standard error for Value2
     description:
       de: Standardfehler der Schätzung Wert2
-    dimension-type: standard error
+    dimension-type: Standard Error
     relates-to: value2
     scale-type: ratio
     path: standardError
