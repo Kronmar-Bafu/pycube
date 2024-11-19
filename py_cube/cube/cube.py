@@ -468,10 +468,42 @@ class Cube:
                 pass
         except KeyError or AttributeError:
             pass
-
-
+        
+        if dim_dict.get("annotation"):
+            annotation_node = self._write_annotation(dim_dict.get("annotation"))
+            self._graph.add((dim_node, META.annotation, annotation_node))
 
         return dim_node
+    
+    def _write_annotation(self, annotation_dict: dict) -> BNode:
+        annotation_node = BNode()
+        for lan, name in annotation_dict.get("name").items():
+            self._graph.add((annotation_node, SCHEMA.name, Literal(name, lang=lan)))
+        
+        for dimension, value in annotation_dict.get("context").items():
+            dimension_dict = self._shape_dict.get(dimension)
+            dimension_path = dimension_dict.get("path")
+
+            type_of_mapping = dimension_dict.get("mapping").get("type")
+            match type_of_mapping:
+                case "additive":
+                    value = dimension_dict.get("mapping").get("base") + str(value)
+                case "replace":
+                    print(value)
+                    value = dimension_dict.get("mapping").get("replacements").get(value)
+            
+            context_node = BNode()
+            self._graph.add((context_node, SH.path, URIRef(self._base_uri + dimension_path)))
+            self._graph.add((context_node, SH.hasValue, URIRef(value)))
+
+            self._graph.add((annotation_node, META.annotationContext, context_node))
+
+        match annotation_dict.get("type"):
+            case "limit":
+                self._graph.add((annotation_node, RDF.type, META.Limit))
+                self._graph.add((annotation_node, SCHEMA.value, Literal(annotation_dict.get("value"))))
+
+        return annotation_node
     
     def _add_sh_list(self, dim_node: BNode, values: pd.Series):
         """Add a SHACL list of all unique values to the given dimension node.
