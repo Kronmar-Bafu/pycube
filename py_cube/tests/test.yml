@@ -102,3 +102,30 @@ dimensions:
     scale-type: ratio
     path: lowerUncertainty
     unit: percent
+
+  Wert2:
+    name:
+      de: Wert2
+      fr: Valeur2
+      it: Valore2
+      en: Value2
+    description:
+      de: Gemessener Wert 2 an der Station
+    dimension-type: Measure Dimension
+    scale-type: ratio
+    path: value2
+    unit: kilogramm
+
+  Standardfehler:
+    name:
+      de: Standardfehler für Wert2
+      fr: erreur standard pour Value2
+      it: errore 
+      en: standard error for Value2
+    description:
+      de: Standardfehler der Schätzung Wert2
+    dimension-type: Standard Error
+    relates-to: value2
+    scale-type: ratio
+    path: standardError
+    unit: percent
