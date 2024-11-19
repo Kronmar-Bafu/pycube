@@ -105,4 +105,28 @@ class TestClass:
     
         result = self.cube._graph.query(sparql)
         assert bool(result)
+    
+    def test_range_limit(self):
+        sparql = (
+            "ASK"
+            "{"
+            "  ?shape a cube:Constraint ;"
+            "    sh:property ?prop ."
+            "  ?prop sh:path mock:value2 ;"
+            "    meta:annotation ?annotation ."
+            "  ?annotation a meta:Limit ;"
+            "    schema:minValue 20 ;"
+            "    schema:maxValue 33 ;"
+            "    meta:annotationContext ["
+            "      sh:path mock:year ;"
+            "      sh:hasValue <https://ld.admin.ch/time/year/2021> ;"
+            "    ] , [ "
+            "      sh:path mock:station ;"
+            "      sh:hasValue <https://mock.ld.admin.ch/station/02> ;"
+            "    ] ."
+            "}"
+        )
+
+        result = self.cube._graph.query(sparql)
+        assert bool(result)
 
