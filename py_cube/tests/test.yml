@@ -115,6 +115,22 @@ dimensions:
     scale-type: ratio
     path: value2
     unit: kilogramm
+    annotation: 
+      - type: limit
+        value: 11
+        name: 
+          de: Richtwert 2020 in Zürich
+        context:
+          Jahr: 2020
+          Station: Zürich
+      - type: limit-range
+        min-value: 9
+        max-value: 13
+        name:
+          de: Zielwert für 2021 in Zürich
+        context:
+          Jahr: 2021
+          Station: Zürich
 
   Standardfehler:
     name:
