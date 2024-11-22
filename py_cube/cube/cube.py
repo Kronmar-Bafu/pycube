@@ -392,6 +392,9 @@ class Cube:
                 self._graph.add((dim_node, RDF.type, CUBE.MeasureDimension))
                 self._graph.add((dim_node, SH.nodeKind, SH.Literal))
             
+            case "Annotation":
+                self._graph.add((dim_node, SH.nodeKind, SH.Literal))
+
             case "Standard Error":
                 relation_node = BNode()
                 relation_path = dim_dict.get("relates-to")
@@ -425,10 +428,12 @@ class Cube:
         match dim_dict.get("scale-type"):
             case "nominal":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.NominalScale))
-                self._add_sh_list(dim_node, values)
+                if dim_dict.get("dimension-type") == "Measure Dimension":
+                    self._add_sh_list(dim_node, values)
             case "ordinal":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.OrdinalScale))
-                self._add_sh_list(dim_node, values)
+                if dim_dict.get("dimension-type") == "Measure Dimension":
+                    self._add_sh_list(dim_node, values)
             case "interval":
                 self._graph.add((dim_node, QUDT.scaleType, QUDT.IntervalScale))
                 self._add_min_max(dim_node, values)

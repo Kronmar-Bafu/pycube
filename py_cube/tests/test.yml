@@ -154,6 +154,6 @@ dimensions:
       en: State of publication
     description:
       de: Status der Veröffentlichung, provisorisch oder final
-    dimension-type: annotation
+    dimension-type: Annotation
     scale-type: nominal
     path: status
