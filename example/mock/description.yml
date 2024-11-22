@@ -94,3 +94,13 @@ dimensions:
     scale-type: ratio
     path: standardError
     unit: percent
+
+  Status:
+    name:
+      de: Veröffentlichungsstatus
+      fr: Statut de publication
+      it: Stato di pubblicazione
+      en: State of publication
+    dimension-type: annotation
+    scale-type: nominal
+    path: status
