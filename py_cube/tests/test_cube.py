@@ -131,3 +131,23 @@ class TestClass:
         result = self.cube._graph.query(sparql)
         assert bool(result)
 
+    def test_annotation_dimension(self):
+        sparql = (
+            "ASK"
+            "{"
+            "  ?shape a cube:Constraint ;"
+            "    sh:property ?prop ."
+            "  ?prop sh:path mock:status ;"
+            "     schema1:name 'Veröffentlichungsstatus'@de ;"
+            "     qudt:scaleType qudt:NominalScale ."
+            "   minus {"
+            "     ?prop a cube:KeyDimension ."
+            "   }"
+            "   minus {"
+            "     ?prop a cube:MeasureDimension ."
+            "   }"
+            "}"
+        )
+
+        result = self.cube._graph.query(sparql)
+        assert bool(result)
