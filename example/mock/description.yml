@@ -9,7 +9,7 @@ Description:
 Publisher: 
   - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
 Creator:
-  - IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
+    IRI: https://register.ld.admin.ch/opendataswiss/org/office_of_Mock
 Contributor:
   - IRI: https://register.ld.admin.ch/opendataswiss/org/bundesamt-fur-umwelt-bafu
     Name: Bundesamt für Mock Data

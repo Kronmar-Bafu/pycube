@@ -15,11 +15,9 @@
       "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare"
     }
   ],
-  "Creator": [
-    {
-      "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare"
-    }
-  ],
+  "Creator": {
+    "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare"
+  },
   "Contributor": [
     {
       "IRI": "https://schleswig-holstein.de/opendata/org/office_of_daycare",

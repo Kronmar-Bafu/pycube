@@ -32,5 +32,5 @@ Namespaces = {
     "unit": UNIT,
     "vcard": VCARD,
     "void": VOID,
-    "geo": GEO,
+    "geo": GEO
 }
