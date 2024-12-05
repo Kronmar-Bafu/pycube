@@ -449,6 +449,8 @@ class Cube:
                    self._graph.add((dim_node, QUDT.hasUnit, UNIT.KiloGM))
                 case "percent":
                    self._graph.add((dim_node, QUDT.hasUnit, UNIT.PERCENT))
+                case "megatonne":
+                    self._graph.add((dim_node, QUDT.hasUnit, UNIT.MegaTonne))
         except KeyError:
             pass
 
@@ -495,7 +497,6 @@ class Cube:
                 case "additive":
                     value = dimension_dict.get("mapping").get("base") + str(value)
                 case "replace":
-                    print(value)
                     value = dimension_dict.get("mapping").get("replacements").get(value)
             
             context_node = BNode()
