@@ -6,9 +6,9 @@ import yaml
 class TestClass:
 
     def setup_method(self):
-        with open("py_cube/tests/test.yml") as file:
+        with open("tests/test.yml") as file:
             cube_yaml = yaml.safe_load(file)
-        test_df = pd.read_csv("py_cube/tests/test_data.csv")
+        test_df = pd.read_csv("tests/test_data.csv")
         self.cube = Cube(
             dataframe=test_df, cube_yaml=cube_yaml,
             environment="TEST", local=True

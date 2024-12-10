@@ -25,8 +25,8 @@ if not cube_exists(cube_uri=cube.get_iri(), environment="TEST"):
 
 # upload_ttl(filename="./example/mock-cube.ttl", db_file="lindas.ini", environment="TEST")
 
-modk_df_two_sided = pd.read_csv("py_cube/tests/test_data.csv")
-with open("py_cube/tests/test.yml") as file:
+modk_df_two_sided = pd.read_csv("tests/test_data.csv")
+with open("tests/test.yml") as file:
     two_sided_yaml = yaml.safe_load(file)
 cube_two_sided = py_cube.Cube(dataframe=modk_df_two_sided, cube_yaml=two_sided_yaml, environment="TEST", local=True)
 cube_two_sided.prepare_data()
