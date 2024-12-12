@@ -35,5 +35,6 @@ jobs:
     - name: test
       env:
         PYTHONWARNINGS: default
+        PYTHONUTF8: 1
       run: |
         pytest -s -vv tests
