@@ -13,11 +13,9 @@
       "IRI": "https://opendata.schleswig-holstein.de/organization/02619150-8e16-46a5-b2b9-de73ecfc617d"
     }
   ],
-  "Creator": [
-    {
-      "IRI": "https://opendata.schleswig-holstein.de/organization/02619150-8e16-46a5-b2b9-de73ecfc617d"
-    }
-  ],
+  "Creator": {
+    "IRI": "https://opendata.schleswig-holstein.de/organization/02619150-8e16-46a5-b2b9-de73ecfc617d"
+  },
   "Contributor": [],
   "Date Created": "2024-11-13T11:45:45.558776",
   "Contact Point": {

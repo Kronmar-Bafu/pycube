@@ -8,11 +8,9 @@
     "de": "Zeitreihe der Corona-Zahlen für Schleswig-Holstein\r\n\r\nEnthalten sind folgende Felder:\r\n\r\n- `Datum` - Datum im Format TT.MM.JJJJ\r\n- `Gemeldete Fälle`\r\n- `Hospitalisierungen`\r\n- `Verstorben`\r\n\r\nFeldtrenner ist Komma, Zeichenketten-Trenner ist doppeltes Anführungszeichen (\")\r\n\r\nBasis für die hier veröffentlichten Daten sind die Zahlen, die die Kreise und kreisfreien Städte auf dem offiziellen Meldeweg der Landesmeldestelle mitteilen. Da die Datenerfassung und Übermittlung Zeit benötigt, können Abweichungen von den vor Ort kommunizierten Fällen entstehen. Im Einzelfall kann es auch zu einer Reduzierung der gemeldeten Fälle kommen, zum Beispiel wenn sich eine Meldung nicht bestätigt hat oder der Wohnort der Person außerhalb des Kreises liegt.\r\n\r\n[Mehr Daten und Diagramme zu Corona in Schleswig-Holstein](https://www.schleswig-holstein.de/DE/Schwerpunkte/Coronavirus/Zahlen/zahlen_node.html)",
     "en": "Time series of Corona numbers for Schleswig-Holstein\n\nThe following fields are included: \n\n— ‘date’ — date in format dd.mm.yyyy\n— ‘reported cases’\n— ‘hospitalisations’\n— ‘deceased’\n\nField separator is comma, string separator is double quote (\")\n\nThe data published here are based on the figures provided by the districts and non-circular cities by the official means of reporting to the Land Registration Office. As data collection and transmission takes time, deviations from the cases communicated on the spot may arise. In individual cases, there may also be a reduction in the reported cases, for example if a report has not been confirmed or if the person’s place of residence is outside the circle. \n \n[More data and charts on Corona in Schleswig-Holstein](https://www.schleswig-holstein.de/DE/Schwerpunkte/Coronavirus/Zahlen/zahlen_node.html)"
   },
-  "Creator": [
-    {
-      "IRI": "https://opendata.schleswig-holstein.de/organization/94498aaa-9bd0-4ac0-ae70-db319a3ca1d8"
-    }
-  ],
+  "Creator": {
+    "IRI": "https://opendata.schleswig-holstein.de/organization/94498aaa-9bd0-4ac0-ae70-db319a3ca1d8"
+  },
   "Publisher": [
     {
       "IRI": "https://opendata.schleswig-holstein.de/organization/94498aaa-9bd0-4ac0-ae70-db319a3ca1d8"

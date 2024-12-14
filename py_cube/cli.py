@@ -103,11 +103,10 @@ def main():
 
     schema_parser = subparsers.add_parser("schema", help="Schema operations")
     schema_subparsers = schema_parser.add_subparsers(dest="suboperation", help="Schema sub-operations")
-    schema_subparsers.add_parser("import", help="Import the description schema file")
+    schema_subparsers.add_parser("import-description", help="Import the description schema file")
     schema_parser.add_argument("output", type=str, help="Output file")
     schema_parser.add_argument("-v", "--verbose", action="count", default=0, help="Increase verbosity")
-
-
+    
     args = parser.parse_args()
     log_level = logging.DEBUG if args.verbose == 1 else logging.INFO
 
