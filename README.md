@@ -88,7 +88,7 @@ Writes the `cube:ObservationConstraint`.
 ```
 # Write the cube
 cube = pycube.Cube(dataframe: pd.DataFrame, cube_yaml: dict, shape_yaml: dict)
-cube.apply_mapping()
+cube.prepare_data()
 cube.write_cube()
 cube.write_observations()
 cube.write_shape()
