@@ -1,8 +1,8 @@
-# lindaspy
+# pylindas
 
 ## About
 
-`lindaspy` is a package to build and publish linked data such as cubes as defined by [cube.link](https://cube.link), describing a schema to describe structured data from tables in [RDF](https://www.w3.org/RDF/). It allows for an alternative to the [Cube-Creator](https://cube-creator.lindas.admin.ch). Currently this project is heavily linked to the [LINDAS](lindas.admin.ch) the Swiss Federal Linked Data Service.
+`pylindas` is a package to build and publish linked data such as cubes as defined by [cube.link](https://cube.link), describing a schema to describe structured data from tables in [RDF](https://www.w3.org/RDF/). It allows for an alternative to the [Cube-Creator](https://cube-creator.lindas.admin.ch). Currently this project is heavily linked to the [LINDAS](lindas.admin.ch) the Swiss Federal Linked Data Service.
 
 For further information, please refer to our [Wiki](https://github.com/Kronmar-Bafu/cubelink/wiki)
 
@@ -24,7 +24,7 @@ pip install -r requirements.txt
 You can install this package through pip without cloning the repository.
 
 ```
-pip install lindaspy
+pip install pylindas
 ```
 
 ## Contributing and Suggestions
@@ -44,7 +44,7 @@ To avoid the feeling of a black box, our philosophy is to make the construction 
 1. **Initialization**
 
 ```
-from lindaspy.pycube import Cube
+from pylindas.pycube import Cube
 
 cube = pycube.Cube(dataframe: pd.Dataframe, cube_yaml: dict, shape_yaml: dict)
 ```
