@@ -3,8 +3,8 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lin-py"
-version = "0.3.7"
+name = "lindaspy"
+version = "0.3.6"
 description = "Utilities for working with the linked data service LINDAS of the Swiss Federal Archives. Includes modules for working with cubes."
 readme = "README.md"
 authors = [{ name = "Marco Kronenberg", email="kronenberg.marco@bafu.admin.ch" }]
