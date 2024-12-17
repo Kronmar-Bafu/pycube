@@ -6,8 +6,8 @@ from datetime import datetime, timezone
 import pandas as pd
 import numbers
 import sys
-from linpy.lindas.namespaces import *
-from linpy.lindas.query import query_lindas
+from pylindas.lindas.namespaces import *
+from pylindas.lindas.query import query_lindas
 
 
 class Cube:
