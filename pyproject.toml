@@ -34,4 +34,4 @@ post_commit_hook = ""
 
 [tool.bumpver.file_patterns]
 "pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
-"linpy/__init__.py" = ["{version}"]
+"pylindas/__init__.py" = ["{version}"]
