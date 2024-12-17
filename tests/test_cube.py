@@ -24,7 +24,7 @@ class TestClass:
             "{"
             "  ?shape a cube:Constraint ;"
             "    sh:property ?prop ."
-            "  ?prop schema1:name 'Standardfehler für wert2'@de ;"
+            "  ?prop schema1:name 'Standardfehler für Wert2'@de ;"
             "    schema1:description 'Standardfehler der Schätzung Wert2'@de ;"
             "    sh:path mock:standardError ;"
             "    qudt:scaleType qudt:RatioScale ;"

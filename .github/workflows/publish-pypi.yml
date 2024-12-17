@@ -1,13 +1,11 @@
 name: Publish to PyPI
 
 on:
-    workflow_run:
-        workflows: ["🧊 CI test"]
-        types:
-            - completed
     push:
         branches:
-            - publication-pypi
+            - main
+    schedule:
+        - cron: '0 0 * * 1'
 
 jobs:
     bump-version-and-publish:
@@ -51,7 +49,7 @@ jobs:
               uses: stefanzweifel/git-auto-commit-action@v5
               with:
                 commit_message: "Bump version for release"
-                branch: publication-pypi
+                branch: main
             
             - name: Build package
               run: |
@@ -66,4 +64,4 @@ jobs:
                 TWINE_USERNAME: __token__
                 TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
               run: |
-                twine upload -r testpypi dist/*
+                twine upload dist/*
