@@ -3,7 +3,7 @@ requires = ["setuptools"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "lindaspy"
+name = "pylindas"
 version = "0.3.6"
 description = "Utilities for working with the linked data service LINDAS of the Swiss Federal Archives. Includes modules for working with cubes."
 readme = "README.md"
