@@ -13,10 +13,7 @@ class TestClass:
             dataframe=test_df, cube_yaml=cube_yaml,
             environment="TEST", local=True
         )
-        self.cube.prepare_data()
-        self.cube.write_cube()
-        self.cube.write_observations()
-        self.cube.write_shape()
+        self.cube.prepare_data().write_cube().write_observations().write_shape()
 
     def test_standard_error(self):
         sparql = (
