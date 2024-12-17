@@ -33,6 +33,5 @@ pre_commit_hook = ""
 post_commit_hook = ""
 
 [tool.bumpver.file_patterns]
-"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"'
-]
+"pyproject.toml" = ['current_version = "{version}"', 'version = "{version}"']
 "linpy/__init__.py" = ["{version}"]
