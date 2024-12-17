@@ -1,8 +1,8 @@
-# linpy
+# lindaspy
 
 ## About
 
-`linpy` is a package to build and publish cubes as defined by [cube.link](https://cube.link), describing a schema to describe structured data from tables in [RDF](https://www.w3.org/RDF/). It allows for an alternative to the [Cube-Creator](https://cube-creator.lindas.admin.ch). Currently this project is heavily linked to the [LINDAS](lindas.admin.ch) the Swiss Federal Linked Data Service.
+`lindaspy` is a package to build and publish linked data such as cubes as defined by [cube.link](https://cube.link), describing a schema to describe structured data from tables in [RDF](https://www.w3.org/RDF/). It allows for an alternative to the [Cube-Creator](https://cube-creator.lindas.admin.ch). Currently this project is heavily linked to the [LINDAS](lindas.admin.ch) the Swiss Federal Linked Data Service.
 
 For further information, please refer to our [Wiki](https://github.com/Kronmar-Bafu/cubelink/wiki)
 
@@ -21,7 +21,7 @@ pip install -r requirements.txt
 
 ### Published Version
 
-You are able to install this package through pip without cloning the repository.
+You can install this package through pip without cloning the repository.
 
 ```
 pip install lindaspy
@@ -33,13 +33,19 @@ If you wish to contribute to this project, feel free to clone this repository an
 
 Alternatively feel free to open an issue with a suggestion on what we could implement. We laid out a rough road map for the features ahead on our [Timetable](https://github.com/Kronmar-Bafu/cubelink/wiki/Timetable)
 
-## Functionality
+## Functionality and structure
+
+This package consists of multiple sub modules
+
+### `pycube`
 
 To avoid the feeling of a black box, our philosophy is to make the construction of cubes modular. The process will take place in multiple steps, outlined below.
 
 1. **Initialization**
 
 ```
+from lindaspy.pycube import Cube
+
 cube = pycube.Cube(dataframe: pd.Dataframe, cube_yaml: dict, shape_yaml: dict)
 ```
 

@@ -1,4 +1,4 @@
-from pylindas.cube import Cube
+from pylindas.pycube import Cube
 import pandas as pd
 import pytest
 import yaml
