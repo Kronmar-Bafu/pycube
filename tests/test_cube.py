@@ -1,4 +1,4 @@
-from py_cube import Cube
+from linpy import Cube
 import pandas as pd
 import pytest
 import yaml
