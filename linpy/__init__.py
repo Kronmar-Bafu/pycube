@@ -4,4 +4,4 @@ from linpy.lindas.namespaces import Namespaces
 from linpy.lindas.upload import upload_ttl
 from linpy.lindas.query import query_lindas
 
-__version__ = "0.3.7"
+__version__ = "0.4.0"
