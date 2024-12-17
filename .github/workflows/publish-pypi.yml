@@ -1,0 +1,62 @@
+name: Publish to PyPI
+
+on:
+    push:
+        branches:
+            - publication-pypi
+
+jobs:
+    bump-version-and-publish:
+        name: Bump Version and Publish to PyPI
+        runs-on: ubuntu-latest
+
+        steps:
+            - name: Checkout code
+              uses: actions/checkout@v4
+
+            - name: Set up python
+              uses: action/setup-python@v5
+              with:
+                python-version: '3.13'
+            
+            - name: Install dependencies
+              run: |
+                python -m pip install --upgrade pip
+                pip install bumpver setuptools wheel twine
+
+            - name: Determine version bump
+              id: version_bump
+              run: |
+                VERSION_BUMP="patch"
+                if git log -1 --pretty=%B | grep -iq "#major"; then 
+                  VERSION_BUMP="major"
+                elif git log -1 --pretty=%B | grep -iq "#minor"; then
+                  VERSION_BUMP="minor"
+                fi
+                echo "Version bump type: $VERSION_BUMP"
+                echo "bump_type=$VERSION_BUMP" >> $GITHUB_ENV
+            
+            - name: Bump version
+              run: |
+                bumpver update --${{ env.bump_type}}
+
+            - name: Commit version bump
+              uses: stefanzweifel/git-auto-commit-action@v5
+              with:
+                commit_message: "Bump version for release"
+                branch: publication-pypi
+            
+            - name: Build package
+              run: |
+                python -m build
+            
+            - name: Check package
+              run: |
+                twine check dist/*
+            
+            - name: Publish to PyPI
+              env:
+                TWINE_USERNAME: __token__
+                TWINE_PASSWORD: ${{ secrets.PYPI_API_TOKEN }}
+              run: |
+                twine upload -r testpypi dist/*
