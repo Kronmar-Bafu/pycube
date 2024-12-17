@@ -1,6 +1,10 @@
 name: Publish to PyPI
 
 on:
+    workflow_run:
+        workflows: ["🧊 CI test"]
+        types:
+            - completed
     push:
         branches:
             - publication-pypi
