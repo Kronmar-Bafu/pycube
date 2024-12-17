@@ -15,6 +15,9 @@ jobs:
         permissions:
             contents: write
 
+        # don't run on this job on forks
+        if: ${{ github.repository_owner == 'SwissFederalArchives' }}
+
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
