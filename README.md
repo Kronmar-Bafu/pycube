@@ -24,7 +24,7 @@ pip install -r requirements.txt
 You are able to install this package through pip without cloning the repository.
 
 ```
-pip install lin-py
+pip install lindaspy
 ```
 
 ## Contributing and Suggestions
