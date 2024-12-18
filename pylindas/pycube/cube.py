@@ -3,6 +3,7 @@ from urllib.parse import quote
 from rdflib import BNode, Graph, Literal, RDF, URIRef, XSD
 from rdflib.collection import Collection
 from datetime import datetime, timezone
+from typing import Self
 import pandas as pd
 import numbers
 import sys
@@ -62,26 +63,27 @@ class Cube:
                   f"Number of triples in Graph: {how_many_triples}")
         return output
 
-    def prepare_data(self):
+    def prepare_data(self) -> Self:
         """
         Prepare the cube data by constructing observation URIs and applying mappings.
 
         This method constructs observation URIs for each row in the dataframe and applies mappings to the dataframe.
 
         Returns:
-            None
+            self
         """
         self._construct_obs_uri()
         self._apply_mappings()
+        return self
 
-    def write_cube(self) -> None:
+    def write_cube(self) -> Self:
         """
         Write the cube metadata to the graph.
 
         This method writes the cube metadata to the graph, including its URI, name, description, publisher, creator, contributor, contact point, version, and date information.
 
         Returns:
-            None
+            self
         """
         self._graph.add((self._cube_uri, RDF.type, CUBE.Cube))
         self._graph.add((self._cube_uri, RDF.type, SCHEMA.Dataset))
@@ -149,6 +151,8 @@ class Cube:
         if self._cube_dict.get("Accrual Periodicity"):
             accrual_periodicity_uri = self._get_accrual_periodicity(self._cube_dict.get("Accrual Periodicity"))
             self._graph.add((self._cube_uri, DCT.accrualPeriodicity, accrual_periodicity_uri))
+
+        return self
 
     def get_iri(self) -> URIRef:
         return self._cube_uri
@@ -295,19 +299,20 @@ class Cube:
             case "irregular":
                 return URIRef(base_uri + "IRREG")
 
-    def write_observations(self) -> None:
+    def write_observations(self) -> Self:
         """Write observations to the cube.
 
         This function iterates over the rows in the dataframe and adds each row as an observation to the cube.
         It also adds the observation URI to the observation set of the cube.
 
         Returns:
-            None
+            Self
         """
         self._graph.add((self._cube_uri + "/ObservationSet", RDF.type, CUBE.ObservationSet))
         self._dataframe.apply(self._add_observation, axis=1)
+        return self
 
-    def serialize(self, filename: str) -> None:
+    def serialize(self, filename: str) -> Self:
         """Serialize the cube to a file.
 
         This function serializes the cube to the given file name in turtle format.
@@ -316,9 +321,10 @@ class Cube:
             filename (str): The name of the file to write the cube to.
 
         Returns:
-            None
+            Self
         """
         self._graph.serialize(destination=filename, format="turtle", encoding="utf-8")
+        return self
 
     def _add_observation(self, obs: pd.DataFrame) -> None:
         """Add an observation to the cube.
@@ -345,20 +351,21 @@ class Cube:
             raise ValueError(f'Could not find {column}')
         return c
 
-    def write_shape(self) -> None:
+    def write_shape(self) -> Self:
         """Write the shape of the cube to the graph.
 
             This function writes the shape of the cube to the graph, which is used to validate the cube as well as for
             description of dimension metadata
 
             Returns:
-                None
+                Self
         """
         self._graph.add((self._shape_URI, RDF.type, CUBE.Constraint))
         self._graph.add((self._shape_URI, SH.closed, Literal("true", datatype=XSD.boolean)))
         for dim, dim_dict in self._shape_dict.items():
             shape = self._write_dimension_shape(dim_dict, self._dataframe[dim])
             self._graph.add((self._shape_URI, SH.property, shape))
+        return self
     
     def _write_dimension_shape(self, dim_dict: dict, values: pd.Series) -> BNode:
         """Write dimension shape based on the provided dictionary and values.
